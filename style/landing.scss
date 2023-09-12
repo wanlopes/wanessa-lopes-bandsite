@@ -1,22 +1,57 @@
 @use "partials/global" as *;
 
 .nav {
+  background-color: $bandsite-black;
+  display: flex;
   &__header {
-    font-family: ;
+    font-family: $primary-font;
     font-size: 60px;
     font-weight: 700;
     line-height: 68px;
+    color: #ffffff;
+    padding: 36px 48px;
   }
   &__list {
-    font-family: ;
+    font-family: $primary-font;
     font-size: 36px;
     font-weight: 600;
     line-height: 44px;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 48px 36px;
     &__list__item {
-      font-family: ;
+      font-family: $primary-font;
       font-size: 36px;
       font-weight: 600;
       line-height: 44px;
+      display: flex;
+      justify-content: space-between;
     }
+  }
+}
+
+.hero {
+  background-image: url("../Assets/Images/hero-bio.jpg");
+  margin: 0 auto;
+  &__title {
+    &__title__heading {
+      font-family: $primary-font;
+      font-size: ;
+      font-weight: ;
+      color: $white;
+      padding: 48px 36px 36px 36px;
+    }
+  }
+}
+
+.footer {
+  background-color: #323232;
+  &__heading {
+    font-family: 'A';
+    font-weight: ;
+    font-size: ;
+    color: $white;
   }
 }

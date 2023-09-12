@@ -1,6 +1,28 @@
-@import url("../../Assets/Font/AvenirNextLTPro-Bold.otf");
-@import url("../../Assets/Font/AvenirNextLTPro-Demi.otf");
-@import url("../../Assets/Font/AvenirNextLTPro-Regular.otf");
+@font-face {
+  font-family: "Avenir Next";
+  src: url("../../Assets/Font/Alternative files/AvenirNextLTProBold.ttf")
+    format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Avenir Next";
+  src: url("../../Assets/Font/AvenirNextLTPro-Demi.ttf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Avenir Next";
+  src: url("../../Assets/Font/AvenirNextLTPro-Regular.ttf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
 
 //Font Variables
-$primary-font: '';
+$primary-font: "Avenir Next Bold";
+
+$bold: 700;
+$demi: 600;
+$regular: 400;
