@@ -1,0 +1,22 @@
+@use "partials/global" as *;
+
+.nav {
+  &__header {
+    font-family: ;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 68px;
+  }
+  &__list {
+    font-family: ;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 44px;
+    &__list__item {
+      font-family: ;
+      font-size: 36px;
+      font-weight: 600;
+      line-height: 44px;
+    }
+  }
+}
