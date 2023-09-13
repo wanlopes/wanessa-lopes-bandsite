@@ -36,7 +36,9 @@
   background-image: url("../Assets/Images/hero-bio.jpg");
   margin: 0 auto;
   &__title {
-    &__title__heading {
+    display: flex;
+
+    .title__heading {
       font-family: $primary-font;
       font-size: $page-header-text-size-desktop;
       line-height: $page-line-height-desktop;
@@ -44,6 +46,41 @@
       color: $white;
       padding: 48px 36px 36px 36px;
     }
+  }
+}
+
+.main {
+  &__head {
+    font-size: $section-header-text-size-desktop;
+    line-height: $section-line-height-desktop;
+    font-weight: $section-text-weight-desktop;
+    font-family: $primary-font;
+  }
+  &__picture {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  &__sub {
+    font-size: $subheader-text-size-desktop;
+    line-height: $subheader-line-height-desktop;
+    font-weight: $subheader-text-weight-desktop;
+  }
+  &__subheading {
+    font-size: $subheader-text-size-desktop;
+    line-height: $subheader-line-height-desktop;
+    font-weight: $subheader-text-weight-desktop;
+  }
+  &__paragraph {
+    font-size: $body-text-size-desktop;
+    line-height: $body-line-height-desktop;
+    font-weight: $body-text-weight-desktop;
+  }
+  &__gallery {
+    font-size: $section-header-text-size-desktop;
+    line-height: $section-line-height-desktop;
+    font-weight: $section-text-weight-desktop;
+    font-family: $primary-font;
   }
 }
 
@@ -66,6 +103,17 @@
     .images__icons {
       width: 30px;
       display: flex;
+    }
+  }
+  &__info {
+    display: flex;
+
+    .info__agent {
+      font-size: $footer-text-size-desktop;
+      font-family: $primary-font;
+      font-weight: $footer-text-weight-desktop;
+      color: $white;
+      line-height: $footer-line-height-desktop;
     }
   }
 }

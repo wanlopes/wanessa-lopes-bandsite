@@ -57,13 +57,49 @@
   background-image: url("../Assets/Images/hero-bio.jpg");
   margin: 0 auto;
 }
-.hero__title__title__heading {
+.hero__title {
+  display: flex;
+}
+.hero__title .title__heading {
   font-family: "Avenir Next Bold";
   font-size: 60px;
   line-height: 68px;
   font-weight: 700;
   color: #ffffff;
   padding: 48px 36px 36px 36px;
+}
+
+.main__head {
+  font-size: 36px;
+  line-height: 44px;
+  font-weight: 700;
+  font-family: "Avenir Next Bold";
+}
+.main__picture {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.main__sub {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+}
+.main__subheading {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+}
+.main__paragraph {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+}
+.main__gallery {
+  font-size: 36px;
+  line-height: 44px;
+  font-weight: 700;
+  font-family: "Avenir Next Bold";
 }
 
 .footer {
@@ -86,4 +122,14 @@
 .footer__images .images__icons {
   width: 30px;
   display: flex;
+}
+.footer__info {
+  display: flex;
+}
+.footer__info .info__agent {
+  font-size: 14px;
+  font-family: "Avenir Next Bold";
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 20px;
 }/*# sourceMappingURL=landing.css.map */
