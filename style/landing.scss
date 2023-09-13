@@ -83,37 +83,3 @@
     font-family: $primary-font;
   }
 }
-
-.footer {
-  background-color: #323232;
-  &__heading {
-    display: flex;
-    flex-direction: row;
-    font-family: $primary-font;
-    font-weight: $section-text-weight-desktop;
-    font-size: $section-header-text-size-desktop;
-    line-height: $section-line-height-desktop;
-    color: $white;
-    opacity: 1;
-  }
-  &__images {
-    display: flex;
-    flex-direction: row;
-
-    .images__icons {
-      width: 30px;
-      display: flex;
-    }
-  }
-}
-
-.foonter__rights {
-  font-size: $footer-text-size-desktop;
-  line-height: $footer-line-height-desktop;
-  font-weight: $footer-text-weight-desktop;
-  color: #ffffff;
-}
-.footer__logo {
-  height: 20px;
-  width: 120px;
-}

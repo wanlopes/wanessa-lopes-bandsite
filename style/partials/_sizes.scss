@@ -1,5 +1,10 @@
-//Variables Desktop
+//Screen Sizes
+$desktop-screen-min-size: 1280px;
+$tablet-screen-max-size: 1279px;
+$tablet-screen-min-size: 768px;
+$mobile-screen-max-size: 767px;
 
+//Variables Desktop
 $page-header-text-size-desktop: 60px;
 $page-line-height-desktop: 68px;
 $page-text-weight-desktop: 700;
@@ -20,7 +25,6 @@ $label-buton-line-height-desktop: 20px;
 $label-buton-text-weight-desktop: 700;
 
 //Variables Mobile
-
 $page-text-weight-mobile: 700;
 $page-line-height-mobile: 32px;
 $page-header-text-size-mobile: 24px;
