@@ -6,13 +6,13 @@
 }
 @font-face {
   font-family: "Avenir Next";
-  src: url("../../Assets/Font/AvenirNextLTPro-Demi.otf") format("opentype");
+  src: url("../../Assets/Font/AvenirNextLTPro-Demi.ttf") format("opentype");
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
   font-family: "Avenir Next";
-  src: url("../../Assets/Font/AvenirNextLTPro-Regular.otf") format("opentype");
+  src: url("../../Assets/Font/AvenirNextLTPro-Regular.ttf") format("opentype");
   font-weight: 400;
   font-style: normal;
 }
@@ -57,7 +57,33 @@
   background-image: url("../Assets/Images/hero-bio.jpg");
   margin: 0 auto;
 }
+.hero__title__title__heading {
+  font-family: "Avenir Next Bold";
+  font-size: 60px;
+  line-height: 68px;
+  font-weight: 700;
+  color: #ffffff;
+  padding: 48px 36px 36px 36px;
+}
 
 .footer {
   background-color: #323232;
+}
+.footer__heading {
+  display: flex;
+  flex-direction: row;
+  font-family: "Avenir Next Bold";
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+  color: #ffffff;
+  opacity: 1;
+}
+.footer__images {
+  display: flex;
+  flex-direction: row;
+}
+.footer__images .images__icons {
+  width: 30px;
+  display: flex;
 }/*# sourceMappingURL=landing.css.map */

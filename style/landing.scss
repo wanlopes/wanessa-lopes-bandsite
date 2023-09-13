@@ -38,8 +38,9 @@
   &__title {
     &__title__heading {
       font-family: $primary-font;
-      font-size: ;
-      font-weight: ;
+      font-size: $page-header-text-size-desktop;
+      line-height: $page-line-height-desktop;
+      font-weight: $page-text-weight-desktop;
       color: $white;
       padding: 48px 36px 36px 36px;
     }
@@ -49,9 +50,22 @@
 .footer {
   background-color: #323232;
   &__heading {
-    font-family: 'A';
-    font-weight: ;
-    font-size: ;
+    display: flex;
+    flex-direction: row;
+    font-family: $primary-font;
+    font-weight: $section-text-weight-desktop;
+    font-size: $section-header-text-size-desktop;
+    line-height: $section-line-height-desktop;
     color: $white;
+    opacity: 1;
+  }
+  &__images {
+    display: flex;
+    flex-direction: row;
+
+    .images__icons {
+      width: 30px;
+      display: flex;
+    }
   }
 }
