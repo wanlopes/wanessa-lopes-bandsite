@@ -105,15 +105,15 @@
       display: flex;
     }
   }
-  &__info {
-    display: flex;
+}
 
-    .info__agent {
-      font-size: $footer-text-size-desktop;
-      font-family: $primary-font;
-      font-weight: $footer-text-weight-desktop;
-      color: $white;
-      line-height: $footer-line-height-desktop;
-    }
-  }
+.foonter__rights {
+  font-size: $footer-text-size-desktop;
+  line-height: $footer-line-height-desktop;
+  font-weight: $footer-text-weight-desktop;
+  color: #ffffff;
+}
+.footer__logo {
+  height: 20px;
+  width: 120px;
 }
