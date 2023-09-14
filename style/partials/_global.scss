@@ -35,6 +35,16 @@
       display: flex;
     }
   }
+  &__info {
+    display: flex;
+
+    .footer__info--agent {
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 400;
+      color: #ffffff;
+    }
+  }
 }
 
 .foonter__rights {
