@@ -26,6 +26,7 @@
       font-size: 36px;
       font-weight: 600;
       line-height: 44px;
+      padding: 48px 36px 36px 36px;
       display: flex;
       justify-content: space-between;
     }
@@ -33,7 +34,12 @@
 }
 
 .hero {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Assets/Images/hero-bio.jpg");
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("../Assets/Images/hero-bio.jpg");
   background-size: cover;
   margin: 0 auto;
   background-repeat: no-repeat;
@@ -41,7 +47,7 @@
   height: 100vh;
   position: relative;
 
-    /*.hero::before {
+  /*.hero::before {
     content: "";
     background-color: rgba(0, 0, 0, 0.5);
     top: 0;
@@ -52,6 +58,8 @@
   } */
   &__title {
     display: flex;
+    flex-direction: row;
+    align-items: center;
 
     .title__heading {
       font-family: $primary-font;
@@ -70,6 +78,7 @@
     line-height: $section-line-height-desktop;
     font-weight: $section-text-weight-desktop;
     font-family: $primary-font;
+    padding: 48px 0 36px 36px;
   }
   &__picture {
     margin-left: auto;
@@ -80,6 +89,12 @@
     font-size: $subheader-text-size-desktop;
     line-height: $subheader-line-height-desktop;
     font-weight: $subheader-text-weight-desktop;
+    padding: 36px 36px 36px 36px;
+
+    .sub__paragraph {
+      font-size: 24px;
+      font-weight: 700;
+    }
   }
   &__subheading {
     font-size: $subheader-text-size-desktop;
@@ -90,6 +105,8 @@
     font-size: $body-text-size-desktop;
     line-height: $body-line-height-desktop;
     font-weight: $body-text-weight-desktop;
+    column-count: 2;
+    width: 70%;
   }
   &__gallery {
     font-size: $section-header-text-size-desktop;
@@ -98,5 +115,6 @@
     font-family: $primary-font;
     display: grid;
     column-gap: 24px;
+    padding: 48px 0 36px 36px;
   }
 }
