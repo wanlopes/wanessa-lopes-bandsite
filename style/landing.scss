@@ -10,22 +10,27 @@
     color: $white;
     padding: 36px 48px;
   }
-  &__list {
+  &__subheader {
     font-family: $primary-bold;
-    font-size: $subheader-text-size-desktop;
+    font-size: $body-text-size-desktop;
     line-height: $subheader-line-height-desktop;
     color: $white;
     display: flex;
     justify-content: space-between;
     list-style-type: none;
     padding: 48px 36px;
-    &__list__item {
+    &__subheader--item {
       font-family: $primary-bold;
-      font-size: 36px;
+      font-size: $body-text-size-desktop;
       line-height: 44px;
       padding: 48px 36px 36px 36px;
       display: flex;
       justify-content: space-between;
+    }
+    &__subheader--item:hover {
+      color: $white;
+      text-decoration: underline;
+      border-bottom: 1px solid $white;
     }
   }
 }
@@ -78,7 +83,7 @@
   &__picture {
     margin: 0 auto;
     display: block;
-    width: 70%;
+    width: 60%;
   }
   &__sub {
     font-family: $primary-bold;
@@ -87,13 +92,17 @@
     padding: 36px 36px 36px 36px;
     width: 50%;
     margin: 0 auto;
-
-    .sub__paragraph {
-      font-family: $primary-extra-bold;
-      font-size: 24px;
-      margin: 0 auto;
-    }
   }
+  &__sub-paragraph {
+    font-family: $primary-extra-bold;
+    font-size: $body-text-size-desktop;
+    line-height: $body-line-height-desktop;
+  }
+  /*&__paragraph {
+    font-family: $primary-extra-bold;
+    font-size: 24px;
+    margin: 0 auto; 
+  } */
   &__subheading {
     font-family: $primary-bold;
     font-size: $subheader-text-size-desktop;
@@ -106,6 +115,7 @@
     width: 60%;
     margin: 0 auto;
     padding: 36px;
+    font-family: $primary-extra-bold;
   }
   &__gallery {
     font-size: $section-header-text-size-desktop;

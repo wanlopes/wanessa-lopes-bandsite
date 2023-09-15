@@ -21,10 +21,12 @@ body {
 
 .footer {
   background-color: #323232;
+  margin-top: 36px;
   &__heading {
+    padding: 48px 48px;
     display: flex;
     flex-direction: row;
-    font-family: $primary-extra-bold;
+    font-family: $primary-bold;
     color: $white;
     opacity: 1;
     @media (min-width: $tablet-screen-min-size) {
@@ -47,6 +49,7 @@ body {
   }
   &__info {
     display: flex;
+    flex-direction: column;
 
     .info__agent {
       font-family: $primary-bold;
@@ -57,6 +60,7 @@ body {
   }
   &__contact {
     display: flex;
+    flex-direction: column;
 
     .contact__address {
       font-family: $primary-normal;

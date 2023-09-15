@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Avenir Next Extra Bold";
-  src: url("../Assets/Font/Alternative files/AvenirNextLTProBold.otf") format("opentype");
+  src: url("../Assets/Font/AvenirNextLTPro-Bold.otf");
   font-weight: 700;
   font-style: normal;
 }
@@ -35,11 +35,13 @@ body {
 
 .footer {
   background-color: #323232;
+  margin-top: 36px;
 }
 .footer__heading {
+  padding: 48px 48px;
   display: flex;
   flex-direction: row;
-  font-family: "Avenir Next Extra Bold";
+  font-family: "Avenir Next Bold";
   color: #ffffff;
   opacity: 1;
 }
@@ -65,6 +67,7 @@ body {
 }
 .footer__info {
   display: flex;
+  flex-direction: column;
 }
 .footer__info .info__agent {
   font-family: "Avenir Next Bold";
@@ -74,6 +77,7 @@ body {
 }
 .footer__contact {
   display: flex;
+  flex-direction: column;
 }
 .footer__contact .contact__address {
   font-family: "Avenir Next";
@@ -104,9 +108,9 @@ body {
   color: #ffffff;
   padding: 36px 48px;
 }
-.nav__list {
+.nav__subheader {
   font-family: "Avenir Next Bold";
-  font-size: 24px;
+  font-size: 14px;
   line-height: 32px;
   color: #ffffff;
   display: flex;
@@ -114,13 +118,18 @@ body {
   list-style-type: none;
   padding: 48px 36px;
 }
-.nav__list__list__item {
+.nav__subheader__subheader--item {
   font-family: "Avenir Next Bold";
-  font-size: 36px;
+  font-size: 14px;
   line-height: 44px;
   padding: 48px 36px 36px 36px;
   display: flex;
   justify-content: space-between;
+}
+.nav__subheader__subheader--item:hover {
+  color: #ffffff;
+  text-decoration: underline;
+  border-bottom: 1px solid #ffffff;
 }
 
 .hero {
@@ -154,6 +163,13 @@ body {
   padding: 48px 36px 36px 36px;
 }
 
+.main {
+  /*&__paragraph {
+    font-family: $primary-extra-bold;
+    font-size: 24px;
+    margin: 0 auto; 
+  } */
+}
 .main__head {
   font-size: 36px;
   line-height: 44px;
@@ -163,7 +179,7 @@ body {
 .main__picture {
   margin: 0 auto;
   display: block;
-  width: 70%;
+  width: 60%;
 }
 .main__sub {
   font-family: "Avenir Next Bold";
@@ -173,10 +189,10 @@ body {
   width: 50%;
   margin: 0 auto;
 }
-.main__sub .sub__paragraph {
+.main__sub-paragraph {
   font-family: "Avenir Next Extra Bold";
-  font-size: 24px;
-  margin: 0 auto;
+  font-size: 14px;
+  line-height: 22px;
 }
 .main__subheading {
   font-family: "Avenir Next Bold";
@@ -191,6 +207,7 @@ body {
   width: 60%;
   margin: 0 auto;
   padding: 36px;
+  font-family: "Avenir Next Extra Bold";
 }
 .main__gallery {
   font-size: 36px;
