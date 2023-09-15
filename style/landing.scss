@@ -4,17 +4,15 @@
   background-color: $bandsite-black;
   display: flex;
   &__header {
-    font-family: $primary-font;
+    font-family: $primary-extra-bold;
     font-size: 60px;
-    font-weight: 700;
     line-height: 68px;
     color: #ffffff;
     padding: 36px 48px;
   }
   &__list {
-    font-family: $primary-font;
+    font-family: $primary-bold;
     font-size: 36px;
-    font-weight: 600;
     line-height: 44px;
     color: #ffffff;
     display: flex;
@@ -22,9 +20,8 @@
     list-style-type: none;
     padding: 48px 36px;
     &__list__item {
-      font-family: $primary-font;
+      font-family: $primary-bold;
       font-size: 36px;
-      font-weight: 600;
       line-height: 44px;
       padding: 48px 36px 36px 36px;
       display: flex;
@@ -62,10 +59,9 @@
     align-items: center;
 
     .title__heading {
-      font-family: $primary-font;
+      font-family: $primary-extra-bold;
       font-size: $page-header-text-size-desktop;
       line-height: $page-line-height-desktop;
-      font-weight: $page-text-weight-desktop;
       color: $white;
       padding: 48px 36px 36px 36px;
     }
@@ -76,8 +72,7 @@
   &__head {
     font-size: $section-header-text-size-desktop;
     line-height: $section-line-height-desktop;
-    font-weight: $section-text-weight-desktop;
-    font-family: $primary-font;
+    font-family: $primary-extra-bold;
     padding: 48px 0 36px 36px;
   }
   &__picture {
@@ -88,33 +83,45 @@
   &__sub {
     font-size: $subheader-text-size-desktop;
     line-height: $subheader-line-height-desktop;
-    font-weight: $subheader-text-weight-desktop;
     padding: 36px 36px 36px 36px;
 
     .sub__paragraph {
+      font-family: $primary-extra-bold;
       font-size: 24px;
-      font-weight: 700;
     }
   }
   &__subheading {
+    font-family: $primary-bold;
     font-size: $subheader-text-size-desktop;
     line-height: $subheader-line-height-desktop;
-    font-weight: $subheader-text-weight-desktop;
   }
   &__paragraph {
     font-size: $body-text-size-desktop;
     line-height: $body-line-height-desktop;
-    font-weight: $body-text-weight-desktop;
     column-count: 2;
     width: 70%;
   }
   &__gallery {
     font-size: $section-header-text-size-desktop;
     line-height: $section-line-height-desktop;
-    font-weight: $section-text-weight-desktop;
-    font-family: $primary-font;
+    font-family: $primary-extra-bold;
     display: grid;
     column-gap: 24px;
     padding: 48px 0 36px 36px;
+  }
+  &__image-wraper {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    // grid-template-rows: 80px auto 80px;
+    column-gap: 24px;
+    row-gap: 24px;
+    img {
+      position: relative;
+      width: 100%;
+    }
+
+    @media screen and (max-width: 760px) {
+      grid-template-columns: 50% 50%;
+    }
   }
 }

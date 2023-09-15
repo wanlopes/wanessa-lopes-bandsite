@@ -1,21 +1,33 @@
 @font-face {
-  font-family: "Avenir Next";
-  src: url("../../Assets/Font/Alternative files/AvenirNextLTProBold.ttf") format("opentype");
+  font-family: "Avenir Next Extra Bold";
+  src: url("../Assets/Font/Alternative files/AvenirNextLTProBold.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
-  font-family: "Avenir Next";
-  src: url("../../Assets/Font/AvenirNextLTPro-Demi.ttf") format("opentype");
+  font-family: "Avenir Next Bold";
+  src: url("../Assets/Font/AvenirNextLTPro-Demi.otf");
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
   font-family: "Avenir Next";
-  src: url("../../Assets/Font/AvenirNextLTPro-Regular.ttf") format("opentype");
+  src: url("../Assets/Font/AvenirNextLTPro-Regular.otf");
   font-weight: 400;
   font-style: normal;
 }
+body {
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -27,20 +39,18 @@
 .footer__heading {
   display: flex;
   flex-direction: row;
-  font-family: "Avenir Next Bold";
+  font-family: "Avenir Next Extra Bold";
   color: #ffffff;
   opacity: 1;
 }
 @media (min-width: 768px) {
   .footer__heading {
-    font-weight: 700;
     font-size: 36px;
     line-height: 44px;
   }
 }
 @media (max-width: 767px) {
   .footer__heading {
-    font-weight: 700;
     font-size: 24px;
     line-height: 32px;
   }
@@ -49,24 +59,32 @@
   display: flex;
   flex-direction: row;
 }
-.footer__images .images__icons {
+.footer__images__icons {
   width: 30px;
   display: flex;
 }
 .footer__info {
   display: flex;
 }
-.footer__info .footer__info--agent {
+.footer__info .info__agent {
+  font-family: "Avenir Next Bold";
   font-size: 14px;
   line-height: 20px;
-  font-weight: 400;
+  color: #ffffff;
+}
+.footer__contact {
+  display: flex;
+}
+.footer__contact .contact__address {
+  font-family: "Avenir Next";
+  font-size: 14px;
+  line-height: 20px;
   color: #ffffff;
 }
 
-.foonter__rights {
+.footer__rights {
   font-size: 14px;
   line-height: 20px;
-  font-weight: 400;
   color: #ffffff;
 }
 
@@ -80,9 +98,8 @@
   display: flex;
 }
 .nav__header {
-  font-family: "Avenir Next Bold";
+  font-family: "Avenir Next Extra Bold";
   font-size: 60px;
-  font-weight: 700;
   line-height: 68px;
   color: #ffffff;
   padding: 36px 48px;
@@ -90,7 +107,6 @@
 .nav__list {
   font-family: "Avenir Next Bold";
   font-size: 36px;
-  font-weight: 600;
   line-height: 44px;
   color: #ffffff;
   display: flex;
@@ -101,7 +117,6 @@
 .nav__list__list__item {
   font-family: "Avenir Next Bold";
   font-size: 36px;
-  font-weight: 600;
   line-height: 44px;
   padding: 48px 36px 36px 36px;
   display: flex;
@@ -132,10 +147,9 @@
   align-items: center;
 }
 .hero__title .title__heading {
-  font-family: "Avenir Next Bold";
+  font-family: "Avenir Next Extra Bold";
   font-size: 60px;
   line-height: 68px;
-  font-weight: 700;
   color: #ffffff;
   padding: 48px 36px 36px 36px;
 }
@@ -143,8 +157,7 @@
 .main__head {
   font-size: 36px;
   line-height: 44px;
-  font-weight: 700;
-  font-family: "Avenir Next Bold";
+  font-family: "Avenir Next Extra Bold";
   padding: 48px 0 36px 36px;
 }
 .main__picture {
@@ -155,22 +168,20 @@
 .main__sub {
   font-size: 24px;
   line-height: 32px;
-  font-weight: 600;
   padding: 36px 36px 36px 36px;
 }
 .main__sub .sub__paragraph {
+  font-family: "Avenir Next Extra Bold";
   font-size: 24px;
-  font-weight: 700;
 }
 .main__subheading {
+  font-family: "Avenir Next Bold";
   font-size: 24px;
   line-height: 32px;
-  font-weight: 600;
 }
 .main__paragraph {
   font-size: 14px;
   line-height: 22px;
-  font-weight: 400;
   -moz-column-count: 2;
        column-count: 2;
   width: 70%;
@@ -178,10 +189,25 @@
 .main__gallery {
   font-size: 36px;
   line-height: 44px;
-  font-weight: 700;
-  font-family: "Avenir Next Bold";
+  font-family: "Avenir Next Extra Bold";
   display: grid;
   -moz-column-gap: 24px;
        column-gap: 24px;
   padding: 48px 0 36px 36px;
+}
+.main__image-wraper {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  -moz-column-gap: 24px;
+       column-gap: 24px;
+  row-gap: 24px;
+}
+.main__image-wraper img {
+  position: relative;
+  width: 100%;
+}
+@media screen and (max-width: 760px) {
+  .main__image-wraper {
+    grid-template-columns: 50% 50%;
+  }
 }/*# sourceMappingURL=landing.css.map */
