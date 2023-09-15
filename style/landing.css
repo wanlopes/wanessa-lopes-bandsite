@@ -106,8 +106,8 @@ body {
 }
 .nav__list {
   font-family: "Avenir Next Bold";
-  font-size: 36px;
-  line-height: 44px;
+  font-size: 24px;
+  line-height: 32px;
   color: #ffffff;
   display: flex;
   justify-content: space-between;
@@ -129,7 +129,7 @@ body {
   margin: 0 auto;
   background-repeat: no-repeat;
   background-position: center;
-  height: 100vh;
+  height: 200vh;
   position: relative;
   /*.hero::before {
     content: "";
@@ -161,18 +161,22 @@ body {
   padding: 48px 0 36px 36px;
 }
 .main__picture {
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   display: block;
+  width: 70%;
 }
 .main__sub {
+  font-family: "Avenir Next Bold";
   font-size: 24px;
   line-height: 32px;
   padding: 36px 36px 36px 36px;
+  width: 50%;
+  margin: 0 auto;
 }
 .main__sub .sub__paragraph {
   font-family: "Avenir Next Extra Bold";
   font-size: 24px;
+  margin: 0 auto;
 }
 .main__subheading {
   font-family: "Avenir Next Bold";
@@ -184,7 +188,9 @@ body {
   line-height: 22px;
   -moz-column-count: 2;
        column-count: 2;
-  width: 70%;
+  width: 60%;
+  margin: 0 auto;
+  padding: 36px;
 }
 .main__gallery {
   font-size: 36px;

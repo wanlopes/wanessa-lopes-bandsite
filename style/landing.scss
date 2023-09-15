@@ -5,16 +5,16 @@
   display: flex;
   &__header {
     font-family: $primary-extra-bold;
-    font-size: 60px;
-    line-height: 68px;
-    color: #ffffff;
+    font-size: $page-header-text-size-desktop;
+    line-height: $page-line-height-desktop;
+    color: $white;
     padding: 36px 48px;
   }
   &__list {
     font-family: $primary-bold;
-    font-size: 36px;
-    line-height: 44px;
-    color: #ffffff;
+    font-size: $subheader-text-size-desktop;
+    line-height: $subheader-line-height-desktop;
+    color: $white;
     display: flex;
     justify-content: space-between;
     list-style-type: none;
@@ -41,7 +41,7 @@
   margin: 0 auto;
   background-repeat: no-repeat;
   background-position: center;
-  height: 100vh;
+  height: 200vh;
   position: relative;
 
   /*.hero::before {
@@ -76,18 +76,22 @@
     padding: 48px 0 36px 36px;
   }
   &__picture {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     display: block;
+    width: 70%;
   }
   &__sub {
+    font-family: $primary-bold;
     font-size: $subheader-text-size-desktop;
     line-height: $subheader-line-height-desktop;
     padding: 36px 36px 36px 36px;
+    width: 50%;
+    margin: 0 auto;
 
     .sub__paragraph {
       font-family: $primary-extra-bold;
       font-size: 24px;
+      margin: 0 auto;
     }
   }
   &__subheading {
@@ -99,7 +103,9 @@
     font-size: $body-text-size-desktop;
     line-height: $body-line-height-desktop;
     column-count: 2;
-    width: 70%;
+    width: 60%;
+    margin: 0 auto;
+    padding: 36px;
   }
   &__gallery {
     font-size: $section-header-text-size-desktop;
