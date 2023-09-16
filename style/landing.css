@@ -101,12 +101,12 @@ body {
   background-color: #323232;
   display: flex;
 }
-.nav__header {
+.nav__logo {
   font-family: "Avenir Next Extra Bold";
   font-size: 60px;
   line-height: 68px;
   color: #ffffff;
-  padding: 36px 48px;
+  padding: 48px 36px;
 }
 .nav__subheader {
   font-family: "Avenir Next Bold";
@@ -141,13 +141,17 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
+  padding: 48px 36px;
+  position: absolute;
+  top: 250px;
+  left: 80px;
 }
 .hero__title .title__heading {
   font-family: "Avenir Next Extra Bold";
   font-size: 60px;
   line-height: 68px;
   color: #ffffff;
-  padding: 48px 36px 36px 36px;
+  padding: 48px 36px;
 }
 
 .main {
@@ -185,27 +189,31 @@ body {
   line-height: 32px;
   padding: 36px 36px 36px 36px;
   width: 50%;
-  margin: 0 auto;
+  margin: 0 350px;
 }
 .main__sub-paragraph {
   font-family: "Avenir Next Extra Bold";
   font-size: 14px;
   line-height: 22px;
+  margin: 0 350px;
+  padding-left: 36px;
 }
 .main__subheading {
   font-family: "Avenir Next Bold";
   font-size: 24px;
   line-height: 32px;
+  padding: 48px 36px 0 36px;
+  margin: 0 350px;
 }
 .main__paragraph {
   font-size: 14px;
   line-height: 22px;
   -moz-column-count: 2;
        column-count: 2;
-  width: 60%;
+  width: 55%;
   margin: 0 auto;
   padding: 36px;
-  font-family: "Avenir Next Extra Bold";
+  font-family: "Avenir Next";
 }
 .main__gallery {
   font-size: 36px;
@@ -231,4 +239,8 @@ body {
   .main__image-wraper {
     grid-template-columns: 50% 50%;
   }
+}
+
+.main__gallery-container {
+  background-color: #fafafa;
 }/*# sourceMappingURL=landing.css.map */
