@@ -4,28 +4,37 @@
   background-color: $bandsite-black;
   display: flex;
   &__logo {
-    font-family: $primary-extra-bold;
-    font-size: $page-header-text-size-desktop;
-    line-height: $page-line-height-desktop;
-    color: $white;
-    padding: 48px 36px;
+    @media (min-width: $tablet-screen-min-size) {
+      padding: $headline-padding-before-desktop
+        $headline-padding-between-components-desktop
+        $headline-padding-after-desktop $headline-padding-before-desktop;
+    }
+    @media (max-width: $mobile-screen-max-size) {
+      padding: $headline-padding-before-mobile
+        $headline-padding-between-components-mobile
+        $headline-padding-after-mobile
+        $headline-padding-between-components-mobile;
+    }
   }
   &__subheader {
     font-family: $primary-bold;
-    font-size: $body-text-size-desktop;
+    font-size: $subheader-text-size-desktop;
     line-height: $subheader-line-height-desktop;
-    color: $white;
+    color: $silver;
     display: flex;
     justify-content: space-between;
     //  list-style-type: none;
     padding: 36px;
     &:hover {
       border-bottom: 3px solid $white;
+      color: $white;
+      font-family: $primary-extra-bold;
+      font-size: $subheader-text-size-desktop;
     }
     &__item {
       font-family: $primary-bold;
       font-size: $body-text-size-desktop;
-      line-height: 44px;
+      line-height: $section-line-height-desktop;
       display: flex;
       justify-content: space-between;
     }
@@ -89,6 +98,7 @@
     margin: 0 auto;
     display: block;
     width: 60%;
+    height: 600px;
   }
   &__sub {
     font-family: $primary-bold;
@@ -105,11 +115,6 @@
     margin: 0 350px;
     padding-left: 36px;
   }
-  /*&__paragraph {
-    font-family: $primary-extra-bold;
-    font-size: 24px;
-    margin: 0 auto; 
-  } */
   &__subheading {
     font-family: $primary-bold;
     font-size: $subheader-text-size-desktop;
@@ -117,41 +122,56 @@
     padding: 48px 36px 0 36px;
     margin: 0 350px;
   }
-  
+
   &__paragraph {
+    background-color: red;
     font-size: $body-text-size-desktop;
     line-height: $body-line-height-desktop;
     column-count: 2;
     width: 55%;
     margin: 0 auto;
     padding: 36px;
-    font-family: $primary-normal;
-  }
-  &__gallery {
-    font-size: $section-header-text-size-desktop;
-    line-height: $section-line-height-desktop;
-    font-family: $primary-extra-bold;
-    display: grid;
-    column-gap: 24px;
-    padding: 48px 0 36px 36px;
-  }
-  &__image-wraper {
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-    // grid-template-rows: 80px auto 80px;
-    column-gap: 24px;
-    row-gap: 24px;
-    img {
-      position: relative;
-      width: 100%;
+    // font-family: $primary-normal;
+    @media (max-width: $tablet-screen-min-size) {
+      column-count: 2;
+      font-size: $body-text-size-desktop;
+      line-height: $body-line-height-desktop;
+      font-weight: $body-text-weight-desktop;
+    }
+    @media (min-width: $tablet-screen-min-size) {
+      column-count: 2;
+      font-size: $body-text-size-desktop;
+      line-height: $body-line-height-desktop;
+      font-weight: $body-text-weight-desktop;
+    }
+    @media (max-width: $mobile-screen-max-size) {
+      column-count: 1;
+      font-size: $body-text-size-mobile;
+      line-height: $body-line-height-mobile;
+      font-weight: $body-text-weight-mobile;
     }
 
-    @media screen and (max-width: 760px) {
-      grid-template-columns: 50% 50%;
+    &__gallery-container {
+      background-color: $alabaster;
+      &__gallery {
+        font-size: $section-header-text-size-desktop;
+        line-height: $section-line-height-desktop;
+        font-family: $primary-extra-bold;
+        display: grid;
+        column-gap: 24px;
+        padding: 48px 0 36px 36px;
+      }
+      &__image-wraper {
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        // grid-template-rows: 80px auto 80px;
+        column-gap: 24px;
+        row-gap: 24px;
+        img {
+          position: relative;
+          width: 100%;
+        }
+      }
     }
   }
 }
-
-.main__gallery-container {
-    background-color: $alabaster;
-  }

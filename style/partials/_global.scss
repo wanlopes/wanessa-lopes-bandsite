@@ -47,26 +47,39 @@ body {
       display: flex;
     }
   }
-  &__info {
+  &__container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 
-    .info__agent {
-      font-family: $primary-bold;
-      font-size: $footer-text-size-desktop;
-      line-height: $footer-line-height-desktop;
-      color: $white;
-    }
-  }
-  &__contact {
-    display: flex;
-    flex-direction: column;
+    &__division {
+      display: flex;
+      flex-direction: row;
+      margin-right: 36px;
 
-    .contact__address {
-      font-family: $primary-normal;
-      font-size: $footer-text-size-desktop;
-      line-height: $footer-line-height-desktop;
-      color: $white;
+      &__info {
+        display: flex;
+        flex-direction: column;
+        padding-top: 36px;
+
+        &__agent {
+          font-family: $primary-bold;
+          font-size: $footer-text-size-desktop;
+          line-height: $footer-line-height-desktop;
+          color: $white;
+        }
+      }
+
+      &__contact {
+        display: flex;
+        flex-direction: column;
+
+        &__address {
+          font-family: $primary-normal;
+          font-size: $footer-text-size-desktop;
+          line-height: $footer-line-height-desktop;
+          color: $white;
+        }
+      }
     }
   }
 }
