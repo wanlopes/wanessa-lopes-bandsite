@@ -38,7 +38,7 @@ body {
   margin-top: 36px;
 }
 .footer__heading {
-  padding: 48px 48px;
+  padding: 48px 120px;
   display: flex;
   flex-direction: row;
   font-family: "Avenir Next Bold";
@@ -68,10 +68,11 @@ body {
 .footer__container {
   display: flex;
   flex-direction: row;
+  margin-left: 120px;
 }
 .footer__container__division {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin-right: 36px;
 }
 .footer__container__division__info {
@@ -80,6 +81,7 @@ body {
   padding-top: 36px;
 }
 .footer__container__division__info__agent {
+  display: flex;
   font-family: "Avenir Next Bold";
   font-size: 14px;
   line-height: 20px;
@@ -88,12 +90,15 @@ body {
 .footer__container__division__contact {
   display: flex;
   flex-direction: column;
+  padding-top: 15px;
+  width: 50%;
 }
 .footer__container__division__contact__address {
   font-family: "Avenir Next";
   font-size: 14px;
   line-height: 20px;
   color: #ffffff;
+  padding-top: 15px;
 }
 
 .footer__rights {
@@ -229,7 +234,7 @@ body {
   .main__paragraph {
     -moz-column-count: 2;
          column-count: 2;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 22px;
     font-weight: 400;
   }
@@ -238,7 +243,7 @@ body {
   .main__paragraph {
     -moz-column-count: 2;
          column-count: 2;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 22px;
     font-weight: 400;
   }

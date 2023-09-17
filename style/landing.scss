@@ -121,6 +121,12 @@
     line-height: $subheader-line-height-desktop;
     padding: 48px 36px 0 36px;
     margin: 0 350px;
+    @media (max-width: $tablet-screen-max-size) {
+    }
+    @media (min-width: $tablet-screen-min-size) {
+    }
+    @media (max-width: $mobile-screen-max-size) {
+    }
   }
 
   &__paragraph {
@@ -134,13 +140,13 @@
     // font-family: $primary-normal;
     @media (max-width: $tablet-screen-min-size) {
       column-count: 2;
-      font-size: $body-text-size-desktop;
+      font-size: 16px;
       line-height: $body-line-height-desktop;
       font-weight: $body-text-weight-desktop;
     }
     @media (min-width: $tablet-screen-min-size) {
       column-count: 2;
-      font-size: $body-text-size-desktop;
+      font-size: 16px;
       line-height: $body-line-height-desktop;
       font-weight: $body-text-weight-desktop;
     }

@@ -23,7 +23,7 @@ body {
   background-color: #323232;
   margin-top: 36px;
   &__heading {
-    padding: 48px 48px;
+    padding: 48px 120px;
     display: flex;
     flex-direction: row;
     font-family: $primary-bold;
@@ -50,10 +50,11 @@ body {
   &__container {
     display: flex;
     flex-direction: row;
+    margin-left: 120px;
 
     &__division {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       margin-right: 36px;
 
       &__info {
@@ -62,6 +63,8 @@ body {
         padding-top: 36px;
 
         &__agent {
+          display: flex;
+
           font-family: $primary-bold;
           font-size: $footer-text-size-desktop;
           line-height: $footer-line-height-desktop;
@@ -72,12 +75,15 @@ body {
       &__contact {
         display: flex;
         flex-direction: column;
+        padding-top: 15px;
+        width: 50%;
 
         &__address {
           font-family: $primary-normal;
           font-size: $footer-text-size-desktop;
           line-height: $footer-line-height-desktop;
           color: $white;
+          padding-top: 15px;
         }
       }
     }
