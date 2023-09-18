@@ -60,6 +60,8 @@ body {
 .footer__images {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  margin-top: -80px;
 }
 .footer__images__icons {
   width: 30px;
@@ -100,16 +102,21 @@ body {
   color: #ffffff;
   padding-top: 15px;
 }
-
-.footer__rights {
+.footer__icon {
+  display: flex;
+  flex-direction: row-reverse;
+  top: -50px;
+}
+.footer__icon__logo {
+  height: 20px;
+  width: 120px;
+}
+.footer .footer__rights {
   font-size: 14px;
   line-height: 20px;
   color: #ffffff;
-}
-
-.footer__logo {
-  height: 20px;
-  width: 120px;
+  font-family: "Avenir Next";
+  padding: 48px 36px 36px 120px;
 }
 
 .nav {
