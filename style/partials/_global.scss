@@ -37,7 +37,8 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: -80px;
+  position: relative;
+  top: -84px;
 }
 
 @mixin footer-rights-style {

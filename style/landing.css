@@ -61,7 +61,8 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: -80px;
+  position: relative;
+  top: -84px;
 }
 .footer__images__icons {
   width: 30px;
@@ -192,7 +193,7 @@ body {
     line-height: 44px;
   }
 }
-@media (max-width: 767px) {
+@media (min-width: 320px) and (max-width: 767px) {
   .main__head {
     padding: 24px 16px 16px 16px;
     font-size: 24px;
@@ -224,7 +225,7 @@ body {
   font-family: "Avenir Next Bold";
   font-size: 24px;
   line-height: 32px;
-  padding: 48px 36px 0 36px;
+  padding: 48px 36px 0 0;
   margin: 0 350px;
 }
 .main__paragraph {
@@ -233,7 +234,7 @@ body {
   line-height: 22px;
   -moz-column-count: 2;
        column-count: 2;
-  width: 55%;
+  max-width: 960px;
   margin: 0 auto;
   padding: 36px;
 }
