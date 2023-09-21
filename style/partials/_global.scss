@@ -22,24 +22,19 @@ body {
 @mixin footer-basic-style {
   background-color: $bandsite-black;
   margin-top: 36px;
+  opacity: 1;
 }
 
 @mixin footer-heading-style {
-  padding: 48px 120px 30px 130px;
   display: flex;
   flex-direction: row;
   font-family: $primary-bold;
   color: $white;
-  opacity: 1;
 }
 
 @mixin footer-images-style {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  position: relative;
-  top: -84px;
-  right: 180px;
 }
 
 @mixin footer-rights-style {
@@ -47,21 +42,12 @@ body {
   line-height: $footer-line-height-desktop;
   color: $white;
   font-family: $primary-normal;
-  padding: 25px 36px 36px 128px;
 }
 
 .footer {
   @include footer-basic-style;
   &__heading {
     @include footer-heading-style;
-    @media (min-width: $tablet-screen-min-size) {
-      font-size: $section-header-text-size-desktop;
-      line-height: $section-line-height-desktop;
-    }
-    @media (max-width: $mobile-screen-max-size) {
-      font-size: $section-header-text-size-mobile;
-      line-height: $section-line-height-mobile;
-    }
   }
   &__images {
     @include footer-images-style;
@@ -70,21 +56,17 @@ body {
       display: flex;
 
       &__icons {
-        width: 30px;
         display: flex;
-        padding-left: 36px;
       }
     }
   }
   &__container {
     display: flex;
-    flex-direction: row;
-    margin-left: 130px;
+    flex-direction: column;
 
     &__division {
       display: flex;
       flex-direction: column;
-      margin-right: 36px;
 
       &__info {
         display: flex;
@@ -116,11 +98,8 @@ body {
     }
   }
   &__icon {
-    position: relative;
     display: flex;
-    flex-direction: row-reverse;
-    top: -267px;
-    right: 240px;
+
     &__logo {
       height: 20px;
       width: 120px;
@@ -129,5 +108,61 @@ body {
 
   .footer__rights {
     @include footer-rights-style;
+  }
+}
+
+@media (min-width: $mobile-screen-min-size) and (max-width: 767px) {
+  .footer__heading {
+    font-size: 38px;
+    line-height: $section-line-height-mobile;
+    padding: 24px 16px 24px 24px;
+  }
+  .footer__images {
+    justify-content: center;
+  }
+  .footer__images__box__icons {
+    width: 30px;
+    padding-left: 36px;
+  }
+  .footer__container {
+    padding-left: 24px;
+  }
+  .footer__container__division__info {
+    padding-top: 24px;
+  }
+  .footer__icon {
+    padding: 48px 0 16px 24px;
+  }
+  .footer__rights {
+    margin-left: 0;
+    padding-left: 24px;
+  }
+}
+
+@media (min-width: $tablet-screen-min-size) and (max-width: 1920px) {
+  .footer__heading {
+    padding: 48px 120px 30px 130px;
+  }
+  .footer__images {
+    justify-content: center;
+    position: relative;
+    top: -84px;
+    right: 180px;
+  }
+  .footer__images__box__icons {
+    width: 30px;
+    padding-left: 36px;
+  }
+  .footer__container {
+    margin-right: 36px;
+  }
+  .footer__rights {
+    padding: 25px 36px 36px 128px;
+  }
+  .footer__icon {
+    flex-direction: row-reverse;
+    position: relative;
+    top: -267px;
+    right: 240px;
   }
 }

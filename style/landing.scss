@@ -4,20 +4,11 @@
   background-color: $bandsite-black;
   display: flex;
   &__logo {
-    @media (min-width: $tablet-screen-min-size) {
-      padding: $headline-padding-before-desktop
-        $headline-padding-between-components-desktop
-        $headline-padding-after-desktop 90px;
-    }
-    @media (max-width: $mobile-screen-max-size) {
-      padding: $headline-padding-before-mobile
-        $headline-padding-between-components-mobile
-        $headline-padding-after-mobile
-        $headline-padding-between-components-mobile;
-    }
+    width: 120px;
+    height: 20px;
   }
   &__subheader {
-    font-family: $primary-bold;
+    font-family: $primary-normal;
     font-size: $subheader-text-size-desktop;
     line-height: $subheader-line-height-desktop;
     color: $silver;
@@ -28,7 +19,7 @@
     &:hover {
       border-bottom: 3px solid $white;
       color: $white;
-      font-family: $primary-extra-bold;
+      font-family: $primary-bold;
       font-size: $subheader-text-size-desktop;
     }
     &__item {
@@ -59,13 +50,8 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 48px 36px;
-    position: absolute;
-    top: 250px;
-    left: 80px;
     .title__heading {
-      font-family: $primary-extra-bold;
-      font-size: $page-header-text-size-desktop;
+      font-family: $primary-bold;
       line-height: $page-line-height-desktop;
       color: $white;
       padding: 48px 36px;
@@ -78,24 +64,7 @@
 
 .main {
   &__head {
-    font-family: $primary-extra-bold;
-
-    @media (min-width: $tablet-screen-min-size) {
-      padding: $headline-padding-before-desktop
-        $headline-padding-between-components-desktop
-        $headline-padding-after-desktop
-        $headline-padding-between-components-desktop;
-      font-size: $section-header-text-size-desktop;
-      line-height: $section-line-height-desktop;
-    }
-    @media (min-width: $mobile-screen-min-size) and (max-width: $mobile-screen-max-size) {
-      padding: $headline-padding-before-mobile
-        $headline-padding-between-components-mobile
-        $headline-padding-after-mobile
-        $headline-padding-between-components-mobile;
-      font-size: $section-header-text-size-mobile;
-      line-height: $section-line-height-mobile;
-    }
+    font-family: $primary-bold;
   }
   &__picture {
     margin: 0 auto;
@@ -105,64 +74,17 @@
   }
   &__sub {
     font-family: $primary-bold;
-    font-size: $subheader-text-size-desktop;
-    line-height: $subheader-line-height-desktop;
-    padding: 36px 36px 36px 36px;
-    width: 50%;
-    margin: 0 350px;
   }
   &__sub-paragraph {
-    font-family: $primary-extra-bold;
-    font-size: $body-text-size-desktop;
-    line-height: $body-line-height-desktop;
-    margin: 0 350px;
-    padding-left: 36px;
+    font-family: $primary-bold;
   }
   &__subheading {
     font-family: $primary-bold;
-    font-size: $subheader-text-size-desktop;
-    line-height: $subheader-line-height-desktop;
-    padding: 48px 36px 0 0;
-    margin: 0 350px;
-    @media (max-width: $tablet-screen-max-size) {
-    }
-    @media (min-width: $tablet-screen-min-size) {
-    }
-    @media (max-width: $mobile-screen-max-size) {
-    }
   }
 
   &__paragraph {
     background-color: red;
-    font-size: $body-text-size-desktop;
-    line-height: $body-line-height-desktop;
-    column-count: 2;
-    max-width: 960px;
-    // width: 55%;
-    margin: 0 auto;
-    padding: 36px;
-    // font-family: $primary-normal;
-    @media (max-width: $tablet-screen-min-size) {
-      column-count: 2;
-      font-size: 16px;
-      line-height: $body-line-height-desktop;
-      font-weight: $body-text-weight-desktop;
-      font-family: $primary-normal;
-    }
-    @media (min-width: $tablet-screen-min-size) {
-      column-count: 2;
-      font-family: $primary-normal;
-      font-size: 16px;
-      line-height: $body-line-height-desktop;
-      font-weight: $body-text-weight-desktop;
-    }
-    @media (max-width: $mobile-screen-max-size) {
-      column-count: 1;
-      font-size: 14px;
-      line-height: $body-line-height-mobile;
-      font-weight: $body-text-weight-mobile;
-      font-family: $primary-normal;
-    }
+    font-family: $primary-normal;
 
     &__gallery-container {
       background-color: $alabaster;
@@ -190,13 +112,120 @@
 }
 
 @media (min-width: $mobile-screen-min-size) and (max-width: 767px) {
-  .hero__title .title__heading {
-    padding: 48px;
+  .nav__logo {
+    padding: $headline-padding-before-mobile
+      $headline-padding-between-components-mobile $headline-padding-after-mobile
+      $headline-padding-between-components-mobile;
+  }
+  .nav__subheader {
+    font-size: 32px;
+  }
+  .title__heading {
+    font-size: 46px;
+    padding: 36px 16px;
+  }
+  .hero__title {
+    padding: 36px 16px;
+    position: absolute;
+    top: 100px;
+    left: 0;
+  }
+  .main__head {
+    padding: 34px 16px 24px 30px;
+    font-size: 40px;
+    line-height: $section-line-height-mobile;
+  }
+  .main__sub {
+    line-height: $section-line-height-mobile;
+    font-weight: $subheader-text-weight-mobile;
+    font-size: 24px;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 24px;
+    width: 90%;
+  }
+  .main__sub-paragraph {
+    font-size: $subheader-text-size-desktop;
+    line-height: $subheader-line-height-desktop;
+    padding: 36px 36px 16px 36px;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .main__subheading {
+    font-size: $subheader-text-size-desktop;
+    line-height: $subheader-line-height-desktop;
+    padding: 24px 16px 0 30px;
+    margin: 0 auto;
+  }
+  .main__paragraph {
+    padding: 24px 24px;
+    column-count: 1;
+    font-size: 22px;
+    line-height: 30px;
+    font-weight: $body-text-weight-mobile;
+    font-family: $primary-normal;
   }
   .main__paragraph__gallery-container__image-wraper {
     display: grid;
     grid-template-columns: 1fr;
     padding: 1em;
     grid-row-gap: 100px;
+  }
+}
+
+@media (min-width: $tablet-screen-min-size) and (max-width: 1920px) {
+  .nav__logo {
+    padding: $headline-padding-before-desktop
+      $headline-padding-between-components-desktop
+      $headline-padding-after-desktop 90px;
+    width: 200px;
+  }
+  .title__heading {
+    font-size: $page-header-text-size-desktop;
+  }
+  .hero__title {
+    padding: 48px 36px;
+    position: absolute;
+    top: 250px;
+    left: 80px;
+  }
+  .main__head {
+    padding: $headline-padding-before-desktop
+      $headline-padding-between-components-desktop
+      $headline-padding-after-desktop
+      $headline-padding-between-components-desktop;
+    font-size: $section-header-text-size-desktop;
+    line-height: $section-line-height-desktop;
+  }
+  .main__sub {
+    font-size: $subheader-text-size-desktop;
+    line-height: $subheader-line-height-desktop;
+    padding: 36px 36px 36px 36px;
+    width: 50%;
+    margin: 0 350px;
+  }
+  .main__sub-paragraph {
+    font-size: $body-text-size-desktop;
+    line-height: $body-line-height-desktop;
+    margin: 0 350px;
+    padding-left: 36px;
+  }
+  .main__subheading {
+    font-size: $subheader-text-size-desktop;
+    line-height: $subheader-line-height-desktop;
+    padding: 48px 36px 0 0;
+    margin: 0 350px;
+  }
+  .main__paragraph {
+    column-count: 2;
+    font-size: 16px;
+    line-height: $body-line-height-desktop;
+    font-weight: $body-text-weight-desktop;
+    font-family: $primary-normal;
+    font-size: $body-text-size-desktop;
+    max-width: 960px;
+    // width: 55%;
+    margin: 0 auto;
+    padding: 36px;
   }
 }
