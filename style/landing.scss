@@ -2,32 +2,32 @@
 
 .nav {
   background-color: $bandsite-black;
-  display: flex;
-  &__logo {
-    width: 120px;
-    height: 20px;
-  }
-  &__subheader {
-    font-family: $primary-normal;
-    font-size: $subheader-text-size-desktop;
-    line-height: $subheader-line-height-desktop;
-    color: $silver;
+  &__container {
     display: flex;
-    justify-content: space-between;
-    //  list-style-type: none;
-    padding: 36px;
-    &:hover {
-      border-bottom: 3px solid $white;
-      color: $white;
-      font-family: $primary-bold;
-      font-size: $subheader-text-size-desktop;
-    }
-    &__item {
-      font-family: $primary-bold;
-      font-size: $body-text-size-desktop;
-      line-height: $section-line-height-desktop;
+    &__logo {
       display: flex;
-      justify-content: space-between;
+    }
+  }
+
+  &__pack {
+    display: flex;
+    &__subheader {
+      font-family: $primary-normal;
+      color: $silver;
+      display: flex;
+      //  list-style-type: none;
+      &:hover {
+        border-bottom: 3px solid $white;
+        color: $white;
+        font-family: $primary-bold;
+        font-size: $subheader-text-size-desktop;
+      }
+      &__item {
+        color: $silver;
+        font-family: $primary-bold;
+        display: flex;
+        justify-content: space-between;
+      }
     }
   }
 }
@@ -69,8 +69,6 @@
   &__picture {
     margin: 0 auto;
     display: block;
-    width: 60%;
-    height: 600px;
   }
   &__sub {
     font-family: $primary-bold;
@@ -112,13 +110,28 @@
 }
 
 @media (min-width: $mobile-screen-min-size) and (max-width: 767px) {
-  .nav__logo {
+  .nav__container {
+    justify-content: center;
+  }
+  .nav__container__logo {
     padding: $headline-padding-before-mobile
       $headline-padding-between-components-mobile $headline-padding-after-mobile
       $headline-padding-between-components-mobile;
+      width: 200px;
+  }
+  .nav__pack {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 24px;
   }
   .nav__subheader {
-    font-size: 32px;
+    padding-top: 24px;
+    display: flex;
+    flex-direction: column;
+  }
+  .nav__subheader__item {
+    font-size: $section-header-text-size-mobile;
+    padding: 48px 36px;
   }
   .title__heading {
     font-size: 46px;
@@ -134,6 +147,11 @@
     padding: 34px 16px 24px 30px;
     font-size: 40px;
     line-height: $section-line-height-mobile;
+  }
+  .main__picture {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
   }
   .main__sub {
     line-height: $section-line-height-mobile;
@@ -169,16 +187,30 @@
     display: grid;
     grid-template-columns: 1fr;
     padding: 1em;
-    grid-row-gap: 100px;
+    grid-row-gap: 24px;
   }
 }
 
 @media (min-width: $tablet-screen-min-size) and (max-width: 1920px) {
+  .nav {
+    display: flex;
+  }
   .nav__logo {
     padding: $headline-padding-before-desktop
       $headline-padding-between-components-desktop
       $headline-padding-after-desktop 90px;
-    width: 200px;
+    width: 120px;
+      height: 20px;
+  }
+  .nav__subheader {
+    font-size: $subheader-text-size-desktop;
+    line-height: $subheader-line-height-desktop;
+    justify-content: space-between;
+    padding: 36px;
+  }
+  .nav__subheader__item {
+    font-size: $body-text-size-desktop;
+    line-height: $section-line-height-desktop;
   }
   .title__heading {
     font-size: $page-header-text-size-desktop;
@@ -196,6 +228,10 @@
       $headline-padding-between-components-desktop;
     font-size: $section-header-text-size-desktop;
     line-height: $section-line-height-desktop;
+  }
+  .main__picture {
+    width: 60%;
+    height: 600px;
   }
   .main__sub {
     font-size: $subheader-text-size-desktop;

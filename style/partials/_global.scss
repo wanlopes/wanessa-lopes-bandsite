@@ -7,7 +7,7 @@ body {
 }
 
 .container {
-  max-width: 960px;
+  max-width: 60rem;
   margin: 0 auto;
   position: relative;
   width: 100%;
@@ -21,7 +21,7 @@ body {
 
 @mixin footer-basic-style {
   background-color: $bandsite-black;
-  margin-top: 36px;
+  margin-top: 2.25rem;
   opacity: 1;
 }
 
@@ -84,7 +84,7 @@ body {
       &__contact {
         display: flex;
         flex-direction: column;
-        padding-top: 15px;
+        padding-top: 0.9375rem;
         width: 50%;
 
         &__address {
@@ -92,7 +92,7 @@ body {
           font-size: $footer-text-size-desktop;
           line-height: $footer-line-height-desktop;
           color: $white;
-          padding-top: 15px;
+          padding-top: 0.9375rem;
         }
       }
     }
@@ -101,8 +101,8 @@ body {
     display: flex;
 
     &__logo {
-      height: 20px;
-      width: 120px;
+      height: 1.25rem;
+      width: 7.5rem;
     }
   }
 
@@ -118,7 +118,7 @@ body {
     padding: 24px 16px 24px 24px;
   }
   .footer__images {
-    justify-content: center;
+    justify-content: flex-start;
   }
   .footer__images__box__icons {
     width: 30px;
@@ -132,10 +132,12 @@ body {
   }
   .footer__icon {
     padding: 48px 0 16px 24px;
+    width: 100%;
   }
   .footer__rights {
     margin-left: 0;
     padding-left: 24px;
+    padding-bottom: 24px;
   }
 }
 
