@@ -11,7 +11,7 @@ body {
   margin: 0 auto;
   position: relative;
   width: 100%;
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 * {
@@ -81,7 +81,7 @@ body {
         display: flex;
         flex-direction: column;
         padding-top: 0.9375rem;
-        width: 50%;
+        width: 70%;
 
         &__address {
           font-family: $primary-normal;
@@ -109,35 +109,35 @@ body {
   .footer__heading {
     font-size: 38px;
     line-height: $section-line-height-mobile;
-    padding: 24px 16px 24px 24px;
+    padding: $headline-padding-before-mobile $headline-padding-after-mobile $headline-padding-before-mobile $headline-padding-before-mobile;
   }
   .footer__images {
     justify-content: flex-start;
   }
   .footer__images__box__icons {
     width: 30px;
-    padding-left: 36px;
+    padding-left: $headline-padding-after-desktop;
   }
   .footer__container {
-    padding-left: 24px;
+    padding-left: $headline-padding-before-mobile;
   }
   .footer__container__division__info {
-    padding-top: 24px;
+    padding-top: $headline-padding-before-mobile;
   }
   .footer__icon {
-    padding: 48px 0 16px 24px;
+    padding: $headline-padding-before-desktop 0 $headline-padding-after-mobile $headline-padding-before-mobile;
     width: 100%;
   }
   .footer__rights {
     margin-left: 0;
-    padding-left: 24px;
-    padding-bottom: 24px;
+    padding-left: $headline-padding-before-mobile;
+    padding-bottom: $headline-padding-before-mobile;
   }
 }
 
 @media (min-width: $tablet-screen-min-size) and (max-width: $tablet-screen-max-size) {
   .footer__heading {
-    padding: 48px 120px 30px 80px;
+    padding: $headline-padding-before-desktop 120px 30px 80px;
     font-size: $section-header-text-size-desktop;
   }
   .footer__images {
@@ -149,7 +149,7 @@ body {
   }
   .footer__images__box__icons {
     width: 30px;
-    padding-left: 36px;
+    padding-left: $headline-padding-after-desktop;
   }
   .footer__container {
     display: flex;
@@ -169,7 +169,7 @@ body {
     line-height: $footer-line-height-desktop;
   }
   .footer__rights {
-    padding: 25px 36px 36px 70px;
+    padding: 25px $headline-padding-after-desktop $headline-padding-after-desktop 70px;
     font-size: $footer-text-size-desktop;
     line-height: $footer-line-height-desktop;
   }
@@ -184,7 +184,7 @@ body {
 @media (min-width: $desktop-screen-min-size) and (max-width: $desktop-screen-max-size) {
   .footer__heading {
     font-size: $section-header-text-size-desktop;
-    padding: 48px;
+    padding: $headline-padding-before-desktop;
   }
   .footer__images {
     justify-content: center;
@@ -194,17 +194,17 @@ body {
   }
   .footer__images__box__icons {
     width: 30px;
-    padding-left: 36px;
+    padding-left: $headline-padding-after-desktop;
   }
   .footer__container {
-    margin-right: 36px;
+    margin-right: $headline-padding-after-desktop;
     display: flex;
     flex-direction: row;
-    padding-left: 48px;
+    padding-left: $headline-padding-before-desktop;
     width: 60%;
   }
   .footer__rights {
-    padding: 25px 36px 36px 128px;
+    padding: 25px $headline-padding-after-desktop $headline-padding-after-desktop $headline-padding-before-desktop;
   }
   .footer__icon {
     flex-direction: row-reverse;

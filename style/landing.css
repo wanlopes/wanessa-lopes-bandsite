@@ -25,7 +25,6 @@ body {
   margin: 0 auto;
   position: relative;
   width: 100%;
-  overflow: hidden;
 }
 
 * {
@@ -75,7 +74,7 @@ body {
   display: flex;
   flex-direction: column;
   padding-top: 0.9375rem;
-  width: 50%;
+  width: 70%;
 }
 .footer__container__division__contact__address {
   font-family: "Avenir Next";
@@ -191,7 +190,7 @@ body {
     width: 60%;
   }
   .footer__rights {
-    padding: 25px 36px 36px 128px;
+    padding: 25px 36px 36px 48px;
   }
   .footer__icon {
     flex-direction: row-reverse;
@@ -220,14 +219,18 @@ body {
 .nav__pack__subheader:hover {
   border-bottom: 3px solid #ffffff;
   color: #ffffff;
-  font-family: "Avenir Next Bold";
-  font-size: 24px;
+  font-family: "Avenir Next Extra Bold";
+  font-size: 14px;
 }
 .nav__pack__subheader__item {
-  color: #afafaf;
+  color: #e1e1e1;
   font-family: "Avenir Next";
   display: flex;
   justify-content: space-between;
+}
+.nav__pack__subheader__item:hover {
+  font-family: "Avenir Next Extra Bold";
+  color: #ffffff;
 }
 
 .hero {
@@ -273,13 +276,13 @@ body {
   font-family: "Avenir Next Bold";
 }
 .main__paragraph {
-  background-color: red;
   font-family: "Avenir Next";
 }
-.main__paragraph__gallery-container {
+
+.gallery {
   background-color: #fafafa;
 }
-.main__paragraph__gallery-container__gallery {
+.gallery__container {
   font-size: 36px;
   line-height: 44px;
   font-family: "Avenir Next Extra Bold";
@@ -288,14 +291,14 @@ body {
        column-gap: 24px;
   padding: 48px 0 36px 36px;
 }
-.main__paragraph__gallery-container__image-wraper {
+.gallery__image-wraper {
   display: grid;
   grid-template-columns: 33% 33% 33%;
   -moz-column-gap: 24px;
        column-gap: 24px;
   row-gap: 24px;
 }
-.main__paragraph__gallery-container__image-wraper img {
+.gallery__image-wraper img {
   position: relative;
   width: 100%;
 }
@@ -381,8 +384,11 @@ body {
   }
 }
 @media (min-width: 768px) and (max-width: 1279px) {
+  .nav {
+    display: flex;
+  }
   .nav__container {
-    padding: 48px 36px 38px 48px;
+    padding: 48px 36px 36px 48px;
   }
   .nav__container__logo {
     width: 120px;
@@ -452,20 +458,25 @@ body {
   }
 }
 @media (min-width: 1280px) and (max-width: 1920px) {
-  .nav__logo {
+  .nav {
+    display: flex;
+  }
+  .nav__container {
     padding: 48px 36px 36px 90px;
+  }
+  .nav__logo {
     width: 120px;
     height: 20px;
   }
-  .nav__subheader {
-    font-size: 24px;
+  .nav__pack__subheader {
+    font-size: 14px;
     line-height: 32px;
     justify-content: space-between;
     padding: 36px;
   }
-  .nav__subheader__item {
+  .nav__pack__subheader__item {
     font-size: 14px;
-    line-height: 44px;
+    line-height: 32px;
   }
   .title__heading {
     font-size: 60px;
@@ -488,15 +499,14 @@ body {
   .main__sub {
     font-size: 24px;
     line-height: 32px;
-    padding: 36px 36px 36px 36px;
-    width: 50%;
-    margin: 0 350px;
+    padding: 36px 36px 0 36px;
+    width: 60%;
+    margin: 0 auto;
   }
   .main__sub-paragraph {
     font-size: 14px;
     line-height: 22px;
-    margin: 0 350px;
-    padding-left: 36px;
+    padding: 36px 250px;
   }
   .main__subheading {
     font-size: 24px;

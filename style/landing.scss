@@ -15,18 +15,21 @@
       font-family: $primary-normal;
       color: $silver;
       display: flex;
-      //  list-style-type: none;
       &:hover {
         border-bottom: 3px solid $white;
         color: $white;
-        font-family: $primary-bold;
-        font-size: $subheader-text-size-desktop;
+        font-family: $primary-extra-bold;
+        font-size: $body-text-size-desktop;
       }
       &__item {
-        color: $silver;
+        color: $mercury;
         font-family: $primary-normal;
         display: flex;
         justify-content: space-between;
+        &:hover {
+          font-family: $primary-extra-bold;
+          color: $white;
+        }
       }
     }
   }
@@ -54,9 +57,9 @@
       font-family: $primary-bold;
       line-height: $page-line-height-desktop;
       color: $white;
-      padding: 48px 36px;
+      padding: $headline-padding-before-desktop $headline-padding-after-desktop;
       @media (min-width: $mobile-screen-min-size) and (max-width: $mobile-screen-max-size) {
-        padding-top: 36px;
+        padding-top: $headline-padding-after-desktop;
       }
     }
   }
@@ -81,30 +84,29 @@
   }
 
   &__paragraph {
-    background-color: red;
     font-family: $primary-normal;
+  }
+}
 
-    &__gallery-container {
-      background-color: $alabaster;
-      &__gallery {
-        font-size: $section-header-text-size-desktop;
-        line-height: $section-line-height-desktop;
-        font-family: $primary-extra-bold;
-        display: grid;
-        column-gap: 24px;
-        padding: 48px 0 36px 36px;
-      }
-      &__image-wraper {
-        display: grid;
-        grid-template-columns: 33% 33% 33%;
-        // grid-template-rows: 80px auto 80px;
-        column-gap: 24px;
-        row-gap: 24px;
-        img {
-          position: relative;
-          width: 100%;
-        }
-      }
+.gallery {
+  background-color: $alabaster;
+  &__container {
+    font-size: $section-header-text-size-desktop;
+    line-height: $section-line-height-desktop;
+    font-family: $primary-extra-bold;
+    display: grid;
+    column-gap: 24px;
+    padding: $headline-padding-before-desktop 0 $headline-padding-after-desktop
+      $headline-padding-after-desktop;
+  }
+  &__image-wraper {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    column-gap: 24px;
+    row-gap: 24px;
+    img {
+      position: relative;
+      width: 100%;
     }
   }
 }
@@ -122,23 +124,23 @@
   .nav__pack {
     flex-direction: row;
     justify-content: space-around;
-    padding: 24px;
+    padding: $headline-padding-before-mobile;
   }
   .nav__subheader {
-    padding-top: 24px;
+    padding-top: $headline-padding-before-mobile;
     display: flex;
     flex-direction: column;
   }
   .nav__subheader__item {
     font-size: $section-header-text-size-mobile;
-    padding: 48px 36px;
+    padding: $headline-padding-before-desktop $headline-padding-after-desktop;
   }
   .title__heading {
     font-size: 46px;
-    padding: 36px 16px;
+    padding: $headline-padding-after-desktop $headline-padding-after-mobile;
   }
   .hero__title {
-    padding: 36px 16px;
+    padding: $headline-padding-after-desktop $headline-padding-after-mobile;
     position: absolute;
     top: 100px;
     left: 0;
@@ -156,27 +158,29 @@
   .main__sub {
     line-height: $section-line-height-mobile;
     font-weight: $subheader-text-weight-mobile;
-    font-size: 24px;
+    font-size: $subheader-text-size-desktop;
     text-align: center;
     margin: 0 auto;
-    padding-top: 24px;
+    padding-top: $headline-padding-before-mobile;
     width: 90%;
   }
   .main__sub-paragraph {
     font-size: $subheader-text-size-desktop;
     line-height: $subheader-line-height-desktop;
-    padding: 36px 36px 16px 36px;
+    padding: $headline-padding-after-desktop $headline-padding-after-desktop
+      16px $headline-padding-after-desktop;
     width: 90%;
     margin: 0 auto;
   }
   .main__subheading {
     font-size: $subheader-text-size-desktop;
     line-height: $subheader-line-height-desktop;
-    padding: 24px 16px 0 30px;
+    padding: $headline-padding-before-mobile $headline-padding-after-mobile 0
+      30px;
     margin: 0 auto;
   }
   .main__paragraph {
-    padding: 24px 24px;
+    padding: $headline-padding-before-mobile $headline-padding-before-mobile;
     column-count: 1;
     font-size: 22px;
     line-height: 30px;
@@ -187,13 +191,17 @@
     display: grid;
     grid-template-columns: 1fr;
     padding: 1em;
-    grid-row-gap: 24px;
+    grid-row-gap: $headline-padding-before-mobile;
   }
 }
 
 @media (min-width: $tablet-screen-min-size) and (max-width: $tablet-screen-max-size) {
+  .nav {
+    display: flex;
+  }
   .nav__container {
-    padding: 48px 36px 38px 48px;
+    padding: $headline-padding-before-desktop $headline-padding-after-desktop
+      $headline-padding-after-desktop $headline-padding-before-desktop;
   }
   .nav__container__logo {
     width: 120px;
@@ -212,13 +220,13 @@
     line-height: $subheader-line-height-desktop;
     flex-direction: column;
     justify-content: space-between;
-    padding: 36px;
+    padding: $headline-padding-after-desktop;
   }
   .hero__title {
     font-size: $page-header-text-size-desktop;
   }
   .hero__title {
-    padding: 48px 36px;
+    padding: $headline-padding-before-desktop $headline-padding-after-desktop;
     position: absolute;
     top: 250px;
     left: 80px;
@@ -239,7 +247,8 @@
   .main__sub {
     font-size: $subheader-text-size-desktop;
     line-height: $subheader-line-height-desktop;
-    padding: 36px 36px 36px 36px;
+    padding: $headline-padding-after-desktop $headline-padding-after-desktop
+      $headline-padding-after-desktop $headline-padding-after-desktop;
     width: 75%;
     margin: 0 auto;
   }
@@ -247,12 +256,12 @@
     font-size: $body-text-size-desktop;
     line-height: $body-line-height-desktop;
     margin: 0 110px;
-    padding: 0 36px;
+    padding: 0 $headline-padding-after-desktop;
   }
   .main__subheading {
     font-size: $subheader-text-size-desktop;
     line-height: $subheader-line-height-desktop;
-    padding: 36px 36px;
+    padding: $headline-padding-after-desktop $headline-padding-after-desktop;
     margin: 0 110px;
   }
   .main__paragraph {
@@ -264,33 +273,38 @@
     max-width: 950px;
     // width: 55%;
     margin: 0 auto;
-    padding: 36px;
+    padding: $headline-padding-after-desktop;
   }
 }
 
 @media (min-width: $desktop-screen-min-size) and (max-width: $desktop-screen-max-size) {
-  .nav__logo {
+  .nav {
+    display: flex;
+  }
+  .nav__container {
     padding: $headline-padding-before-desktop
       $headline-padding-between-components-desktop
       $headline-padding-after-desktop 90px;
+  }
+  .nav__logo {
     width: 120px;
     height: 20px;
   }
-  .nav__subheader {
-    font-size: $subheader-text-size-desktop;
+  .nav__pack__subheader {
+    font-size: $body-text-size-desktop;
     line-height: $subheader-line-height-desktop;
     justify-content: space-between;
-    padding: 36px;
+    padding: $headline-padding-after-desktop;
   }
-  .nav__subheader__item {
+  .nav__pack__subheader__item {
     font-size: $body-text-size-desktop;
-    line-height: $section-line-height-desktop;
+    line-height: $subheader-line-height-desktop;
   }
   .title__heading {
     font-size: $page-header-text-size-desktop;
   }
   .hero__title {
-    padding: 48px 36px;
+    padding: $headline-padding-before-desktop $headline-padding-after-desktop;
     position: absolute;
     top: 250px;
     left: 80px;
@@ -310,20 +324,21 @@
   .main__sub {
     font-size: $subheader-text-size-desktop;
     line-height: $subheader-line-height-desktop;
-    padding: 36px 36px 36px 36px;
-    width: 50%;
-    margin: 0 350px;
+    padding: $headline-padding-after-desktop $headline-padding-after-desktop 0
+      $headline-padding-after-desktop;
+    width: 60%;
+    margin: 0 auto;
   }
   .main__sub-paragraph {
     font-size: $body-text-size-desktop;
     line-height: $body-line-height-desktop;
-    margin: 0 350px;
-    padding-left: 36px;
+    padding: $headline-padding-after-desktop 250px;
   }
   .main__subheading {
     font-size: $subheader-text-size-desktop;
     line-height: $subheader-line-height-desktop;
-    padding: 48px 36px 0 160px;
+    padding: $headline-padding-before-desktop $headline-padding-after-desktop 0
+      160px;
   }
   .main__paragraph {
     column-count: 2;
@@ -333,8 +348,7 @@
     font-family: $primary-normal;
     font-size: $body-text-size-desktop;
     max-width: 960px;
-    // width: 55%;
     margin: 0 auto;
-    padding: 36px;
+    padding: $headline-padding-after-desktop;
   }
 }
