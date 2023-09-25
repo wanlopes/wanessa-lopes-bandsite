@@ -11,7 +11,7 @@ body {
   margin: 0 auto;
   position: relative;
   width: 100%;
-  // overflow: hidden;
+  overflow: hidden;
 }
 
 * {
@@ -19,9 +19,13 @@ body {
   padding: 0;
 }
 
+@mixin logo-style {
+  height: 1.25rem;
+  width: 7.5rem;
+}
 @mixin footer-basic-style {
   background-color: $bandsite-black;
-  margin-top: 2.25rem;
+  margin-top: $headline-padding-after-desktop;
   opacity: 1;
 }
 
@@ -95,8 +99,7 @@ body {
     display: flex;
 
     &__logo {
-      height: 1.25rem;
-      width: 7.5rem;
+      @include logo-style;
     }
   }
 
@@ -104,28 +107,34 @@ body {
     @include footer-rights-style;
   }
 }
-
-@media (min-width: $mobile-screen-min-size) and (max-width: $mobile-screen-max-size) {
+@media (max-width: $mobile-screen-min-size) {
+  .footer__container {
+    flex-direction: column;
+  }
   .footer__heading {
-    font-size: 38px;
+    font-size: 2.375rem;
     line-height: $section-line-height-mobile;
-    padding: $headline-padding-before-mobile $headline-padding-after-mobile $headline-padding-before-mobile $headline-padding-before-mobile;
+    padding: $headline-padding-after-mobile $headline-padding-after-mobile
+      $headline-padding-before-mobile $headline-padding-before-mobile;
   }
   .footer__images {
     justify-content: flex-start;
   }
   .footer__images__box__icons {
-    width: 30px;
-    padding-left: $headline-padding-after-desktop;
+    width: 1.875rem;
+    padding-left: 1.5rem;
+    height: 1.875rem;
   }
   .footer__container {
+    flex-direction: column;
     padding-left: $headline-padding-before-mobile;
   }
   .footer__container__division__info {
     padding-top: $headline-padding-before-mobile;
   }
   .footer__icon {
-    padding: $headline-padding-before-desktop 0 $headline-padding-after-mobile $headline-padding-before-mobile;
+    padding: $headline-padding-before-desktop 0 $headline-padding-after-mobile
+      $headline-padding-before-mobile;
     width: 100%;
   }
   .footer__rights {
@@ -135,21 +144,56 @@ body {
   }
 }
 
-@media (min-width: $tablet-screen-min-size) and (max-width: $tablet-screen-max-size) {
+@media (min-width: 321px) and (max-width: $mobile-screen-max-size) {
   .footer__heading {
-    padding: $headline-padding-before-desktop 120px 30px 80px;
+    font-size: 2.375rem;
+    line-height: $section-line-height-mobile;
+    padding: $headline-padding-after-mobile $headline-padding-after-mobile
+      $headline-padding-before-mobile $headline-padding-before-mobile;
+  }
+  .footer__images {
+    justify-content: flex-start;
+  }
+  .footer__images__box__icons {
+    width: 1.875rem;
+    padding-left: 1.5rem;
+    height: 1.875rem;
+  }
+  .footer__container {
+    flex-direction: column;
+    padding-left: $headline-padding-before-mobile;
+  }
+  .footer__container__division__info {
+    padding-top: $headline-padding-before-mobile;
+  }
+  .footer__icon {
+    padding: $headline-padding-before-desktop 0 $headline-padding-after-mobile
+      $headline-padding-before-mobile;
+    width: 100%;
+  }
+  .footer__rights {
+    margin-left: 0;
+    padding-left: $headline-padding-before-mobile;
+    padding-bottom: $headline-padding-before-mobile;
+  }
+}
+
+@media (min-width: 768px) and (max-width: $tablet-screen-max-size) {
+  .footer__heading {
+    padding: $headline-padding-before-desktop 7.5rem 1.875rem 0rem;
     font-size: $section-header-text-size-desktop;
   }
   .footer__images {
     justify-content: center;
     position: relative;
     width: 100%;
-    top: -80px;
-    left: -25pxpx;
+    top: -4.5rem;
+    left: -1.5625rem;
   }
   .footer__images__box__icons {
-    width: 30px;
+    width: 1.875rem;
     padding-left: $headline-padding-after-desktop;
+    height: 1.875rem;
   }
   .footer__container {
     display: flex;
@@ -169,19 +213,20 @@ body {
     line-height: $footer-line-height-desktop;
   }
   .footer__rights {
-    padding: 25px $headline-padding-after-desktop $headline-padding-after-desktop 70px;
+    padding: 25px $headline-padding-after-desktop
+      $headline-padding-after-desktop 0px;
     font-size: $footer-text-size-desktop;
     line-height: $footer-line-height-desktop;
   }
   .footer__icon {
     flex-direction: row-reverse;
     position: relative;
-    top: -255px;
+    top: -241px;
     right: 100px;
   }
 }
 
-@media (min-width: $desktop-screen-min-size) and (max-width: $desktop-screen-max-size) {
+@media (min-width: 1280px) and (max-width: $desktop-screen-max-size) {
   .footer__heading {
     font-size: $section-header-text-size-desktop;
     padding: $headline-padding-before-desktop;
@@ -195,6 +240,7 @@ body {
   .footer__images__box__icons {
     width: 30px;
     padding-left: $headline-padding-after-desktop;
+    height: 1.875rem;
   }
   .footer__container {
     margin-right: $headline-padding-after-desktop;
@@ -204,12 +250,13 @@ body {
     width: 60%;
   }
   .footer__rights {
-    padding: 25px $headline-padding-after-desktop $headline-padding-after-desktop $headline-padding-before-desktop;
+    padding: 25px $headline-padding-after-desktop
+      $headline-padding-after-desktop $headline-padding-before-desktop;
   }
   .footer__icon {
     flex-direction: row-reverse;
     position: relative;
     top: -267px;
-    right: 240px;
+    right: 150px;
   }
 }

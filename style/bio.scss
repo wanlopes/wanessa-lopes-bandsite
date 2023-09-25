@@ -2,21 +2,61 @@
 
 .nav {
   background-color: $bandsite-black;
+  display: flex;
+  @media (max-width: $mobile-screen-max-size) {
+    display: block;
+  }
   &__container {
+    padding: $headline-padding-before-desktop
+      $headline-padding-between-components-desktop
+      $headline-padding-after-desktop 5.625rem;
     display: flex;
+    @media (max-width: $tablet-screen-max-size) {
+      padding: $headline-padding-before-desktop $headline-padding-after-desktop;
+    }
+    @media (max-width: $mobile-screen-max-size) {
+      padding: 1.5rem;
+      justify-content: center;
+    }
     &__logo {
+      @include logo-style;
       display: flex;
+      @media (max-width: $mobile-screen-max-size) {
+        padding: $headline-padding-before-mobile
+          $headline-padding-between-components-mobile
+          $headline-padding-after-mobile
+          $headline-padding-between-components-mobile;
+      }
     }
   }
 
   &__pack {
     display: flex;
+    align-items: center;
+    @media (max-width: $mobile-screen-max-size) {
+      justify-content: space-around;
+    }
     &__subheader {
       font-family: $primary-normal;
       color: $silver;
-      display: flex;
+      margin-right: 2.25rem;
+      text-align: center;
+      padding: 2.875rem 0;
+      @media (max-width: $tablet-screen-max-size) {
+        font-size: $body-text-size-desktop;
+        font-weight: $subheader-text-weight-desktop;
+        line-height: $subheader-line-height-desktop;
+        flex-direction: column;
+        padding: 2.625rem 0rem 2.75rem 0rem;
+      }
+      @media (max-width: $mobile-screen-max-size) {
+        width: 50%;
+        padding-bottom: 1rem;
+        padding-top: 0rem;
+        margin-right: 0rem;
+      }
       &:hover {
-        border-bottom: 3px solid $white;
+        border-bottom: 0.1875rem solid $white;
         color: $white;
         font-family: $primary-extra-bold;
         font-size: $body-text-size-desktop;
@@ -24,8 +64,10 @@
       &__item {
         color: $mercury;
         font-family: $primary-normal;
-        display: flex;
-        justify-content: space-between;
+        @media (max-width: $mobile-screen-max-size) {
+          font-size: 1.125rem;
+          padding: 0rem;
+        }
         &:hover {
           font-family: $primary-extra-bold;
           color: $white;
@@ -48,18 +90,18 @@
   background-position: center;
   position: relative;
   height: 100vh;
+  @media (max-width: $mobile-screen-max-size) {
+    height: 40vh;
+    padding: 0;
+  }
 
   &__title {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     .title__heading {
       font-family: $primary-bold;
       line-height: $page-line-height-desktop;
       color: $white;
-      padding: $headline-padding-before-desktop $headline-padding-after-desktop;
-      @media (min-width: $mobile-screen-min-size) and (max-width: $mobile-screen-max-size) {
-        padding-top: $headline-padding-after-desktop;
+      @media (max-width: $mobile-screen-max-size) {
+        font-size: 1.5rem;
       }
     }
   }
@@ -72,6 +114,7 @@
   &__picture {
     margin: 0 auto;
     display: block;
+    height: 28.375rem;
   }
   &__sub {
     font-family: $primary-bold;
@@ -93,17 +136,16 @@
   &__container {
     font-size: $section-header-text-size-desktop;
     line-height: $section-line-height-desktop;
-    font-family: $primary-extra-bold;
+    font-family: $primary-bold;
     display: grid;
-    column-gap: 24px;
-    padding: $headline-padding-before-desktop 0 $headline-padding-after-desktop
-      $headline-padding-after-desktop;
+    column-gap: 1.5rem;
+    padding: 1.5rem 0rem;
   }
   &__image-wraper {
     display: grid;
     grid-template-columns: 33% 33% 33%;
-    column-gap: 24px;
-    row-gap: 24px;
+    column-gap: 1.5rem;
+    row-gap: 1.5rem;
     img {
       position: relative;
       width: 100%;
@@ -111,126 +153,50 @@
   }
 }
 
-@media (min-width: $mobile-screen-min-size) and (max-width: 767px) {
-  .nav__container {
-    justify-content: center;
-  }
-  .nav__container__logo {
-    padding: $headline-padding-before-mobile
-      $headline-padding-between-components-mobile $headline-padding-after-mobile
-      $headline-padding-between-components-mobile;
-    width: 200px;
-  }
-  .nav__pack {
-    flex-direction: row;
-    justify-content: space-around;
-    padding: $headline-padding-before-mobile;
-  }
-  .nav__subheader {
-    padding-top: $headline-padding-before-mobile;
-    display: flex;
-    flex-direction: column;
-  }
-  .nav__subheader__item {
-    font-size: $section-header-text-size-mobile;
-    padding: $headline-padding-before-desktop $headline-padding-after-desktop;
-  }
-  .title__heading {
-    font-size: 46px;
-    padding: $headline-padding-after-desktop $headline-padding-after-mobile;
-  }
-  .hero__title {
-    padding: $headline-padding-after-desktop $headline-padding-after-mobile;
-    position: absolute;
-    top: 100px;
-    left: 0;
-  }
+@media (max-width: 767px) {
   .main__head {
-    padding: 34px 16px 24px 30px;
-    font-size: 40px;
+    padding: 2.125rem 1rem 1.5rem 0rem;
+    font-size: 1.5rem;
     line-height: $section-line-height-mobile;
   }
   .main__picture {
     width: 100%;
-    max-width: 500px;
+    max-width: 31.25rem;
     height: auto;
   }
   .main__sub {
     line-height: $section-line-height-mobile;
-    font-weight: $subheader-text-weight-mobile;
-    font-size: $subheader-text-size-desktop;
-    text-align: center;
+    font-weight: $body-text-weight-mobile;
+    font-size: 1.125;
     margin: 0 auto;
     padding-top: $headline-padding-before-mobile;
-    width: 90%;
   }
   .main__sub-paragraph {
-    font-size: $subheader-text-size-desktop;
+    font-size: 1.125rem;
     line-height: $subheader-line-height-desktop;
-    padding: $headline-padding-after-desktop $headline-padding-after-desktop
-      16px $headline-padding-after-desktop;
-    width: 90%;
-    margin: 0 auto;
   }
   .main__subheading {
-    font-size: $subheader-text-size-desktop;
+    font-size: 1.125rem;
     line-height: $subheader-line-height-desktop;
-    padding: $headline-padding-before-mobile $headline-padding-after-mobile 0
-      30px;
-    margin: 0 auto;
+    padding: $headline-padding-before-mobile $headline-padding-after-mobile 0rem
+      0rem;
   }
   .main__paragraph {
-    padding: $headline-padding-before-mobile $headline-padding-before-mobile;
+    padding: $headline-padding-before-mobile 0rem;
     column-count: 1;
-    font-size: 22px;
-    line-height: 30px;
+    font-size: 1.125rem;
+    line-height: 1.875rem;
     font-weight: $body-text-weight-mobile;
     font-family: $primary-normal;
   }
-  .main__paragraph__gallery-container__image-wraper {
+  .gallery__image-wraper {
     display: grid;
     grid-template-columns: 1fr;
-    padding: 1em;
     grid-row-gap: $headline-padding-before-mobile;
   }
 }
 
 @media (min-width: $tablet-screen-min-size) and (max-width: $tablet-screen-max-size) {
-  .nav {
-    display: flex;
-  }
-  .nav__container {
-    padding: $headline-padding-before-desktop $headline-padding-after-desktop
-      $headline-padding-after-desktop $headline-padding-before-desktop;
-  }
-  .nav__container__logo {
-    width: 120px;
-    height: 20px;
-  }
-  .nav__subheader {
-    font-size: $subheader-text-size-desktop;
-    line-height: $subheader-line-height-desktop;
-    flex-direction: column;
-    // justify-content: space-between;
-    // padding: 36px;
-  }
-  .nav__pack__subheader__item {
-    font-size: $subheader-text-size-desktop;
-    font-weight: $subheader-text-weight-desktop;
-    line-height: $subheader-line-height-desktop;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: $headline-padding-after-desktop;
-  }
-  .hero__title {
-    font-size: $page-header-text-size-desktop;
-  }
-  .hero__title {
-    padding: $headline-padding-before-desktop $headline-padding-after-desktop;
-    position: absolute;
-    top: 250px;
-    left: 80px;
-  }
   .main__head {
     padding: $headline-padding-before-desktop
       $headline-padding-between-components-desktop
@@ -242,7 +208,7 @@
   }
   .main__picture {
     width: 75%;
-    height: 550px;
+    height: 22.375rem;
   }
   .main__sub {
     font-size: $subheader-text-size-desktop;
@@ -255,60 +221,32 @@
   .main__sub-paragraph {
     font-size: $body-text-size-desktop;
     line-height: $body-line-height-desktop;
-    margin: 0 110px;
+    margin: 0 6.875rem;
     padding: 0 $headline-padding-after-desktop;
   }
   .main__subheading {
     font-size: $subheader-text-size-desktop;
     line-height: $subheader-line-height-desktop;
     padding: $headline-padding-after-desktop $headline-padding-after-desktop;
-    margin: 0 110px;
+    margin: 0 6.875rem;
   }
   .main__paragraph {
     column-count: 2;
     line-height: $subheader-line-height-desktop;
     font-weight: $body-text-weight-desktop;
     font-family: $primary-normal;
-    font-size: 22px;
-    max-width: 950px;
-    // width: 55%;
+    font-size: 1.375rem;
+    max-width: 59.375rem;
     margin: 0 auto;
     padding: $headline-padding-after-desktop;
   }
 }
 
-@media (min-width: $desktop-screen-min-size) and (max-width: $desktop-screen-max-size) {
-  .nav {
-    display: flex;
-  }
-  .nav__container {
-    padding: $headline-padding-before-desktop
-      $headline-padding-between-components-desktop
-      $headline-padding-after-desktop 90px;
-  }
-  .nav__logo {
-    width: 120px;
-    height: 20px;
-  }
-  .nav__pack__subheader {
-    font-size: $body-text-size-desktop;
-    line-height: $subheader-line-height-desktop;
-    justify-content: space-between;
-    padding: $headline-padding-after-desktop;
-  }
-  .nav__pack__subheader__item {
-    font-size: $body-text-size-desktop;
-    line-height: $subheader-line-height-desktop;
-  }
+@media (min-width: $desktop-screen-min-size) {
   .title__heading {
     font-size: $page-header-text-size-desktop;
   }
-  .hero__title {
-    padding: $headline-padding-before-desktop $headline-padding-after-desktop;
-    position: absolute;
-    top: 250px;
-    left: 80px;
-  }
+
   .main__head {
     padding: $headline-padding-before-desktop
       $headline-padding-between-components-desktop
@@ -319,7 +257,7 @@
   }
   .main__picture {
     width: 60%;
-    height: 600px;
+    height: 28.5rem;
   }
   .main__sub {
     font-size: $subheader-text-size-desktop;
@@ -332,23 +270,42 @@
   .main__sub-paragraph {
     font-size: $body-text-size-desktop;
     line-height: $body-line-height-desktop;
-    padding: $headline-padding-after-desktop 250px;
+    padding: $headline-padding-after-desktop 15.625rem;
   }
   .main__subheading {
     font-size: $subheader-text-size-desktop;
     line-height: $subheader-line-height-desktop;
     padding: $headline-padding-before-desktop $headline-padding-after-desktop 0
-      160px;
+      10rem;
   }
   .main__paragraph {
     column-count: 2;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: $body-line-height-desktop;
     font-weight: $body-text-weight-desktop;
     font-family: $primary-normal;
     font-size: $body-text-size-desktop;
-    max-width: 960px;
+    max-width: 60rem;
     margin: 0 auto;
     padding: $headline-padding-after-desktop;
   }
+}
+
+.hero__title {
+  padding: $headline-padding-before-desktop $headline-padding-after-desktop;
+  position: absolute;
+  top: 15.625rem;
+  left: 5rem;
+  @media (max-width: $tablet-screen-max-size) {
+    font-size: $section-header-text-size-desktop;
+    left: 0rem;
+  }
+  @media (max-width: $mobile-screen-max-size) {
+    padding: $headline-padding-after-desktop $headline-padding-after-mobile;
+    top: 6.25rem;
+  }
+}
+
+.content_wrapper {
+  padding: 0 1rem;
 }
