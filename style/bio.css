@@ -439,6 +439,10 @@ body {
     grid-row-gap: 24px;
   }
 }
+.testimony {
+  background-color: #ffffff;
+}
+
 @media (min-width: 768px) and (max-width: 1279px) {
   .main__head {
     padding: 48px 36px 36px 36px;
@@ -481,6 +485,59 @@ body {
     padding: 36px;
   }
 }
+.testimony__heading {
+  color: #323232;
+  font-size: 24px;
+  font-family: "Avenir Next Bold";
+}
+
+.form__button {
+  font-family: "Avenir Next Bold";
+  font-size: 24px;
+  color: #ffffff;
+  background-color: #323232;
+}
+
+.form__name {
+  font-family: "Avenir Next";
+  color: #afafaf;
+  font-size: 14px;
+}
+
+.input__name {
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+  height: 36px;
+  width: 100%;
+  padding-top: 4px;
+}
+
+.form__comment {
+  font-family: "Avenir Next";
+  color: #afafaf;
+  font-size: 14px;
+}
+
+.fans {
+  font-size: 14px;
+  font-family: "Avenir Next Bold";
+  color: #323232;
+}
+
+.date {
+  font-size: 14px;
+  font-family: "Avenir Next";
+  color: #afafaf;
+}
+
+.testimony__article {
+  font-size: 14px;
+  font-family: "Avenir Next";
+  color: #323232;
+  border-bottom: 1px solid #e1e1e1;
+  padding-bottom: 16px;
+}
+
 @media (min-width: 1280px) {
   .title__heading {
     font-size: 60px;

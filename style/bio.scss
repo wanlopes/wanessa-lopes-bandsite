@@ -196,6 +196,9 @@
   }
 }
 
+.testimony {
+  background-color: $white;
+}
 @media (min-width: $tablet-screen-min-size) and (max-width: $tablet-screen-max-size) {
   .main__head {
     padding: $headline-padding-before-desktop
@@ -241,7 +244,52 @@
     padding: $headline-padding-after-desktop;
   }
 }
+.testimony__heading {
+    color: $bandsite-black;
+    font-size: $section-header-text-size-mobile;
+    font-family: $primary-bold;
+}
 
+.form__button {
+  font-family: $primary-bold;
+  font-size: $section-header-text-size-mobile;
+  color: $white;
+  background-color: $bandsite-black;
+}
+.form__name {
+  font-family: $primary-normal;
+  color: $silver;
+  font-size: $body-text-size-desktop;
+}
+.input__name {
+  border: 1px solid $mercury;
+  border-radius: 4px;
+  height: 36px;
+  width: 100%;
+  padding-top: 4px;
+}
+.form__comment {
+  font-family: $primary-normal;
+  color: $silver;
+  font-size: $body-text-size-desktop;
+}
+.fans {
+  font-size: $body-text-size-desktop;
+  font-family: $primary-bold;
+  color: $bandsite-black;
+}
+.date {
+   font-size: $body-text-size-desktop;
+  font-family: $primary-normal;
+  color: $silver;
+}
+.testimony__article {
+  font-size: $body-text-size-desktop;
+  font-family: $primary-normal;
+  color: $bandsite-black;
+  border-bottom: 1px solid $mercury;
+  padding-bottom: 16px;
+}
 @media (min-width: $desktop-screen-min-size) {
   .title__heading {
     font-size: $page-header-text-size-desktop;

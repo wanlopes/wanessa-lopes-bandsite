@@ -1,0 +1,23 @@
+@use "partials/global" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+.nav {
+  background-color: $bandsite-black;
+}
+.album {
+    background-image: url(../Assets/Images/hero-shows.jpg);
+    background-size: cover;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+
+    &__title {
+        font-family: $primary-normal;
+        color: $white;
+        font-size: $subheader-text-size-mobile;
+    }
+}
