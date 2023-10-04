@@ -53,6 +53,21 @@ function displayComment (comment) {
 
 function functSubmit(event) {
     event.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const timestamp = new Date().toLocaleDateString();
+    const text = document.getElementById("comment").value;
+
+    const comment = {name, timestamp, text};
+    console.log(comment);
+
+    document.getElementById("myForm").reset();
+    console.log("AAAAAAAAAAAAAAAAAAAAAAA");
 }
 
-document.getElementById("myForm").addEventListener("submit", functSubmit);
+window.addEventListener("DOMContentLoaded", (event) => {
+    const el = document.getElementById("myForm");
+    if (el) {
+      el.addEventListener("submit", functSubmit);
+    }
+});
