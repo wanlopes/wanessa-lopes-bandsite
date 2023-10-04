@@ -58,8 +58,10 @@ function functSubmit(event) {
     const timestamp = new Date().toLocaleDateString();
     const text = document.getElementById("comment").value;
 
-    const comment = {name, timestamp, text};
-    console.log(comment);
+    const inputComment = {name, timestamp, text};
+    console.log(inputComment);
+
+    addNewComment(inputComment);
 
     document.getElementById("myForm").reset();
     console.log("AAAAAAAAAAAAAAAAAAAAAAA");
@@ -71,3 +73,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
       el.addEventListener("submit", functSubmit);
     }
 });
+
+function addNewComment(inputComment) {
+    comments.unshift(inputComment);
+    console.log(comments);
+}
