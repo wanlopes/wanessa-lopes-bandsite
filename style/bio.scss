@@ -196,9 +196,6 @@
   }
 }
 
-.testimony {
-  background-color: $white;
-}
 @media (min-width: $tablet-screen-min-size) and (max-width: $tablet-screen-max-size) {
   .main__head {
     padding: $headline-padding-before-desktop
@@ -244,7 +241,10 @@
     padding: $headline-padding-after-desktop;
   }
 }
-.testimony__heading {
+.testimony__title {
+  padding: 24px 16px;
+}
+.testimony__title__heading {
     color: $bandsite-black;
     font-size: $section-header-text-size-mobile;
     font-family: $primary-bold;
@@ -252,9 +252,13 @@
 
 .form__button {
   font-family: $primary-bold;
-  font-size: $section-header-text-size-mobile;
+  font-size: 20px;
   color: $white;
   background-color: $bandsite-black;
+  border: 1px solid $bandsite-black;
+  border-radius: 4px;
+  width: 80%;
+  height: 45px;
 }
 .form__name {
   font-family: $primary-normal;
@@ -265,7 +269,6 @@
   border: 1px solid $mercury;
   border-radius: 4px;
   height: 36px;
-  width: 100%;
   padding-top: 4px;
 }
 .form__comment {
@@ -273,15 +276,24 @@
   color: $silver;
   font-size: $body-text-size-desktop;
 }
+.input__comment {
+  border: 1px solid $mercury;
+  border-radius: 4px;
+  height: 36px;
+  padding-top: 4px;
+}
 .fans {
   font-size: $body-text-size-desktop;
   font-family: $primary-bold;
   color: $bandsite-black;
 }
 .date {
-   font-size: $body-text-size-desktop;
+  font-size: $body-text-size-desktop;
   font-family: $primary-normal;
   color: $silver;
+}
+.testimony__comments{
+  padding: 24px 16px 0px 16px;
 }
 .testimony__article {
   font-size: $body-text-size-desktop;

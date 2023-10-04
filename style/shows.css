@@ -241,6 +241,7 @@ body {
 * {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 .nav {
@@ -248,7 +249,7 @@ body {
 }
 
 .album {
-  background-image: url(../Assets/Images/hero-shows.jpg);
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Assets/Images/hero-shows.jpg);
   background-size: cover;
   margin: 0 auto;
   background-repeat: no-repeat;
@@ -256,7 +257,155 @@ body {
   position: relative;
 }
 .album__title {
+  padding: 24px 16px;
+}
+.album__title__paragraph {
+  color: #ffffff;
+}
+.album__subtitle {
+  width: 70%;
+}
+.album__subtitle__paragraph {
   font-family: "Avenir Next";
   color: #ffffff;
-  font-size: 14px;
+}
+.album iframe {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shows {
+  background-color: #ffffff;
+}
+.shows__heading__title {
+  font-family: "Avenir Next Bold";
+  color: #323232;
+}
+.shows__container__info__head {
+  font-family: "Avenir Next";
+  color: #afafaf;
+}
+.shows__container__info__date {
+  font-family: "Avenir Next Bold";
+  color: #000000;
+}
+.shows__container__info__place {
+  font-family: "Avenir Next";
+  color: #000000;
+}
+.shows__container__info__town {
+  font-family: "Avenir Next";
+  color: #000000;
+}
+.shows__container__info button {
+  background-color: #323232;
+  color: #ffffff;
+  border-radius: 4px;
+  border: 1px solid #323232;
+  font-family: "Avenir Next";
+}
+
+@media (min-width: 321px) and (max-width: 767px) {
+  .album__title {
+    padding: 24px 16px;
+  }
+  .album__title__paragraph {
+    padding: 24px 16px;
+    font-size: 14px;
+    font-family: "Avenir Next";
+  }
+  .album__subtitle {
+    padding: 24px 16px;
+    width: 70%;
+  }
+  .album__subtitle__paragraph {
+    font-size: 24px;
+  }
+  iframe {
+    width: 90%;
+  }
+  .shows__heading {
+    padding: 24px 16px;
+  }
+  .shows__heading__title {
+    font-size: 24px;
+  }
+  .shows__container__info {
+    padding: 24px 16px 16px 16px;
+  }
+  .shows__container__info__head {
+    font-size: 13px;
+    line-height: 18px;
+  }
+  .shows__container__info__date {
+    line-height: 18px;
+    font-size: 13px;
+  }
+  .shows__container__info__place {
+    line-height: 18px;
+    font-size: 13px;
+  }
+  .shows__container__info__town {
+    line-height: 18px;
+    padding-bottom: 16px;
+    font-size: 13px;
+  }
+  button {
+    line-height: 18px;
+    font-size: 14px;
+    width: 100%;
+    height: 40px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .album__title {
+    padding: 48px 36px;
+  }
+  .album__title__paragraph {
+    font-size: 24px;
+    font-family: "Avenir Next Bold";
+  }
+  .album__subtitle {
+    padding: 0px 36px;
+    font-size: 36px;
+  }
+  iframe {
+    margin: 48px 36px;
+  }
+  .shows__heading {
+    padding: 48px 36px;
+  }
+  .shows__heading__title {
+    font-size: 60px;
+    color: #000000;
+  }
+  .shows__container__info {
+    border-bottom: 1px solid #afafaf;
+    padding-bottom: 16px;
+    padding-left: 36px;
+  }
+  .shows__container__info__head {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .shows__container__info__date {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .shows__container__info__place {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .shows__container__info__town {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  button {
+    line-height: 22px;
+    font-size: 18px;
+    width: 25%;
+    height: 50px;
+  }
 }/*# sourceMappingURL=shows.css.map */
