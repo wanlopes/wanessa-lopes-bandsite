@@ -52,6 +52,9 @@
   }
   &__container {
     &__info {
+      &:hover {
+        background-color: $alabaster;
+      }
       &__head {
         font-family: $primary-normal;
         color: $silver;
@@ -137,7 +140,7 @@
   }
   .album__title__paragraph {
     font-size: $subheader-text-size-desktop;
-    font-family:  $primary-bold;
+    font-family: $primary-bold;
   }
   .album__subtitle {
     padding: 0px 36px;
@@ -176,7 +179,7 @@
   }
   button {
     line-height: $body-line-height-desktop;
-    font-size: 18px ;
+    font-size: 18px;
     width: 25%;
     height: 50px;
   }

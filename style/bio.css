@@ -508,6 +508,14 @@ body {
   font-size: 14px;
 }
 
+.form__name__img {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .input__name {
   border: 1px solid #e1e1e1;
   border-radius: 4px;

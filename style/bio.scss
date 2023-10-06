@@ -265,6 +265,12 @@
   color: $silver;
   font-size: $body-text-size-desktop;
 }
+.form__name__img {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
 .input__name {
   border: 1px solid $mercury;
   border-radius: 4px;

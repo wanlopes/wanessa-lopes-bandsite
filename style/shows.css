@@ -283,6 +283,9 @@ body {
   font-family: "Avenir Next Bold";
   color: #323232;
 }
+.shows__container__info:hover {
+  background-color: #fafafa;
+}
 .shows__container__info__head {
   font-family: "Avenir Next";
   color: #afafaf;
