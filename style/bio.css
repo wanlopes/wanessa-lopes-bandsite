@@ -510,8 +510,6 @@ body {
 
 .form__name__img {
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -624,4 +622,36 @@ body {
 
 .content_wrapper {
   padding: 0 1rem;
+}
+
+@media (min-width: 1279px) and (max-width: 1920px) {
+  .form__name__img {
+    width: 60px;
+    height: 60px;
+  }
+  .input__name {
+    width: 40%;
+    height: 50px;
+  }
+  .input__comment {
+    width: 40%;
+    height: 120px;
+  }
+  .form__button {
+    width: 18%;
+    height: 50px;
+  }
+  #comments {
+    width: 50%;
+    margin: 0 auto;
+  }
+  .fans {
+    font-size: 18px;
+  }
+  .date {
+    font-size: 18px;
+  }
+  .testimony__article {
+    font-size: 18px;
+  }
 }/*# sourceMappingURL=bio.css.map */
