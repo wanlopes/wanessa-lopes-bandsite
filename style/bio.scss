@@ -4,7 +4,7 @@
   background-color: $bandsite-black;
   display: flex;
   @media (max-width: $mobile-screen-max-size) {
-    display: block;
+    // display: block;
   }
   &__container {
     padding: $headline-padding-before-desktop
@@ -12,20 +12,20 @@
       $headline-padding-after-desktop 5.625rem;
     display: flex;
     @media (max-width: $tablet-screen-max-size) {
-      padding: $headline-padding-before-desktop $headline-padding-after-desktop;
+      // padding: $headline-padding-before-desktop $headline-padding-after-desktop;
     }
     @media (max-width: $mobile-screen-max-size) {
-      padding: 1.5rem;
-      justify-content: center;
+      // padding: 1.5rem;
+      // justify-content: center;
     }
     &__logo {
       @include logo-style;
       display: flex;
       @media (max-width: $mobile-screen-max-size) {
-        padding: $headline-padding-before-mobile
-          $headline-padding-between-components-mobile
-          $headline-padding-after-mobile
-          $headline-padding-between-components-mobile;
+        // padding: $headline-padding-before-mobile
+        //   $headline-padding-between-components-mobile
+        //   $headline-padding-after-mobile
+        //   $headline-padding-between-components-mobile;
       }
     }
   }
@@ -280,6 +280,10 @@
 }
 
 @media (min-width: $tablet-screen-min-size) and (max-width: $tablet-screen-max-size) {
+  .nav__container {
+    padding: $headline-padding-before-desktop $headline-padding-after-desktop;
+  }
+
   .main__head {
     padding: $headline-padding-before-desktop
       $headline-padding-between-components-desktop
@@ -344,7 +348,20 @@
   padding: 0 1rem;
 }
 
-@media (min-widht: $tablet-screen-min-size) and (max-width: $tablet-screen-max-size) {
+//TMOBILE
+@media (max-width: $mobile-screen-max-size) {
+  .nav {
+    display: block;
+  }
+  .nav__container {
+    padding: 1.5rem;
+    justify-content: center;
+  }
+  .nav__container__logo {
+    padding: $headline-padding-before-mobile
+      $headline-padding-between-components-mobile $headline-padding-after-mobile
+      $headline-padding-between-components-mobile;
+  }
 }
 
 @media (min-width: $desktop-screen-min-size) and (max-width: $desktop-screen-max-size) {
@@ -402,16 +419,16 @@
     font-size: $section-header-text-size-desktop;
   }
 
-.form__name {
-    width:50%;
+  .form__name {
+    width: 50%;
     margin: 0 auto;
-}
+  }
   .form__name__container__img {
     width: 60px;
     height: 60px;
   }
   .cont {
-  width: 80%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     margin: 0px 0px 0px 90px;
