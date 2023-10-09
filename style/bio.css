@@ -397,6 +397,99 @@ body {
   width: 100%;
 }
 
+.testimony__title {
+  font-family: "Avenir Next";
+}
+
+.testimony__title__heading {
+  color: #323232;
+  font-size: 24px;
+  font-family: "Avenir Next Bold";
+}
+
+.div {
+  display: flex;
+}
+
+.div__form__button {
+  font-family: "Avenir Next Bold";
+  font-size: 20px;
+  color: #ffffff;
+  background-color: #323232;
+  border: 1px solid #323232;
+  border-radius: 4px;
+  width: 80%;
+  height: 45px;
+}
+
+.form__name {
+  font-family: "Avenir Next";
+  color: #afafaf;
+  font-size: 14px;
+}
+
+.form__name__container {
+  display: flex;
+}
+
+.form__name__container__img {
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.cont {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.cont__input__name {
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+  height: 36px;
+  padding-top: 4px;
+  background-color: #fafafa;
+}
+
+.cont__form__comment {
+  font-family: "Avenir Next";
+  color: #afafaf;
+  font-size: 14px;
+}
+
+.cont__input__comment {
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+  height: 36px;
+  padding-top: 4px;
+  background-color: #fafafa;
+}
+
+.fans {
+  font-size: 14px;
+  font-family: "Avenir Next Bold";
+  color: #323232;
+}
+
+.date {
+  font-size: 14px;
+  font-family: "Avenir Next";
+  color: #afafaf;
+}
+
+.testimony__comments {
+  padding: 24px 16px 0px 16px;
+}
+
+.testimony__article {
+  font-size: 14px;
+  font-family: "Avenir Next";
+  color: #323232;
+  border-bottom: 1px solid #e1e1e1;
+  padding-bottom: 16px;
+}
+
 @media (max-width: 767px) {
   .main__head {
     padding: 2.125rem 1rem 1.5rem 0rem;
@@ -437,6 +530,9 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     grid-row-gap: 24px;
+  }
+  .testimony__title {
+    padding: 24px 16px;
   }
 }
 @media (min-width: 768px) and (max-width: 1279px) {
@@ -481,84 +577,30 @@ body {
     padding: 36px;
   }
 }
-.testimony__title {
-  padding: 24px 16px;
+.hero__title {
+  padding: 48px 36px;
+  position: absolute;
+  top: 15.625rem;
+  left: 5rem;
+}
+@media (max-width: 1279px) {
+  .hero__title {
+    font-size: 36px;
+    left: 0rem;
+  }
+}
+@media (max-width: 767px) {
+  .hero__title {
+    padding: 36px 16px;
+    top: 6.25rem;
+  }
 }
 
-.testimony__title__heading {
-  color: #323232;
-  font-size: 24px;
-  font-family: "Avenir Next Bold";
+.content_wrapper {
+  padding: 0 1rem;
 }
 
-.form__button {
-  font-family: "Avenir Next Bold";
-  font-size: 20px;
-  color: #ffffff;
-  background-color: #323232;
-  border: 1px solid #323232;
-  border-radius: 4px;
-  width: 80%;
-  height: 45px;
-}
-
-.form__name {
-  font-family: "Avenir Next";
-  color: #afafaf;
-  font-size: 14px;
-}
-
-.form__name__img {
-  border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.input__name {
-  border: 1px solid #e1e1e1;
-  border-radius: 4px;
-  height: 36px;
-  padding-top: 4px;
-}
-
-.form__comment {
-  font-family: "Avenir Next";
-  color: #afafaf;
-  font-size: 14px;
-}
-
-.input__comment {
-  border: 1px solid #e1e1e1;
-  border-radius: 4px;
-  height: 36px;
-  padding-top: 4px;
-}
-
-.fans {
-  font-size: 14px;
-  font-family: "Avenir Next Bold";
-  color: #323232;
-}
-
-.date {
-  font-size: 14px;
-  font-family: "Avenir Next";
-  color: #afafaf;
-}
-
-.testimony__comments {
-  padding: 24px 16px 0px 16px;
-}
-
-.testimony__article {
-  font-size: 14px;
-  font-family: "Avenir Next";
-  color: #323232;
-  border-bottom: 1px solid #e1e1e1;
-  padding-bottom: 16px;
-}
-
-@media (min-width: 1280px) {
+@media (min-width: 1280px) and (max-width: 1920px) {
   .title__heading {
     font-size: 60px;
   }
@@ -600,34 +642,26 @@ body {
     margin: 0 auto;
     padding: 36px;
   }
-}
-.hero__title {
-  padding: 48px 36px;
-  position: absolute;
-  top: 15.625rem;
-  left: 5rem;
-}
-@media (max-width: 1279px) {
-  .hero__title {
+  .testimony__title {
+    padding: 48px 36px 36px 60px;
+  }
+  .testimony__title__heading {
+    padding: 48px 36px;
     font-size: 36px;
-    left: 0rem;
   }
-}
-@media (max-width: 767px) {
-  .hero__title {
-    padding: 36px 16px;
-    top: 6.25rem;
+  .form__name {
+    width: 50%;
+    margin: 0 auto;
   }
-}
-
-.content_wrapper {
-  padding: 0 1rem;
-}
-
-@media (min-width: 1279px) and (max-width: 1920px) {
-  .form__name__img {
+  .form__name__container__img {
     width: 60px;
     height: 60px;
+  }
+  .cont {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: 0px 0px 0px 90px;
   }
   .input__name {
     width: 40%;
@@ -637,21 +671,41 @@ body {
     width: 40%;
     height: 120px;
   }
-  .form__button {
-    width: 18%;
+  .div {
+    justify-content: flex-end;
+    padding: 36px;
+  }
+  .div__form__button {
+    width: 30%;
     height: 50px;
   }
   #comments {
+    display: flex;
     width: 50%;
     margin: 0 auto;
+    align-items: center;
+    flex-direction: column;
+  }
+  .details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 10px;
   }
   .fans {
+    display: flex;
     font-size: 18px;
   }
   .date {
+    display: flex;
     font-size: 18px;
   }
   .testimony__article {
     font-size: 18px;
+    display: flex;
+  }
+  .testimony__comments {
+    display: flex;
+    flex-direction: column;
   }
 }/*# sourceMappingURL=bio.css.map */
