@@ -166,14 +166,14 @@
   display: flex;
 }
 .div__form__button {
+  width: 80%;
+  height: 45px;
   font-family: $primary-bold;
   font-size: 20px;
   color: $white;
   background-color: $bandsite-black;
   border: 1px solid $bandsite-black;
   border-radius: 4px;
-  width: 80%;
-  height: 45px;
 }
 .form__name {
   font-family: $primary-normal;
@@ -200,6 +200,10 @@
   padding-top: 4px;
   background-color: $alabaster;
 }
+
+.cont__input__name:active {
+  border-color: $bandsite-darkblack;
+}
 .cont__form__comment {
   font-family: $primary-normal;
   color: $silver;
@@ -211,6 +215,7 @@
   height: 36px;
   padding-top: 4px;
   background-color: $alabaster;
+  color: $bandsite-black;
 }
 .fans {
   font-size: $body-text-size-desktop;
@@ -276,6 +281,30 @@
   }
   .testimony__title {
     padding: 24px 16px;
+  }
+  .form__name__container__img {
+    width: 50px;
+    height: 50px;
+  }
+  label {
+    padding-bottom: 5px;
+  }
+  .cont__input__name {
+    padding-top: 4px;
+    padding-left: 10px;
+    margin-bottom: 24px;
+    font-family: $primary-normal;
+  }
+  .cont__input__comment {
+    padding: 4px 0px 50px 10px;
+    margin-bottom: 24px;
+    font-family: $primary-normal;
+  }
+  .details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 10px;
   }
 }
 
@@ -364,6 +393,78 @@
   }
 }
 
+@media (min-width: $tablet-screen-min-size) and (max-width: $tablet-screen-max-size) {
+  .form__name {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .form__name__container__img {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+  }
+  label {
+    padding: 20px 0px 5px 0px;
+  }
+  .cont__input__name {
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 15px;
+  }
+  .cont__input__comment {
+    width: 100%;
+    padding-top: 4px;
+    padding-bottom: 60px;
+    padding-left: 15px;
+  }
+  .div {
+    justify-content: flex-end;
+    padding: 36px 0px;
+  }
+  .div__form__button {
+  width: 36%;
+  height: 49px;
+  }
+  .testimony__title {
+    padding: 48px 36px 24px 60px;
+  }
+  .testimony__title__heading {
+    font-size: 50px;
+  }
+  #comments {
+    overflow-wrap: anywhere;
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    align-items: center;
+    flex-direction: column;
+  }
+  .details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 10px;
+  }
+  .fans {
+    display: flex;
+    font-size: 18px;
+  }
+  .date {
+    display: flex;
+    font-size: 18px;
+  }
+  .testimony__article {
+    font-size: 16px;
+    display: flex;
+  }
+  .testimony__comments {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 @media (min-width: $desktop-screen-min-size) and (max-width: $desktop-screen-max-size) {
   .title__heading {
     font-size: $page-header-text-size-desktop;
@@ -424,6 +525,7 @@
     margin: 0 auto;
   }
   .form__name__container__img {
+    position: absolute;
     width: 60px;
     height: 60px;
   }
@@ -433,24 +535,31 @@
     flex-direction: column;
     margin: 0px 0px 0px 90px;
   }
-
-  .input__name {
-    width: 40%;
-    height: 50px;
+  label {
+    padding: 20px 0px 5px 0px;
   }
-  .input__comment {
-    width: 40%;
-    height: 120px;
+  .cont__input__name {
+    width: 100%;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 15px;
+  }
+  .cont__input__comment {
+    width: 100%;
+    padding-top: 4px;
+    padding-bottom: 55px;
+    padding-left: 15px;
   }
   .div {
     justify-content: flex-end;
-    padding: 36px;
+    padding: 36px 0px;
   }
   .div__form__button {
     width: 30%;
     height: 50px;
   }
   #comments {
+    overflow-wrap: anywhere;
     display: flex;
     width: 50%;
     margin: 0 auto;
@@ -476,6 +585,7 @@
     display: flex;
   }
   .testimony__comments {
+    width: 100%;
     display: flex;
     flex-direction: column;
   }

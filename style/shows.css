@@ -99,21 +99,21 @@ body {
     flex-direction: column;
   }
   .footer__heading {
-    font-size: 2.375rem;
+    font-size: 24px;
     line-height: 32px;
-    padding: 16px 16px 24px 24px;
+    padding: 24px 16px 24px 16px;
   }
   .footer__images {
     justify-content: flex-start;
   }
   .footer__images__box__icons {
     width: 1.875rem;
-    padding-left: 1.5rem;
+    padding-left: 1.2rem;
     height: 1.875rem;
   }
   .footer__container {
     flex-direction: column;
-    padding-left: 24px;
+    padding-left: 16px;
   }
   .footer__container__division__info {
     padding-top: 24px;
@@ -130,21 +130,21 @@ body {
 }
 @media (min-width: 321px) and (max-width: 767px) {
   .footer__heading {
-    font-size: 2.375rem;
+    font-size: 24px;
     line-height: 32px;
-    padding: 16px 16px 24px 24px;
+    padding: 24px 16px 24px 24px;
   }
   .footer__images {
     justify-content: flex-start;
   }
   .footer__images__box__icons {
     width: 1.875rem;
-    padding-left: 1.5rem;
+    padding-left: 1.2rem;
     height: 1.875rem;
   }
   .footer__container {
     flex-direction: column;
-    padding-left: 24px;
+    padding-left: 16px;
   }
   .footer__container__division__info {
     padding-top: 24px;
@@ -270,10 +270,14 @@ body {
   color: #ffffff;
 }
 .album iframe {
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-size: 10px;
+  color: #cccccc;
+  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
+  font-weight: 100;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 300px;
 }
 
 .shows {
@@ -310,7 +314,7 @@ body {
   font-family: "Avenir Next";
 }
 
-@media (min-width: 321px) and (max-width: 767px) {
+@media (min-width: 320px) and (max-width: 767px) {
   .album__title {
     padding: 24px 16px;
   }
@@ -330,13 +334,14 @@ body {
     width: 90%;
   }
   .shows__heading {
-    padding: 24px 16px;
+    padding: 24px 16px 0px 16px;
   }
   .shows__heading__title {
     font-size: 24px;
   }
   .shows__container__info {
     padding: 24px 16px 16px 16px;
+    border-bottom: 1px solid #e1e1e1;
   }
   .shows__container__info__head {
     font-size: 13px;
@@ -354,6 +359,7 @@ body {
     line-height: 18px;
     padding-bottom: 16px;
     font-size: 13px;
+    width: 150px;
   }
   button {
     line-height: 18px;
@@ -410,5 +416,19 @@ body {
     font-size: 18px;
     width: 25%;
     height: 50px;
+  }
+}
+@media (min-width: 1280px) and (max-width: 1920px) {
+  .shows__container__info {
+    border-bottom: 1px solid #afafaf;
+  }
+  button {
+    line-height: 18px;
+    font-size: 14px;
+    width: 100%;
+    height: 40px;
+  }
+  .button {
+    width: 200px;
   }
 }/*# sourceMappingURL=shows.css.map */

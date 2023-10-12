@@ -22,6 +22,9 @@ function displayComment(comment) {
   const divElement = document.createElement("div");
   divElement.classList.add("testimony__comments");
 
+  const detailsElement = document.createElement("div");
+  detailsElement.classList.add("details");
+
   const header = document.createElement("h4");
   header.classList.add("fans");
   header.textContent = comment.name;
@@ -34,8 +37,10 @@ function displayComment(comment) {
   paragraph.classList.add("testimony__article");
   paragraph.textContent = comment.text;
 
-  divElement.appendChild(header);
-  divElement.appendChild(date);
+  detailsElement.appendChild(header);
+  detailsElement.appendChild(date);
+
+  divElement.appendChild(detailsElement);
   divElement.appendChild(paragraph);
 
   commentsDiv.appendChild(divElement);
@@ -78,9 +83,9 @@ function addNewComment(inputComment) {
 
 function removeAllChildNodes(parent) {
   while (parent.firstChild) {
+    console.log(parent.firstChild);
     parent.removeChild(parent.firstChild);
   }
 }
-
 
 //TODO add the new child details flexblox into js
