@@ -99,7 +99,7 @@ body {
     flex-direction: column;
   }
   .footer__heading {
-    font-size: 24px;
+    font-size: 1.5rem;
     line-height: 32px;
     padding: 24px 16px 24px 16px;
   }
@@ -161,7 +161,7 @@ body {
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .footer__heading {
-    padding: 48px 7.5rem 1.875rem 0rem;
+    padding: 48px 7.5rem 1.875rem 36px;
     font-size: 36px;
   }
   .footer__images {
@@ -213,11 +213,11 @@ body {
   .footer__images {
     justify-content: center;
     position: relative;
-    top: -84px;
-    right: 220px;
+    top: -5.25rem;
+    right: 13.75rem;
   }
   .footer__images__box__icons {
-    width: 30px;
+    width: 1.875rem;
     padding-left: 36px;
     height: 1.875rem;
   }
@@ -229,13 +229,13 @@ body {
     width: 60%;
   }
   .footer__rights {
-    padding: 25px 36px 36px 48px;
+    padding: 1.5625rem 36px 36px 48px;
   }
   .footer__icon {
     flex-direction: row-reverse;
     position: relative;
-    top: -267px;
-    right: 150px;
+    top: -16.6875rem;
+    right: 9.375rem;
   }
 }
 * {
@@ -246,6 +246,29 @@ body {
 
 .nav {
   background-color: #323232;
+  display: flex;
+}
+.nav__container {
+  display: flex;
+}
+.nav__pack {
+  display: flex;
+}
+.nav__pack__list {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.nav__pack__list__item {
+  justify-content: space-between;
+  display: flex;
+}
+.nav__pack__list__item:hover {
+  border-bottom: 0.1875rem solid #ffffff;
+  color: #ffffff;
+  font-family: "Avenir Next Extra Bold";
+  font-size: 14px;
 }
 
 .album {
@@ -270,14 +293,14 @@ body {
   color: #ffffff;
 }
 .album iframe {
-  font-size: 10px;
+  font-size: 0.625rem;
   color: #cccccc;
   font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
   font-weight: 100;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  width: 300px;
+  width: 18.75rem;
 }
 
 .shows {
@@ -289,6 +312,9 @@ body {
 }
 .shows__container__info:hover {
   background-color: #fafafa;
+}
+.shows__container__info--selected {
+  background-color: #e1e1e1;
 }
 .shows__container__info__head {
   font-family: "Avenir Next";
@@ -309,8 +335,8 @@ body {
 .shows__container__info button {
   background-color: #323232;
   color: #ffffff;
-  border-radius: 4px;
-  border: 1px solid #323232;
+  border-radius: 0.25rem;
+  border: 0.0625rem solid #323232;
   font-family: "Avenir Next";
 }
 
@@ -341,7 +367,7 @@ body {
   }
   .shows__container__info {
     padding: 24px 16px 16px 16px;
-    border-bottom: 1px solid #e1e1e1;
+    border-bottom: 0.0625rem solid #e1e1e1;
   }
   .shows__container__info__head {
     font-size: 13px;
@@ -357,18 +383,30 @@ body {
   }
   .shows__container__info__town {
     line-height: 18px;
-    padding-bottom: 16px;
+    padding-bottom: 1rem;
     font-size: 13px;
-    width: 150px;
+    width: 9.375rem;
   }
   button {
     line-height: 18px;
     font-size: 14px;
     width: 100%;
-    height: 40px;
+    height: 2.5rem;
   }
 }
 @media (min-width: 768px) and (max-width: 1279px) {
+  .nav__container {
+    padding: 48px 36px 36px 36px;
+  }
+  .nav__pack {
+    flex-direction: row;
+    align-items: center;
+  }
+  .nav__pack__list__item {
+    color: #ffffff;
+    font-size: 1rem;
+    font-family: "Avenir Next";
+  }
   .album__title {
     padding: 48px 36px;
   }
@@ -392,43 +430,45 @@ body {
   }
   .shows__container__info {
     border-bottom: 1px solid #afafaf;
-    padding-bottom: 16px;
-    padding-left: 36px;
+    padding: 0 0 1 rem 36px;
   }
   .shows__container__info__head {
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 22px;
   }
   .shows__container__info__date {
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 22px;
   }
   .shows__container__info__place {
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 22px;
   }
   .shows__container__info__town {
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 22px;
   }
   button {
     line-height: 22px;
-    font-size: 18px;
+    font-size: 1.125rem;
     width: 25%;
-    height: 50px;
+    height: 3.125rem;
   }
 }
 @media (min-width: 1280px) and (max-width: 1920px) {
+  .nav__container {
+    padding: 48px 36px 36px 36px;
+  }
   .shows__container__info {
-    border-bottom: 1px solid #afafaf;
+    border-bottom: 0.0625rem solid #afafaf;
   }
   button {
     line-height: 18px;
     font-size: 14px;
     width: 100%;
-    height: 40px;
+    height: 2.5rem;
   }
   .button {
-    width: 200px;
+    width: 12.5rem;
   }
 }/*# sourceMappingURL=shows.css.map */

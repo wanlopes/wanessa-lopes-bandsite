@@ -112,7 +112,7 @@ body {
     flex-direction: column;
   }
   .footer__heading {
-    font-size: 24px;
+    font-size: 1.5rem;
     line-height: $section-line-height-mobile;
     padding: $headline-padding-before-mobile $headline-padding-after-mobile
       $headline-padding-before-mobile $headline-padding-after-mobile;
@@ -146,7 +146,7 @@ body {
 
 @media (min-width: 321px) and (max-width: $mobile-screen-max-size) {
   .footer__heading {
-    font-size: 24px;
+    font-size: $page-header-text-size-mobile;
     line-height: $section-line-height-mobile;
     padding: $headline-padding-before-mobile $headline-padding-after-mobile
       $headline-padding-before-mobile $headline-padding-before-mobile;
@@ -180,7 +180,7 @@ body {
 
 @media (min-width: 768px) and (max-width: $tablet-screen-max-size) {
   .footer__heading {
-    padding: $headline-padding-before-desktop 7.5rem 1.875rem 0rem;
+    padding: $headline-padding-before-desktop 7.5rem 1.875rem $headline-padding-after-desktop;
     font-size: $section-header-text-size-desktop;
   }
   .footer__images {
@@ -234,11 +234,11 @@ body {
   .footer__images {
     justify-content: center;
     position: relative;
-    top: -84px;
-    right: 220px;
+    top: -5.25rem;
+    right: 13.75rem;
   }
   .footer__images__box__icons {
-    width: 30px;
+    width: 1.875rem ;
     padding-left: $headline-padding-after-desktop;
     height: 1.875rem;
   }
@@ -250,13 +250,13 @@ body {
     width: 60%;
   }
   .footer__rights {
-    padding: 25px $headline-padding-after-desktop
+    padding: 1.5625rem $headline-padding-after-desktop
       $headline-padding-after-desktop $headline-padding-before-desktop;
   }
   .footer__icon {
     flex-direction: row-reverse;
     position: relative;
-    top: -267px;
-    right: 150px;
+    top: -16.6875rem;
+    right: 9.375rem;
   }
 }
