@@ -58,6 +58,11 @@
       color: $white;
     }
   }
+  &__song {
+    display: flex;
+    // flex-direction: column;
+    width: 30%;
+  }
   iframe {
     font-size: 0.625rem;
     color: #cccccc;
@@ -184,6 +189,9 @@
     font-size: 1rem;
     font-family: $primary-normal;
   }
+  .album {
+    height: 100vh;
+  }
   .album__title {
     padding: $headline-padding-before-desktop $headline-padding-after-desktop;
   }
@@ -237,7 +245,24 @@
   .nav__container {
     padding: $headline-padding-before-desktop
       $headline-padding-between-components-desktop
-      $headline-padding-after-desktop $headline-padding-after-desktop;
+      $headline-padding-after-desktop 90px;
+  }
+  .album {
+    height: 100vh;
+  }
+  .album__title {
+    padding: $headline-padding-before-desktop $headline-padding-after-desktop;
+  }
+  .album__title__paragraph {
+    font-size: 28px;
+    font-family: $primary-bold;
+  }
+  .album__subtitle {
+    padding: 0px $headline-padding-after-desktop;
+    width: 33%;
+  }
+  .album__subtitle__paragraph {
+    font-size: 64px;
   }
   .shows__container__info {
     border-bottom: 0.0625rem solid $silver;

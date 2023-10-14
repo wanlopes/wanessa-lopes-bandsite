@@ -96,8 +96,7 @@ function selectElement(divElement) {
       removeClass[i].classList.remove(selectedClassName);
     }
     divElement.classList.add(selectedClassName);
-    alert("click");
   };
 }
 
-// TODO REMOVE HTML 
+// TODO REMOVE HTML

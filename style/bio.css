@@ -255,25 +255,12 @@ body {
   display: flex;
   align-items: center;
 }
-@media (max-width: 767px) {
-  .nav__pack {
-    justify-content: space-around;
-  }
-}
 .nav__pack__subheader {
   font-family: "Avenir Next";
   color: #afafaf;
   margin-right: 2.25rem;
   text-align: center;
   padding: 2.875rem 0;
-}
-@media (max-width: 1279px) {
-  .nav__pack__subheader {
-    font-size: 0.75rem;
-    line-height: 32px;
-    flex-direction: column;
-    padding: 2.625rem 0rem 2.75rem 0rem;
-  }
 }
 @media (max-width: 767px) {
   .nav__pack__subheader {
@@ -293,12 +280,6 @@ body {
   color: #e1e1e1;
   font-family: "Avenir Next";
 }
-@media (max-width: 767px) {
-  .nav__pack__subheader__item {
-    font-size: 1.125rem;
-    padding: 0rem;
-  }
-}
 .nav__pack__subheader__item:hover {
   font-family: "Avenir Next Extra Bold";
   color: #ffffff;
@@ -313,23 +294,11 @@ body {
   position: relative;
   height: 100vh;
 }
-@media (max-width: 767px) {
-  .hero {
-    height: 40vh;
-    padding: 0;
-  }
-}
 .hero__title .title__heading {
   font-family: "Avenir Next Bold";
   line-height: 68px;
   color: #ffffff;
 }
-@media (max-width: 767px) {
-  .hero__title .title__heading {
-    font-size: 1.5rem;
-  }
-}
-
 .main__head {
   font-family: "Avenir Next Bold";
 }
@@ -430,6 +399,14 @@ body {
   background-color: #fafafa;
 }
 
+.cont__input__name::-moz-placeholder {
+  color: #000000;
+}
+
+.cont__input__name::placeholder {
+  color: #000000;
+}
+
 .cont__input__name:active {
   border-color: #000000;
 }
@@ -449,6 +426,14 @@ body {
   color: #323232;
 }
 
+.cont__input__comment::-moz-placeholder {
+  color: #323232;
+}
+
+.cont__input__comment::placeholder {
+  color: #323232;
+}
+
 .fans {
   font-size: 14px;
   font-family: "Avenir Next Bold";
@@ -465,6 +450,10 @@ body {
   padding: 24px 16px 0px 16px;
 }
 
+.testimony__comments__avatar {
+  display: flex;
+}
+
 .testimony__article {
   font-size: 14px;
   font-family: "Avenir Next";
@@ -474,6 +463,59 @@ body {
 }
 
 @media (max-width: 767px) {
+  .hero__title {
+    padding: 48px 36px;
+    position: absolute;
+    top: 15.625rem;
+    left: 5rem;
+  }
+}
+@media (max-width: 767px) and (max-width: 1279px) {
+  .hero__title {
+    font-size: 36px;
+    left: 0rem;
+  }
+}
+@media (max-width: 767px) {
+  .content_wrapper {
+    padding: 0 1rem;
+  }
+}
+@media (max-width: 767px) and (max-width: 767px) {
+  .nav {
+    display: block;
+  }
+  .nav__container {
+    padding: 1.5rem;
+    justify-content: center;
+  }
+  .nav__container__logo {
+    padding: 24px 16px 16px 16px;
+  }
+  .nav__pack {
+    justify-content: space-around;
+  }
+  .nav__pack__subheader {
+    font-size: 0.75rem;
+    line-height: 32px;
+    flex-direction: column;
+    padding: 2.625rem 0rem 2.75rem 0rem;
+  }
+  .nav__pack__subheader__item {
+    font-size: 1.125rem;
+    padding: 0rem;
+  }
+  .hero {
+    height: 40vh;
+    padding: 0;
+  }
+  .hero__title {
+    padding: 36px 16px;
+    top: 6.25rem;
+  }
+  .title__heading {
+    font-size: 1.5rem;
+  }
   .main__head {
     padding: 2.125rem 1rem 1.5rem 0rem;
     font-size: 1.5rem;
@@ -515,7 +557,7 @@ body {
     grid-row-gap: 24px;
   }
   .testimony__title {
-    padding: 24px 1 16px;
+    padding: 24px 16px;
   }
   .form__name__container__img {
     width: 3.125rem;
@@ -546,6 +588,15 @@ body {
   .nav__container {
     padding: 48px 36px;
   }
+  .hero {
+    height: 63vh;
+  }
+  .hero__title {
+    padding: 200px 36px;
+  }
+  .title__heading {
+    font-size: 60px;
+  }
   .main__head {
     padding: 48px 36px 36px 36px;
     font-size: 36px;
@@ -566,14 +617,13 @@ body {
   .main__sub-paragraph {
     font-size: 14px;
     line-height: 22px;
-    margin: 0 6.875rem;
-    padding: 0 36px;
+    margin: 0 5.875rem;
   }
   .main__subheading {
     font-size: 24px;
     line-height: 32px;
-    padding: 36px 36px;
-    margin: 0 6.875rem;
+    padding: 36px 0rem 0rem 0rem;
+    margin: 0 5.875rem;
   }
   .main__paragraph {
     -moz-column-count: 2;
@@ -586,43 +636,6 @@ body {
     margin: 0 auto;
     padding: 36px;
   }
-}
-.hero__title {
-  padding: 48px 36px;
-  position: absolute;
-  top: 15.625rem;
-  left: 5rem;
-}
-@media (max-width: 1279px) {
-  .hero__title {
-    font-size: 36px;
-    left: 0rem;
-  }
-}
-@media (max-width: 767px) {
-  .hero__title {
-    padding: 36px 16px;
-    top: 6.25rem;
-  }
-}
-
-.content_wrapper {
-  padding: 0 1rem;
-}
-
-@media (max-width: 767px) {
-  .nav {
-    display: block;
-  }
-  .nav__container {
-    padding: 1.5rem;
-    justify-content: center;
-  }
-  .nav__container__logo {
-    padding: 24px 16px 16px 16px;
-  }
-}
-@media (min-width: 768px) and (max-width: 1279px) {
   .form__name {
     width: 70%;
     margin: 0 auto;
@@ -694,6 +707,9 @@ body {
   }
 }
 @media (min-width: 1280px) and (max-width: 1920px) {
+  .hero__title {
+    padding: 270px 140px;
+  }
   .title__heading {
     font-size: 60px;
   }
@@ -742,6 +758,12 @@ body {
     padding: 48px 36px;
     font-size: 36px;
   }
+  .testimony__comments__avatar {
+    background-color: #e1e1e1;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+  }
   .form__name {
     width: 50%;
     margin: 0 auto;
@@ -774,11 +796,11 @@ body {
   }
   .div {
     justify-content: flex-end;
-    padding: 36px 0px;
+    padding: 2.25rem 0rem;
   }
   .div__form__button {
     width: 30%;
-    height: 50px;
+    height: 3.125rem;
   }
   #comments {
     overflow-wrap: anywhere;
@@ -792,18 +814,18 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-bottom: 10px;
+    padding-bottom: 0.625rem;
   }
   .fans {
     display: flex;
-    font-size: 18px;
+    font-size: 1.125rem;
   }
   .date {
     display: flex;
-    font-size: 18px;
+    font-size: 1.125rem;
   }
   .testimony__article {
-    font-size: 18px;
+    font-size: 1.125;
     display: flex;
   }
   .testimony__comments {

@@ -292,6 +292,10 @@ body {
   font-family: "Avenir Next";
   color: #ffffff;
 }
+.album__song {
+  display: flex;
+  width: 30%;
+}
 .album iframe {
   font-size: 0.625rem;
   color: #cccccc;
@@ -407,6 +411,9 @@ body {
     font-size: 1rem;
     font-family: "Avenir Next";
   }
+  .album {
+    height: 100vh;
+  }
   .album__title {
     padding: 48px 36px;
   }
@@ -457,7 +464,24 @@ body {
 }
 @media (min-width: 1280px) and (max-width: 1920px) {
   .nav__container {
-    padding: 48px 36px 36px 36px;
+    padding: 48px 36px 36px 90px;
+  }
+  .album {
+    height: 100vh;
+  }
+  .album__title {
+    padding: 48px 36px;
+  }
+  .album__title__paragraph {
+    font-size: 28px;
+    font-family: "Avenir Next Bold";
+  }
+  .album__subtitle {
+    padding: 0px 36px;
+    width: 33%;
+  }
+  .album__subtitle__paragraph {
+    font-size: 64px;
   }
   .shows__container__info {
     border-bottom: 0.0625rem solid #afafaf;
