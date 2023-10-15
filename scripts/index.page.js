@@ -22,26 +22,32 @@ function displayComment(comment) {
   const divElement = document.createElement("div");
   divElement.classList.add("testimony__comments");
 
+  const avatarElement = document.createElement("div");
+  avatarElement.classList.add("testimony__comments__avatar");
+  divElement.appendChild(avatarElement);
+
+  const divisionElement = document.createElement("div");
+  divisionElement.classList.add("testimony__division");
+  divElement.appendChild(divisionElement);
+
   const detailsElement = document.createElement("div");
-  detailsElement.classList.add("details");
+  detailsElement.classList.add("testimony__division__details");
+  divisionElement.appendChild(detailsElement);
 
   const header = document.createElement("h4");
-  header.classList.add("fans");
+  header.classList.add("testimony__division__details__fans");
   header.textContent = comment.name;
+  detailsElement.appendChild(header);
 
   const date = document.createElement("p");
-  date.classList.add("date");
+  date.classList.add("testimony__division__details__date");
   date.textContent = comment.timestamp;
-
-  const paragraph = document.createElement("p");
-  paragraph.classList.add("testimony__article");
-  paragraph.textContent = comment.text;
-
-  detailsElement.appendChild(header);
   detailsElement.appendChild(date);
 
-  divElement.appendChild(detailsElement);
-  divElement.appendChild(paragraph);
+  const paragraph = document.createElement("p");
+  paragraph.classList.add("testimony__division__article");
+  paragraph.textContent = comment.text;
+  divisionElement.appendChild(paragraph);
 
   commentsDiv.appendChild(divElement);
 }

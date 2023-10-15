@@ -256,11 +256,12 @@ body {
   align-items: center;
 }
 .nav__pack__subheader {
-  font-family: "Avenir Next";
-  color: #afafaf;
   margin-right: 2.25rem;
   text-align: center;
   padding: 2.875rem 0;
+  font-size: 0.75rem;
+  color: #e1e1e1;
+  font-family: "Avenir Next";
 }
 @media (max-width: 767px) {
   .nav__pack__subheader {
@@ -274,15 +275,6 @@ body {
   border-bottom: 0.1875rem solid #ffffff;
   color: #ffffff;
   font-family: "Avenir Next Extra Bold";
-  font-size: 0.75rem;
-}
-.nav__pack__subheader__item {
-  color: #e1e1e1;
-  font-family: "Avenir Next";
-}
-.nav__pack__subheader__item:hover {
-  font-family: "Avenir Next Extra Bold";
-  color: #ffffff;
 }
 
 .hero {
@@ -448,6 +440,10 @@ body {
   display: flex;
 }
 
+.testimony__division {
+  line-height: 22px;
+}
+
 .testimony__article {
   font-size: 14px;
   font-family: "Avenir Next";
@@ -456,18 +452,18 @@ body {
   padding-bottom: 16px;
 }
 
-@media (max-width: 767px) {
-  .hero__title {
-    padding: 48px 36px;
-    position: absolute;
-    top: 15.625rem;
-    left: 5rem;
-  }
-  .content_wrapper {
-    padding: 0 1rem;
-  }
+.hero__title {
+  padding: 48px 36px;
+  position: absolute;
+  top: 15.625rem;
+  left: 5rem;
 }
-@media (max-width: 767px) and (max-width: 767px) {
+
+.content_wrapper {
+  padding: 0 1rem;
+}
+
+@media (max-width: 767px) {
   .nav {
     display: block;
   }
@@ -485,7 +481,6 @@ body {
     font-size: 0.75rem;
     line-height: 32px;
     flex-direction: column;
-    padding: 2.625rem 0rem 2.75rem 0rem;
   }
   .nav__pack__subheader__item {
     font-size: 1.125rem;
@@ -546,11 +541,14 @@ body {
     grid-row-gap: 24px;
   }
   .testimony__title {
-    padding: 24px 16px;
+    padding: 24px 16px 0px 16px;
   }
   .form__name__container__img {
-    width: 36px;
-    height: 36px;
+    right: -12px;
+    top: 60px;
+    position: relative;
+    width: 38px;
+    height: 38px;
   }
   label {
     padding-bottom: 0.3125rem;
@@ -570,11 +568,14 @@ body {
     margin-bottom: 24px;
     font-family: "Avenir Next";
   }
-  .details {
+  .testimony__division__details {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding-bottom: 0.625rem;
+  }
+  .div__form__button {
+    margin: 0 10px 0 58px;
   }
 }
 @media (min-width: 768px) and (max-width: 1279px) {
@@ -585,7 +586,7 @@ body {
     height: 63vh;
   }
   .hero__title {
-    padding: 200px 36px;
+    padding: 0px 36px;
     font-size: 36px;
     left: 0rem;
   }
@@ -680,21 +681,35 @@ body {
     align-items: center;
     flex-direction: column;
   }
-  .details {
+  .testimony__comments__avatar {
+    left: 55px;
+    top: 57px;
+    position: relative;
+    background-color: #e1e1e1;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+  }
+  .testimony__division {
+    padding-bottom: 30px;
+    padding-left: 120px;
+    width: 80%;
+  }
+  .testimony__division__details {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding-bottom: 10px;
   }
-  .fans {
+  .testimony__division__details__fans {
     display: flex;
     font-size: 18px;
   }
-  .date {
+  .testimony__division__details__date {
     display: flex;
     font-size: 18px;
   }
-  .testimony__article {
+  .testimony__division__article {
     font-size: 16px;
     display: flex;
   }
@@ -706,7 +721,7 @@ body {
 }
 @media (min-width: 1280px) and (max-width: 1920px) {
   .hero__title {
-    padding: 270px 140px;
+    padding: 20px 60px;
   }
   .title__heading {
     font-size: 60px;
@@ -756,23 +771,29 @@ body {
     padding: 48px 36px 36px 60px;
   }
   .testimony__title__heading {
-    padding: 48px 36px;
+    padding: 0px 36px;
     font-size: 36px;
   }
   .testimony__comments__avatar {
+    left: 55px;
+    top: 57px;
+    position: relative;
     background-color: #e1e1e1;
     border-radius: 50%;
     width: 48px;
     height: 48px;
   }
   .form__name {
+    border-bottom: 1px solid #e1e1e1;
     width: 50%;
     margin: 0 auto;
   }
   .form__name__container__img {
-    position: absolute;
-    width: 60px;
-    height: 60px;
+    left: 15px;
+    top: 91px;
+    position: relative;
+    width: 55px;
+    height: 55px;
   }
   .cont {
     width: 80%;
@@ -797,7 +818,7 @@ body {
   }
   .div {
     justify-content: flex-end;
-    padding: 2.25rem 0rem;
+    padding: 2.25rem 1rem;
   }
   .div__form__button {
     width: 30%;
@@ -811,26 +832,38 @@ body {
     align-items: center;
     flex-direction: column;
   }
-  .details {
+  .testimony__division__details {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding-bottom: 0.625rem;
   }
-  .fans {
+  .testimony__division__details__fans {
+    font-family: "Avenir Next";
     display: flex;
     font-size: 1.125rem;
   }
-  .date {
+  .testimony__division__details__date {
+    font-family: "Avenir Next";
+    display: flex;
     display: flex;
     font-size: 1.125rem;
+    color: #e1e1e1;
   }
-  .testimony__article {
+  .testimony__division {
+    padding-bottom: 30px;
+    padding-left: 120px;
+    width: 80%;
+  }
+  .testimony__division__article {
     font-size: 1.125;
     display: flex;
+    font-family: "Avenir Next";
   }
   .testimony__comments {
-    width: 100%;
+    padding-top: 0px;
+    border-bottom: 1px solid #e1e1e1;
+    width: 95%;
     display: flex;
     flex-direction: column;
   }
