@@ -9,7 +9,14 @@
   background-color: $bandsite-black;
   display: flex;
   &__container {
+    padding: $headline-padding-before-desktop
+      $headline-padding-between-components-desktop
+      $headline-padding-after-desktop 5.625rem;
     display: flex;
+    &__logo {
+      @include logo-style;
+      display: flex;
+    }
   }
   &__pack {
     display: flex;
@@ -119,6 +126,7 @@
 }
 
 @media (min-width: 320px) and (max-width: $mobile-screen-max-size) {
+
   .album__title {
     padding: $headline-padding-before-mobile $headline-padding-after-mobile;
   }
@@ -180,6 +188,7 @@
       $headline-padding-between-components-desktop
       $headline-padding-after-desktop $headline-padding-after-desktop;
   }
+  
   .nav__pack {
     flex-direction: row;
     align-items: center;

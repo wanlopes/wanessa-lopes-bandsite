@@ -249,6 +249,12 @@ body {
   display: flex;
 }
 .nav__container {
+  padding: 48px 36px 36px 5.625rem;
+  display: flex;
+}
+.nav__container__logo {
+  height: 1.25rem;
+  width: 7.5rem;
   display: flex;
 }
 .nav__pack {

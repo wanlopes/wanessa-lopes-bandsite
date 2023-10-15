@@ -3,51 +3,26 @@
 .nav {
   background-color: $bandsite-black;
   display: flex;
-  @media (max-width: $mobile-screen-max-size) {
-    // display: block;
-  }
   &__container {
     padding: $headline-padding-before-desktop
       $headline-padding-between-components-desktop
       $headline-padding-after-desktop 5.625rem;
     display: flex;
-    @media (max-width: $tablet-screen-max-size) {
-      // padding: $headline-padding-before-desktop $headline-padding-after-desktop;
-    }
-    @media (max-width: $mobile-screen-max-size) {
-      // padding: 1.5rem;
-      // justify-content: center;
-    }
     &__logo {
       @include logo-style;
       display: flex;
-      @media (max-width: $mobile-screen-max-size) {
-        // padding: $headline-padding-before-mobile
-        //   $headline-padding-between-components-mobile
-        //   $headline-padding-after-mobile
-        //   $headline-padding-between-components-mobile;
-      }
     }
   }
 
   &__pack {
     display: flex;
     align-items: center;
-    @media (max-width: $mobile-screen-max-size) {
-      // justify-content: space-around;
-    }
     &__subheader {
       font-family: $primary-normal;
       color: $silver;
       margin-right: 2.25rem;
       text-align: center;
       padding: 2.875rem 0;
-      @media (max-width: $tablet-screen-max-size) {
-        // font-size: 0.75rem;
-        // line-height: $subheader-line-height-desktop;
-        // flex-direction: column;
-        // padding: 2.625rem 0rem 2.75rem 0rem;
-      }
       @media (max-width: $mobile-screen-max-size) {
         width: 50%;
         padding-bottom: 1rem;
@@ -63,10 +38,6 @@
       &__item {
         color: $mercury;
         font-family: $primary-normal;
-        @media (max-width: $mobile-screen-max-size) {
-          // font-size: 1.125rem;
-          // padding: 0rem;
-        }
         &:hover {
           font-family: $primary-extra-bold;
           color: $white;
@@ -89,19 +60,12 @@
   background-position: center;
   position: relative;
   height: 100vh;
-  @media (max-width: $mobile-screen-max-size) {
-    // height: 40vh;
-    // padding: 0;
-  }
 
   &__title {
     .title__heading {
       font-family: $primary-bold;
       line-height: $page-line-height-desktop;
       color: $white;
-      @media (max-width: $mobile-screen-max-size) {
-        // font-size: 1.5rem;
-      }
     }
   }
 }
@@ -152,13 +116,68 @@
   }
 }
 
-.testimony__title {
-  font-family: $primary-normal;
+.testimony {
+  &__title {
+    font-family: $primary-normal;
+    &__heading {
+      color: $bandsite-black;
+      font-size: $section-header-text-size-mobile;
+      font-family: $primary-bold;
+    }
+  }
 }
-.testimony__title__heading {
-  color: $bandsite-black;
-  font-size: $section-header-text-size-mobile;
-  font-family: $primary-bold;
+
+.form__name {
+  font-family: $primary-normal;
+  color: $silver;
+  font-size: $body-text-size-desktop;
+  &__container {
+    display: flex;
+    &__img {
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+}
+
+.cont {
+  display: flex;
+  flex-direction: column;
+  // width: 40%;
+  margin: 0 auto;
+  &__input__name {
+    border: 0.0625rem solid $mercury;
+    border-radius: 0.25rem;
+    height: 2.25rem;
+    padding-top: 0.25rem;
+    background-color: $alabaster;
+    &::placeholder {
+      color: $bandsite-darkblack;
+    }
+    &:active {
+      border-color: $bandsite-darkblack;
+    }
+  }
+  &__input__comment {
+    border: 0.0625rem solid $mercury;
+    border-radius: 0.25rem;
+    height: 2.25rem;
+    padding-top: 0.25rem;
+    background-color: $alabaster;
+    color: $bandsite-black;
+    &::placeholder {
+      color: $bandsite-darkblack;
+    }
+    &:active {
+      border-color: $bandsite-darkblack;
+    }
+  }
+}
+
+.cont__form__comment {
+  font-family: $primary-normal;
+  color: $silver;
+  font-size: $body-text-size-desktop;
 }
 
 .div {
@@ -174,53 +193,7 @@
   border: 0.0625rem solid $bandsite-black;
   border-radius: 0.25rem;
 }
-.form__name {
-  font-family: $primary-normal;
-  color: $silver;
-  font-size: $body-text-size-desktop;
-}
-.form__name__container {
-  display: flex;
-}
-.form__name__container__img {
-  border-radius: 50%;
-  object-fit: cover;
-}
-.cont {
-  display: flex;
-  flex-direction: column;
-  // width: 40%;
-  margin: 0 auto;
-}
-.cont__input__name {
-  border: 0.0625rem solid $mercury;
-  border-radius: 0.25rem;
-  height: 2.25rem;
-  padding-top: 0.25rem;
-  background-color: $alabaster;
-}
-.cont__input__name::placeholder{
-  color: $bandsite-darkblack;
-}
-.cont__input__name:active {
-  border-color: $bandsite-darkblack;
-}
-.cont__form__comment {
-  font-family: $primary-normal;
-  color: $silver;
-  font-size: $body-text-size-desktop;
-}
-.cont__input__comment {
-  border: 0.0625rem solid $mercury;
-  border-radius: 0.25rem;
-  height: 2.25rem;
-  padding-top: 0.25rem;
-  background-color: $alabaster;
-  color: $bandsite-black;
-}
-.cont__input__comment::placeholder {
-  color: $bandsite-black;
-}
+
 .fans {
   font-size: $body-text-size-desktop;
   font-family: $primary-bold;
@@ -235,7 +208,7 @@
   padding: $headline-padding-before-mobile $headline-padding-after-mobile 0px
     $headline-padding-after-mobile;
 }
-.testimony__comments__avatar{
+.testimony__comments__avatar {
   display: flex;
 }
 .testimony__article {
@@ -313,8 +286,7 @@
   //     flex-direction: row;
   //     justify-content: space-between;
   //     padding-bottom: 0.625rem;
-  //   }
-  // }
+  //   } }
 
   @media (min-width: $tablet-screen-min-size) and (max-width: $tablet-screen-max-size) {
     // .nav__container {
@@ -371,14 +343,6 @@
     position: absolute;
     top: 15.625rem;
     left: 5rem;
-    @media (max-width: $tablet-screen-max-size) {
-      font-size: $section-header-text-size-desktop;
-      left: 0rem;
-    }
-    @media (max-width: $mobile-screen-max-size) {
-      // padding: $headline-padding-after-desktop $headline-padding-after-mobile;
-      // top: 6.25rem;
-    }
   }
 
   .content_wrapper {
@@ -421,7 +385,7 @@
       padding: $headline-padding-after-desktop $headline-padding-after-mobile;
       top: 6.25rem;
     }
-    
+
     .title__heading {
       font-size: 1.5rem;
     }
@@ -460,6 +424,9 @@
       font-weight: $body-text-weight-mobile;
       font-family: $primary-normal;
     }
+    .gallery {
+      padding-bottom: $headline-padding-after-mobile;
+    }
     .gallery__image-wraper {
       display: grid;
       grid-template-columns: 1fr;
@@ -469,11 +436,15 @@
       padding: $headline-padding-before-mobile $headline-padding-after-mobile;
     }
     .form__name__container__img {
-      width: 3.125rem;
-      height: 3.125rem;
+      width: 36px;
+      height: 36px;
     }
     label {
       padding-bottom: 0.3125rem;
+    }
+    .cont {
+      width : 80%;
+      padding: 0 10px 0 58px;
     }
     .cont__input__name {
       padding-top: 0.25rem;
@@ -497,60 +468,65 @@
 
 @media (min-width: $tablet-screen-min-size) and (max-width: $tablet-screen-max-size) {
   .nav__container {
-      padding: $headline-padding-before-desktop $headline-padding-after-desktop;
+    padding: $headline-padding-before-desktop $headline-padding-after-desktop;
   }
   .hero {
     height: 63vh;
   }
   .hero__title {
     padding: 200px $headline-padding-after-desktop;
+    font-size: $section-header-text-size-desktop;
+    left: 0rem;
   }
   .title__heading {
     font-size: $page-header-text-size-desktop;
   }
   .main__head {
     padding: $headline-padding-before-desktop
-    $headline-padding-between-components-desktop
-    $headline-padding-after-desktop
-    $headline-padding-between-components-desktop;
+      $headline-padding-between-components-desktop
+      $headline-padding-after-desktop
+      $headline-padding-between-components-desktop;
     font-size: $section-header-text-size-desktop;
     line-height: $section-line-height-desktop;
     font-weight: $section-text-weight-desktop;
-    }
-    .main__picture {
-      width: 75%;
-      height: 22.375rem;
-    }
-    .main__sub {
-      font-size: $subheader-text-size-desktop;
-      line-height: $subheader-line-height-desktop;
-      padding: $headline-padding-after-desktop $headline-padding-after-desktop
-        $headline-padding-after-desktop $headline-padding-after-desktop;
-      width: 75%;
-      margin: 0 auto;
-    }
+  }
+  .main__picture {
+    width: 75%;
+    height: 22.375rem;
+  }
+  .main__sub {
+    font-size: $subheader-text-size-desktop;
+    line-height: $subheader-line-height-desktop;
+    padding: $headline-padding-after-desktop $headline-padding-after-desktop
+      $headline-padding-after-desktop $headline-padding-after-desktop;
+    width: 75%;
+    margin: 0 auto;
+  }
   .main__sub-paragraph {
-      font-size: $body-text-size-desktop;
-      line-height: $body-line-height-desktop;
-      margin: 0  5.875rem;
-      // padding: 0 $headline-padding-after-desktop;
-    }
-    .main__subheading {
-      font-size: $subheader-text-size-desktop;
-      line-height: $subheader-line-height-desktop;
-      padding: $headline-padding-after-desktop 0rem 0rem 0rem;
-      margin: 0 5.875rem;
-    }
-    .main__paragraph {
-      column-count: 2;
-      line-height: $subheader-line-height-desktop;
-      font-weight: $body-text-weight-desktop;
-      font-family: $primary-normal;
-      font-size: 1.375rem;
-      max-width: 59.375rem;
-      margin: 0 auto;
-      padding: $headline-padding-after-desktop;
-    }  
+    font-size: $body-text-size-desktop;
+    line-height: $body-line-height-desktop;
+    margin: 0 5.875rem;
+    // padding: 0 $headline-padding-after-desktop;
+  }
+  .main__subheading {
+    font-size: $subheader-text-size-desktop;
+    line-height: $subheader-line-height-desktop;
+    padding: $headline-padding-after-desktop 0rem 0rem 0rem;
+    margin: 0 5.875rem;
+  }
+  .main__paragraph {
+    column-count: 2;
+    line-height: $subheader-line-height-desktop;
+    font-weight: $body-text-weight-desktop;
+    font-family: $primary-normal;
+    font-size: 1.375rem;
+    max-width: 59.375rem;
+    margin: 0 auto;
+    padding: $headline-padding-after-desktop;
+  }
+  .gallery {
+    padding-bottom: $headline-padding-after-desktop;
+  }
   .form__name {
     width: 70%;
     margin: 0 auto;
@@ -672,6 +648,9 @@
     margin: 0 auto;
     padding: $headline-padding-after-desktop;
   }
+  .gallery {
+    padding-bottom: $headline-padding-after-desktop;
+  }
   .testimony__title {
     padding: 48px 36px 36px 60px;
   }
@@ -679,7 +658,7 @@
     padding: 48px 36px;
     font-size: $section-header-text-size-desktop;
   }
-  .testimony__comments__avatar{
+  .testimony__comments__avatar {
     background-color: $mercury;
     border-radius: 50%;
     width: 48px;
