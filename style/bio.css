@@ -99,6 +99,7 @@ body {
 * {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 a {
@@ -379,6 +380,32 @@ a {
   font-size: 24px;
   font-family: "Avenir Next Bold";
 }
+.testimony__comments {
+  padding: 24px 16px 0px 16px;
+}
+.testimony__comments_avatar {
+  display: flex;
+}
+.testimony__division {
+  line-height: 22px;
+}
+.testimony__division__details__fans {
+  font-size: 14px;
+  font-family: "Avenir Next Bold";
+  color: #323232;
+}
+.testimony__division__details__date {
+  font-size: 14px;
+  font-family: "Avenir Next";
+  color: #afafaf;
+}
+.testimony__article {
+  font-size: 14px;
+  font-family: "Avenir Next";
+  color: #323232;
+  border-bottom: 0.0625rem solid #e1e1e1;
+  padding-bottom: 16px;
+}
 
 .form__name {
   font-family: "Avenir Next";
@@ -452,38 +479,6 @@ a {
   background-color: #323232;
   border: 0.0625rem solid #323232;
   border-radius: 0.25rem;
-}
-
-.fans {
-  font-size: 14px;
-  font-family: "Avenir Next Bold";
-  color: #323232;
-}
-
-.date {
-  font-size: 14px;
-  font-family: "Avenir Next";
-  color: #afafaf;
-}
-
-.testimony__comments {
-  padding: 24px 16px 0px 16px;
-}
-
-.testimony__comments__avatar {
-  display: flex;
-}
-
-.testimony__division {
-  line-height: 22px;
-}
-
-.testimony__article {
-  font-size: 14px;
-  font-family: "Avenir Next";
-  color: #323232;
-  border-bottom: 0.0625rem solid #e1e1e1;
-  padding-bottom: 16px;
 }
 
 .hero__title {

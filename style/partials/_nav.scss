@@ -34,7 +34,6 @@
         padding-top: 0rem;
         margin-right: 0rem;
       }
-      //TODO: Bold only on hover, and white only on hover
       &:hover {
         border-bottom: 0.1875rem solid $white;
         color: $white;
@@ -65,7 +64,6 @@
     font-size: 0.75rem;
     line-height: $subheader-line-height-desktop;
     flex-direction: column;
-    // padding: 2.625rem 0rem 2.75rem 0rem;
   }
   .nav__pack__subheader__item {
     font-size: 1.125rem;

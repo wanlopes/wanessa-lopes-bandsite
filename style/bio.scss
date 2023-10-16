@@ -78,6 +78,36 @@
       font-family: $primary-bold;
     }
   }
+
+  &__comments {
+    padding: $headline-padding-before-mobile $headline-padding-after-mobile 0px
+      $headline-padding-after-mobile;
+    &_avatar {
+      display: flex;
+    }
+  }
+  &__division {
+    line-height: $body-line-height-desktop;
+    &__details {
+      &__fans {
+        font-size: $body-text-size-desktop;
+        font-family: $primary-bold;
+        color: $bandsite-black;
+      }
+      &__date {
+        font-size: $body-text-size-desktop;
+        font-family: $primary-normal;
+        color: $silver;
+      }
+    }
+  }
+  &__article {
+    font-size: $body-text-size-desktop;
+    font-family: $primary-normal;
+    color: $bandsite-black;
+    border-bottom: 0.0625rem solid $mercury;
+    padding-bottom: $headline-padding-after-mobile;
+  }
 }
 
 .form__name {
@@ -145,34 +175,6 @@
   background-color: $bandsite-black;
   border: 0.0625rem solid $bandsite-black;
   border-radius: 0.25rem;
-}
-
-.fans {
-  font-size: $body-text-size-desktop;
-  font-family: $primary-bold;
-  color: $bandsite-black;
-}
-.date {
-  font-size: $body-text-size-desktop;
-  font-family: $primary-normal;
-  color: $silver;
-}
-.testimony__comments {
-  padding: $headline-padding-before-mobile $headline-padding-after-mobile 0px
-    $headline-padding-after-mobile;
-}
-.testimony__comments__avatar {
-  display: flex;
-}
-.testimony__division {
-  line-height: $body-line-height-desktop;
-}
-.testimony__article {
-  font-size: $body-text-size-desktop;
-  font-family: $primary-normal;
-  color: $bandsite-black;
-  border-bottom: 0.0625rem solid $mercury;
-  padding-bottom: $headline-padding-after-mobile;
 }
 
 .hero__title {
