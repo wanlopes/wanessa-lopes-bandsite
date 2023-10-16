@@ -84,22 +84,16 @@
     padding: 48px 36px;
   }
 }
-body {
-  overflow-x: hidden;
-}
-
 .container {
   max-width: 67rem;
   margin: 0 auto;
   position: relative;
   width: 100%;
-  overflow: hidden;
 }
 
 * {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
 }
 
 a {
@@ -599,6 +593,9 @@ a {
     justify-content: space-between;
     padding-bottom: 0.625rem;
   }
+  .testimony__division__article {
+    font-family: "Avenir Next";
+  }
   .div__form__button {
     margin: 0 10px 0 58px;
   }
@@ -662,7 +659,9 @@ a {
     margin: -50px 0 0 162px;
   }
   .form__name__container__img {
-    position: absolute;
+    top: 96px;
+    left: -77px;
+    position: relative;
     width: 3.75rem;
     height: 3.75rem;
   }
@@ -716,6 +715,7 @@ a {
     padding-bottom: 30px;
     padding-left: 120px;
     width: 80%;
+    border-bottom: 1px solid #e1e1e1;
   }
   .testimony__division__details {
     display: flex;
@@ -732,6 +732,7 @@ a {
     font-size: 18px;
   }
   .testimony__division__article {
+    font-family: "Avenir Next";
     font-size: 16px;
     display: flex;
   }

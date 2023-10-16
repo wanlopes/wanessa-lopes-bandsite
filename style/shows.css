@@ -84,22 +84,16 @@
     padding: 48px 36px;
   }
 }
-body {
-  overflow-x: hidden;
-}
-
 .container {
   max-width: 67rem;
   margin: 0 auto;
   position: relative;
   width: 100%;
-  overflow: hidden;
 }
 
 * {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
 }
 
 a {
@@ -513,6 +507,48 @@ a {
     width: 25%;
     height: 3.125rem;
   }
+  .shows__heading__title {
+    font-size: 48px;
+  }
+  .shows__container {
+    padding-bottom: 60px;
+    margin: 36px;
+    flex-direction: column;
+    display: flex;
+    width: 90%;
+  }
+  .shows__container__column {
+    margin-left: -144px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .shows__container__column__head {
+    color: #e1e1e1;
+    font-family: "Avenir Next Bold";
+    font-size: 20px;
+    font-size: 1rem;
+    line-height: 22px;
+  }
+  .shows__container__info {
+    padding: 36px;
+    border-bottom: 0.0625rem solid #afafaf;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .shows__container__info__head {
+    display: none;
+  }
+  button {
+    line-height: 18px;
+    font-size: 14px;
+    width: 100%;
+    height: 2.5rem;
+  }
+  .button {
+    width: 12.5rem;
+  }
 }
 @media (min-width: 1280px) and (max-width: 1920px) {
   .album {
@@ -543,24 +579,37 @@ a {
   iframe {
     width: 350px;
   }
+  .shows__heading__title {
+    font-size: 48px;
+    padding: 48px 60px;
+  }
   .shows__container {
+    padding-bottom: 60px;
+    margin: -79px 348px;
     flex-direction: column;
     display: flex;
     width: 70%;
   }
   .shows__container__column {
-    font-family: "Avenir Next";
+    left: -183px;
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
   }
   .shows__container__column__head {
-    font-family: "Avenir Next";
+    color: #e1e1e1;
+    font-family: "Avenir Next Bold";
+    font-size: 20px;
     font-size: 1rem;
     line-height: 22px;
   }
   .shows__container__info {
+    padding: 36px;
     border-bottom: 0.0625rem solid #afafaf;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
   .shows__container__info__head {
     display: none;

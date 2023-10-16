@@ -41,32 +41,31 @@ function generateConcertsElement(concert) {
   const headDateElement = document.createElement("p");
   headDateElement.classList.add("shows__container__info__head");
   headDateElement.textContent = "Date";
+  divElement.appendChild(headDateElement);
 
   const dateElement = document.createElement("p");
   dateElement.classList.add("shows__container__info__date");
   dateElement.textContent = concert.date;
+  divElement.appendChild(dateElement);
 
   const headVenueElement = document.createElement("p");
   headVenueElement.classList.add("shows__container__info__head");
   headVenueElement.textContent = "Venue";
+  divElement.appendChild(headVenueElement);
 
   const placeElement = document.createElement("p");
   placeElement.classList.add("shows__container__info__place");
   placeElement.textContent = concert.venue;
+  divElement.appendChild(placeElement);
 
   const headLocationElement = document.createElement("p");
   headLocationElement.classList.add("shows__container__info__head");
   headLocationElement.textContent = "Location";
+  divElement.appendChild(headLocationElement);
 
   const townElement = document.createElement("p");
   townElement.classList.add("shows__container__info__town");
   townElement.textContent = concert.location;
-
-  divElement.appendChild(headDateElement);
-  divElement.appendChild(dateElement);
-  divElement.appendChild(headVenueElement);
-  divElement.appendChild(placeElement);
-  divElement.appendChild(headLocationElement);
   divElement.appendChild(townElement);
 
   const divButton = document.createElement("div");
@@ -74,17 +73,14 @@ function generateConcertsElement(concert) {
 
   const buttonElement = document.createElement("button");
   buttonElement.textContent = "BUY TICKETS";
-  //   divElement.appendChild(buttonElement);
-
   divButton.appendChild(buttonElement);
-
   divElement.appendChild(divButton);
+
   concertsContainer.appendChild(divElement);
 }
 
 document.addEventListener("DOMContentLoaded", (event) => {
   for (let index = 0; index < concerts.length; index++) {
-    console.log(concerts[index]);
     generateConcertsElement(concerts[index]);
   }
 });

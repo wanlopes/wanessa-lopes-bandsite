@@ -216,6 +216,49 @@
     width: 25%;
     height: 3.125rem;
   }
+  .shows__heading__title {
+    font-size: 48px;
+  }
+  .shows__container {
+    padding-bottom: 60px;
+    margin: 36px;
+    flex-direction: column;
+    display: flex;
+    width: 90%;
+  }
+  .shows__container__column {
+    margin-left: -144px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .shows__container__column__head {
+    color: $mercury;
+    font-family: $primary-bold;
+    font-size: 20px;
+    font-size: 1rem;
+    line-height: $body-line-height-desktop;
+  }
+  .shows__container__info {
+    padding: 36px;
+    border-bottom: 0.0625rem solid #afafaf;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .shows__container__info__head {
+    display: none;
+  }
+  button {
+    line-height: $body-line-height-mobile;
+    font-size: $subheader-text-size-mobile;
+    width: 100%;
+    height: 2.5rem;
+  }
+  .button {
+    width: 12.5rem;
+  }
 }
 
 @media (min-width: $desktop-screen-min-size) and (max-width: $desktop-screen-max-size) {
@@ -247,24 +290,38 @@
   iframe {
     width: 350px;
   }
+  .shows__heading__title {
+    font-size: 48px;
+    padding: 48px 60px;
+  }
   .shows__container {
+    padding-bottom: 60px;
+    margin: -79px 348px;
     flex-direction: column;
     display: flex;
     width: 70%;
   }
   .shows__container__column {
-    font-family: $primary-normal;
+    left: -183px;
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
   }
+
   .shows__container__column__head {
-    font-family: $primary-normal;
+    color: $mercury;
+    font-family: $primary-bold;
+    font-size: 20px;
     font-size: 1rem;
     line-height: $body-line-height-desktop;
   }
   .shows__container__info {
-    border-bottom: 0.0625rem solid $silver;
+    padding: 36px;
+    border-bottom: 0.0625rem solid #afafaf;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
   .shows__container__info__head {
     display: none;

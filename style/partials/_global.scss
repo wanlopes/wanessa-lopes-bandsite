@@ -3,23 +3,19 @@
 @import "sizes";
 @import "nav";
 
-body {
-  overflow-x: hidden;
-}
-
 .container {
   max-width: 67rem;
   margin: 0 auto;
   position: relative;
   width: 100%;
-  overflow: hidden;
+  // overflow-x: hidden;
 }
 
 * {
   margin: 0;
   padding: 0;
 
-  overflow-x: hidden;
+  // overflow-x: hidden;
 }
 
 a {

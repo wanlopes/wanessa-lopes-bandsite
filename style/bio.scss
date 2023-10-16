@@ -297,6 +297,10 @@
     justify-content: space-between;
     padding-bottom: 0.625rem;
   }
+  .testimony__division__article {
+    font-family: $primary-normal;
+
+  }
   .div__form__button {
     margin: 0 10px 0 58px;
   }
@@ -365,7 +369,9 @@
     margin: -50px 0 0 162px;
   }
   .form__name__container__img {
-    position: absolute;
+    top: 96px;
+    left: -77px;
+    position: relative;
     width: 3.75rem;
     height: 3.75rem;
   }
@@ -419,6 +425,7 @@
     padding-bottom: 30px;
     padding-left: 120px;
     width: 80%;
+    border-bottom: 1px solid $mercury;
   }
   .testimony__division__details {
     display: flex;
@@ -435,6 +442,7 @@
     font-size: 18px;
   }
   .testimony__division__article {
+    font-family: $primary-normal;
     font-size: 16px;
     display: flex;
   }
