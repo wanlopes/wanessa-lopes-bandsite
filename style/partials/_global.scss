@@ -19,6 +19,11 @@ body {
   padding: 0;
 }
 
+a {
+  color: $mercury;
+  text-decoration: none;
+}
+
 @mixin logo-style {
   height: 1.25rem;
   width: 7.5rem;
@@ -180,7 +185,8 @@ body {
 
 @media (min-width: 768px) and (max-width: $tablet-screen-max-size) {
   .footer__heading {
-    padding: $headline-padding-before-desktop 7.5rem 1.875rem $headline-padding-after-desktop;
+    padding: $headline-padding-before-desktop 7.5rem 1.875rem
+      $headline-padding-after-desktop;
     font-size: $section-header-text-size-desktop;
   }
   .footer__images {
@@ -238,7 +244,7 @@ body {
     right: 13.75rem;
   }
   .footer__images__box__icons {
-    width: 1.875rem ;
+    width: 1.875rem;
     padding-left: $headline-padding-after-desktop;
     height: 1.875rem;
   }

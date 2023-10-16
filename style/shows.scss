@@ -134,11 +134,14 @@
     font-size: $subheader-text-size-mobile;
     font-family: $primary-normal;
   }
-  .album__subtitle {
+  .album__pack { 
+    display: flex;
+  }
+  .album__pack__subtitle {
     padding: $headline-padding-before-mobile $headline-padding-after-mobile;
     width: 70%;
   }
-  .album__subtitle__paragraph {
+  .album__pack__subtitle__paragraph {
     font-size: $section-header-text-size-mobile;
   }
   iframe {
@@ -214,6 +217,15 @@
     padding: 0px $headline-padding-after-desktop;
     font-size: $section-header-text-size-desktop;
   }
+  .album__pack__subtitle {
+    padding: $headline-padding-before-desktop $headline-padding-before-mobile;
+  }
+  .album__pack__subtitle__paragraph {
+    font-size: $page-header-text-size-desktop;
+    font-family: $primary-normal;
+    color: $white;
+    width: 76%;
+  }
   iframe {
     margin: $headline-padding-before-desktop $headline-padding-after-desktop;
   }
@@ -270,22 +282,33 @@
     height: 100vh;
   }
   .album__title {
-    padding: $headline-padding-before-desktop $headline-padding-after-desktop;
+    padding: $headline-padding-before-desktop 145px;
   }
   .album__title__paragraph {
     font-size: 28px;
     font-family: $primary-bold;
   }
-  .album__subtitle {
-    padding: 0px $headline-padding-after-desktop;
-    width: 33%;
+  .album__pack {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
   }
-  .album__subtitle__paragraph {
+  .album__pack__subtitle {
+    font-size: $section-header-text-size-desktop;
+    font-family: $primary-bold;
+    color: $white;
+    padding: 0px $headline-padding-after-desktop;
+    width: 39%;
+  }
+  .album__pack__subtitle__paragraph {
     font-size: 64px;
   }
   .album__song {
-    position: relative;
-    left: 30px;
+   
+  }
+  iframe {
+    width: 350px;
   }
   .shows__container {
     flex-direction: column;

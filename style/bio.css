@@ -33,6 +33,11 @@ body {
   padding: 0;
 }
 
+a {
+  color: #e1e1e1;
+  text-decoration: none;
+}
+
 .footer {
   background-color: #323232;
   margin-top: 36px;

@@ -33,6 +33,11 @@ body {
   padding: 0;
 }
 
+a {
+  color: #e1e1e1;
+  text-decoration: none;
+}
+
 .footer {
   background-color: #323232;
   margin-top: 36px;
@@ -359,11 +364,14 @@ body {
     font-size: 14px;
     font-family: "Avenir Next";
   }
-  .album__subtitle {
+  .album__pack {
+    display: flex;
+  }
+  .album__pack__subtitle {
     padding: 24px 16px;
     width: 70%;
   }
-  .album__subtitle__paragraph {
+  .album__pack__subtitle__paragraph {
     font-size: 24px;
   }
   iframe {
@@ -434,6 +442,15 @@ body {
     padding: 0px 36px;
     font-size: 36px;
   }
+  .album__pack__subtitle {
+    padding: 48px 24px;
+  }
+  .album__pack__subtitle__paragraph {
+    font-size: 60px;
+    font-family: "Avenir Next";
+    color: #ffffff;
+    width: 76%;
+  }
   iframe {
     margin: 48px 36px;
   }
@@ -487,22 +504,29 @@ body {
     height: 100vh;
   }
   .album__title {
-    padding: 48px 36px;
+    padding: 48px 145px;
   }
   .album__title__paragraph {
     font-size: 28px;
     font-family: "Avenir Next Bold";
   }
-  .album__subtitle {
-    padding: 0px 36px;
-    width: 33%;
+  .album__pack {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
   }
-  .album__subtitle__paragraph {
+  .album__pack__subtitle {
+    font-size: 36px;
+    font-family: "Avenir Next Bold";
+    color: #ffffff;
+    padding: 0px 36px;
+    width: 39%;
+  }
+  .album__pack__subtitle__paragraph {
     font-size: 64px;
   }
-  .album__song {
-    position: relative;
-    left: 30px;
+  iframe {
+    width: 350px;
   }
   .shows__container {
     flex-direction: column;
