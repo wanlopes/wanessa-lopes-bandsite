@@ -5,39 +5,6 @@
   padding: 0;
   overflow-x: hidden;
 }
-.nav {
-  background-color: $bandsite-black;
-  display: flex;
-  &__container {
-    padding: $headline-padding-before-desktop
-      $headline-padding-between-components-desktop
-      $headline-padding-after-desktop 5.625rem;
-    display: flex;
-    &__logo {
-      @include logo-style;
-      display: flex;
-    }
-  }
-  &__pack {
-    display: flex;
-    &__list {
-      display: flex;
-      justify-content: space-between;
-      flex-direction: row;
-      justify-content: space-between;
-      &__item {
-        justify-content: space-between;
-        display: flex;
-        &:hover {
-          border-bottom: 0.1875rem solid $white;
-          color: $white;
-          font-family: $primary-extra-bold;
-          font-size: $body-text-size-desktop;
-        }
-      }
-    }
-  }
-}
 .album {
   background-image: linear-gradient(
       0deg,
@@ -134,7 +101,7 @@
     font-size: $subheader-text-size-mobile;
     font-family: $primary-normal;
   }
-  .album__pack { 
+  .album__pack {
     display: flex;
   }
   .album__pack__subtitle {
@@ -188,21 +155,6 @@
   }
 }
 @media (min-width: $tablet-screen-min-size) and (max-width: $tablet-screen-max-size) {
-  .nav__container {
-    padding: $headline-padding-before-desktop
-      $headline-padding-between-components-desktop
-      $headline-padding-after-desktop $headline-padding-after-desktop;
-  }
-
-  .nav__pack {
-    flex-direction: row;
-    align-items: center;
-  }
-  .nav__pack__list__item {
-    color: $white;
-    font-size: 1rem;
-    font-family: $primary-normal;
-  }
   .album {
     height: 100vh;
   }
@@ -236,7 +188,7 @@
     font-size: $page-header-text-size-desktop;
     color: $bandsite-darkblack;
   }
-   .shows__container__column {
+  .shows__container__column {
     display: flex;
   }
   .shows__container__column__head {
@@ -273,11 +225,6 @@
 }
 
 @media (min-width: $desktop-screen-min-size) and (max-width: $desktop-screen-max-size) {
-  .nav__container {
-    padding: $headline-padding-before-desktop
-      $headline-padding-between-components-desktop
-      $headline-padding-after-desktop 90px;
-  }
   .album {
     height: 100vh;
   }
@@ -292,7 +239,6 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-
   }
   .album__pack__subtitle {
     font-size: $section-header-text-size-desktop;
@@ -305,7 +251,6 @@
     font-size: 64px;
   }
   .album__song {
-   
   }
   iframe {
     width: 350px;
@@ -329,7 +274,7 @@
   .shows__container__info {
     border-bottom: 0.0625rem solid $silver;
   }
-  .shows__container__info__head{
+  .shows__container__info__head {
     display: none;
   }
   button {

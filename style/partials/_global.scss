@@ -1,6 +1,7 @@
 @import "fonts";
 @import "colors";
 @import "sizes";
+@import "nav";
 
 body {
   overflow-x: hidden;
@@ -28,6 +29,7 @@ a {
   height: 1.25rem;
   width: 7.5rem;
 }
+
 @mixin footer-basic-style {
   background-color: $bandsite-black;
   margin-top: $headline-padding-after-desktop;

@@ -16,6 +16,74 @@
   font-weight: 400;
   font-style: normal;
 }
+.nav {
+  background-color: #323232;
+  display: flex;
+}
+.nav__container {
+  padding: 48px 36px 36px 5.625rem;
+  display: flex;
+}
+.nav__container__logo {
+  height: 1.25rem;
+  width: 7.5rem;
+  display: flex;
+}
+.nav__pack {
+  display: flex;
+  align-items: center;
+}
+.nav__pack__subheader {
+  margin-right: 2.25rem;
+  text-align: center;
+  padding: 2.875rem 0;
+  font-size: 0.75rem;
+  color: #e1e1e1;
+  font-family: "Avenir Next";
+}
+@media (max-width: 767px) {
+  .nav__pack__subheader {
+    width: 50%;
+    padding-bottom: 1rem;
+    padding-top: 0rem;
+    margin-right: 0rem;
+  }
+}
+.nav__pack__subheader:hover {
+  border-bottom: 0.1875rem solid #ffffff;
+  color: #ffffff;
+  font-family: "Avenir Next Extra Bold";
+}
+
+@media (max-width: 767px) {
+  .nav {
+    display: block;
+  }
+  .nav__container {
+    padding: 1.5rem;
+    justify-content: center;
+  }
+  .nav__container__logo {
+    padding: 24px 16px 16px 16px;
+  }
+  .nav__pack {
+    justify-content: space-around;
+  }
+  .nav__pack__subheader {
+    font-size: 0.75rem;
+    line-height: 32px;
+    flex-direction: column;
+  }
+  .nav__pack__subheader__item {
+    font-size: 1.125rem;
+    padding: 0rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .nav__container {
+    padding: 48px 36px;
+  }
+}
 body {
   overflow-x: hidden;
 }
@@ -249,39 +317,6 @@ a {
   overflow-x: hidden;
 }
 
-.nav {
-  background-color: #323232;
-  display: flex;
-}
-.nav__container {
-  padding: 48px 36px 36px 5.625rem;
-  display: flex;
-}
-.nav__container__logo {
-  height: 1.25rem;
-  width: 7.5rem;
-  display: flex;
-}
-.nav__pack {
-  display: flex;
-}
-.nav__pack__list {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.nav__pack__list__item {
-  justify-content: space-between;
-  display: flex;
-}
-.nav__pack__list__item:hover {
-  border-bottom: 0.1875rem solid #ffffff;
-  color: #ffffff;
-  font-family: "Avenir Next Extra Bold";
-  font-size: 14px;
-}
-
 .album {
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Assets/Images/hero-shows.jpg);
   background-size: cover;
@@ -416,18 +451,6 @@ a {
   }
 }
 @media (min-width: 768px) and (max-width: 1279px) {
-  .nav__container {
-    padding: 48px 36px 36px 36px;
-  }
-  .nav__pack {
-    flex-direction: row;
-    align-items: center;
-  }
-  .nav__pack__list__item {
-    color: #ffffff;
-    font-size: 1rem;
-    font-family: "Avenir Next";
-  }
   .album {
     height: 100vh;
   }
@@ -497,9 +520,6 @@ a {
   }
 }
 @media (min-width: 1280px) and (max-width: 1920px) {
-  .nav__container {
-    padding: 48px 36px 36px 90px;
-  }
   .album {
     height: 100vh;
   }

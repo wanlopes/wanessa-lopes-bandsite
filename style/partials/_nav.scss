@@ -1,0 +1,80 @@
+@mixin logo-style {
+  height: 1.25rem;
+  width: 7.5rem;
+}
+
+.nav {
+  background-color: $bandsite-black;
+  display: flex;
+  &__container {
+    padding: $headline-padding-before-desktop
+      $headline-padding-between-components-desktop
+      $headline-padding-after-desktop 5.625rem;
+    display: flex;
+    &__logo {
+      @include logo-style;
+      display: flex;
+    }
+  }
+
+  &__pack {
+    display: flex;
+    align-items: center;
+    &__subheader {
+      margin-right: 2.25rem;
+      text-align: center;
+      padding: 2.875rem 0;
+      font-size: 0.75rem;
+      color: $mercury;
+      font-family: $primary-normal;
+
+      @media (max-width: $mobile-screen-max-size) {
+        width: 50%;
+        padding-bottom: 1rem;
+        padding-top: 0rem;
+        margin-right: 0rem;
+      }
+      //TODO: Bold only on hover, and white only on hover
+      &:hover {
+        border-bottom: 0.1875rem solid $white;
+        color: $white;
+        font-family: $primary-extra-bold;
+      }
+    }
+  }
+}
+
+//TMOBILE
+@media (max-width: $mobile-screen-max-size) {
+  .nav {
+    display: block;
+  }
+  .nav__container {
+    padding: 1.5rem;
+    justify-content: center;
+  }
+  .nav__container__logo {
+    padding: $headline-padding-before-mobile
+      $headline-padding-between-components-mobile $headline-padding-after-mobile
+      $headline-padding-between-components-mobile;
+  }
+  .nav__pack {
+    justify-content: space-around;
+  }
+  .nav__pack__subheader {
+    font-size: 0.75rem;
+    line-height: $subheader-line-height-desktop;
+    flex-direction: column;
+    // padding: 2.625rem 0rem 2.75rem 0rem;
+  }
+  .nav__pack__subheader__item {
+    font-size: 1.125rem;
+    padding: 0rem;
+  }
+}
+
+@media (min-width: $tablet-screen-min-size) and (max-width: $tablet-screen-max-size) {
+  .nav__container {
+    padding: $headline-padding-before-desktop $headline-padding-after-desktop;
+  }
+}
