@@ -126,7 +126,6 @@
 }
 
 @media (min-width: 320px) and (max-width: $mobile-screen-max-size) {
-
   .album__title {
     padding: $headline-padding-before-mobile $headline-padding-after-mobile;
   }
@@ -151,6 +150,9 @@
   }
   .shows__heading__title {
     font-size: $section-header-text-size-mobile;
+  }
+  .shows__container__column {
+    display: none;
   }
   .shows__container__info {
     padding: $headline-padding-before-mobile $headline-padding-after-mobile
@@ -188,7 +190,7 @@
       $headline-padding-between-components-desktop
       $headline-padding-after-desktop $headline-padding-after-desktop;
   }
-  
+
   .nav__pack {
     flex-direction: row;
     align-items: center;
@@ -221,6 +223,14 @@
   .shows__heading__title {
     font-size: $page-header-text-size-desktop;
     color: $bandsite-darkblack;
+  }
+   .shows__container__column {
+    display: flex;
+  }
+  .shows__container__column__head {
+    font-family: $primary-normal;
+    font-size: 1rem;
+    line-height: $body-line-height-desktop;
   }
   .shows__container__info {
     border-bottom: 1px solid $silver;
@@ -273,8 +283,31 @@
   .album__subtitle__paragraph {
     font-size: 64px;
   }
+  .album__song {
+    position: relative;
+    left: 30px;
+  }
+  .shows__container {
+    flex-direction: column;
+    display: flex;
+    width: 70%;
+  }
+  .shows__container__column {
+    font-family: $primary-normal;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .shows__container__column__head {
+    font-family: $primary-normal;
+    font-size: 1rem;
+    line-height: $body-line-height-desktop;
+  }
   .shows__container__info {
     border-bottom: 0.0625rem solid $silver;
+  }
+  .shows__container__info__head{
+    display: none;
   }
   button {
     line-height: $body-line-height-mobile;

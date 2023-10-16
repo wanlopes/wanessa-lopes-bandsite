@@ -375,6 +375,9 @@ body {
   .shows__heading__title {
     font-size: 24px;
   }
+  .shows__container__column {
+    display: none;
+  }
   .shows__container__info {
     padding: 24px 16px 16px 16px;
     border-bottom: 0.0625rem solid #e1e1e1;
@@ -441,6 +444,14 @@ body {
     font-size: 60px;
     color: #000000;
   }
+  .shows__container__column {
+    display: flex;
+  }
+  .shows__container__column__head {
+    font-family: "Avenir Next";
+    font-size: 1rem;
+    line-height: 22px;
+  }
   .shows__container__info {
     border-bottom: 1px solid #afafaf;
     padding: 0 0 1 rem 36px;
@@ -489,8 +500,31 @@ body {
   .album__subtitle__paragraph {
     font-size: 64px;
   }
+  .album__song {
+    position: relative;
+    left: 30px;
+  }
+  .shows__container {
+    flex-direction: column;
+    display: flex;
+    width: 70%;
+  }
+  .shows__container__column {
+    font-family: "Avenir Next";
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .shows__container__column__head {
+    font-family: "Avenir Next";
+    font-size: 1rem;
+    line-height: 22px;
+  }
   .shows__container__info {
     border-bottom: 0.0625rem solid #afafaf;
+  }
+  .shows__container__info__head {
+    display: none;
   }
   button {
     line-height: 18px;

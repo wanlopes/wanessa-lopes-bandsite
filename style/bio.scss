@@ -255,12 +255,13 @@
     padding: 0rem;
   }
   .hero {
-    height: 40vh;
+    height: 30vh;
     padding: 0;
   }
   .hero__title {
-    padding: $headline-padding-after-desktop $headline-padding-after-mobile;
-    top: 6.25rem;
+    padding: 0px 0px;
+    top: 4.25rem;
+    left: 18px;
   }
 
   .title__heading {
@@ -337,6 +338,23 @@
     margin-bottom: $headline-padding-before-mobile;
     font-family: $primary-normal;
   }
+  .testimony__comments {
+    border-bottom: 1px solid $mercury;
+    padding: 0px 11px 12px 9px;
+  }
+  .testimony__comments__avatar {
+    left: -1px;
+    top: 45px;
+    position: relative;
+    background-color: #e1e1e1;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+  }
+  .testimony__division {
+    padding: 0 0 0 45px;
+    width: 87%;
+  }
   .testimony__division__details {
     display: flex;
     flex-direction: row;
@@ -398,20 +416,20 @@
   }
   .main__paragraph {
     column-count: 2;
-    line-height: $subheader-line-height-desktop;
+    line-height: 24px;
     font-weight: $body-text-weight-desktop;
     font-family: $primary-normal;
-    font-size: 1.375rem;
+    font-size: 18px;
     max-width: 59.375rem;
     margin: 0 auto;
-    padding: $headline-padding-after-desktop;
+    padding: $headline-padding-before-desktop;
   }
   .gallery {
     padding-bottom: $headline-padding-after-desktop;
   }
   .form__name {
     width: 70%;
-    margin: 0 auto;
+    margin: -50px 0 0 162px;
   }
   .form__name__container__img {
     position: absolute;
@@ -442,10 +460,10 @@
     height: 49px;
   }
   .testimony__title {
-    padding: 48px 36px 24px 60px;
+    padding: 48px 36px 24px 48px;
   }
   .testimony__title__heading {
-    font-size: 50px;
+    font-size: 44px;
   }
   #comments {
     overflow-wrap: anywhere;
