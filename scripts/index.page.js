@@ -94,4 +94,3 @@ function removeAllChildNodes(parent) {
   }
 }
 
-//TODO add the new child details flexblox into js
