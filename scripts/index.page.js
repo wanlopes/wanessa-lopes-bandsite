@@ -41,7 +41,7 @@ function displayComment(comment) {
 
   const date = document.createElement("p");
   date.classList.add("testimony__division__details__date");
-  date.textContent = comment.timestamp;
+  date.textContent = convertTimestampToDate(comment.timestamp);
   detailsElement.appendChild(date);
 
   const paragraph = document.createElement("p");
@@ -50,6 +50,11 @@ function displayComment(comment) {
   divisionElement.appendChild(paragraph);
 
   commentsDiv.appendChild(divElement);
+}
+
+function convertTimestampToDate(timestamp) {
+  let date = new Date(timestamp);
+  return date.toLocaleDateString();
 }
 
 function functSubmit(event) {
@@ -67,11 +72,7 @@ function functSubmit(event) {
   const commentsDiv = document.getElementById("comments");
   removeAllChildNodes(commentsDiv);
 
-  let commentsTemp = retrieveComments();
-  for (let index = 0; index < commentsTemp.length; index++) {
-    console.log(commentsTemp[index]);
-    displayComment(commentsTempents[index]);
-  }
+  retrieveAndDisplayComments();
 }
 
 window.addEventListener("DOMContentLoaded", (event) => {
@@ -88,12 +89,11 @@ function addNewComment(inputComment) {
 
 function removeAllChildNodes(parent) {
   while (parent.firstChild) {
-    console.log(parent.firstChild);
     parent.removeChild(parent.firstChild);
   }
 }
 
-function retrieveComments() {
+function retrieveAndDisplayComments() {
   let dataAPI = {};
   const retrieveCommentsPromisse = axios
     .get(
@@ -101,10 +101,8 @@ function retrieveComments() {
     )
     .then(
       (result) => {
-        console.log(result.data);
         dataAPI = result.data;
         dataAPI.forEach((comment) => {
-          console.log(comment);
           displayComment(comment);
         });
         return result.data;
