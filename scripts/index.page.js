@@ -46,7 +46,7 @@ function displayComment(comment) {
 
   const paragraph = document.createElement("p");
   paragraph.classList.add("testimony__division__article");
-  paragraph.textContent = comment.text;
+  paragraph.textContent = comment.comment;
   divisionElement.appendChild(paragraph);
 
   commentsDiv.appendChild(divElement);
@@ -60,8 +60,6 @@ function functSubmit(event) {
   const text = document.getElementById("comment").value;
 
   const inputComment = { name, timestamp, text };
-  console.log(inputComment);
-
   addNewComment(inputComment);
 
   document.getElementById("myForm").reset();
@@ -69,9 +67,10 @@ function functSubmit(event) {
   const commentsDiv = document.getElementById("comments");
   removeAllChildNodes(commentsDiv);
 
-  for (let index = 0; index < comments.length; index++) {
-    console.log(comments[index]);
-    displayComment(comments[index]);
+  let commentsTemp = retrieveComments();
+  for (let index = 0; index < commentsTemp.length; index++) {
+    console.log(commentsTemp[index]);
+    displayComment(commentsTempents[index]);
   }
 }
 
@@ -83,8 +82,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
 });
 
 function addNewComment(inputComment) {
+  //TODO remove in favor of API
   comments.unshift(inputComment);
-  console.log(comments);
 }
 
 function removeAllChildNodes(parent) {
@@ -94,3 +93,24 @@ function removeAllChildNodes(parent) {
   }
 }
 
+function retrieveComments() {
+  let dataAPI = {};
+  const retrieveCommentsPromisse = axios
+    .get(
+      "https://project-1-api.herokuapp.com/comments?api_key=7808a60f-f0a0-4469-8bfe-db68f24f6b64"
+    )
+    .then(
+      (result) => {
+        console.log(result.data);
+        dataAPI = result.data;
+        dataAPI.forEach((comment) => {
+          console.log(comment);
+          displayComment(comment);
+        });
+        return result.data;
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+}
