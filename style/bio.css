@@ -465,14 +465,14 @@ a {
 }
 
 .div__form__button {
-  width: 80%;
-  height: 2.8125rem;
   font-family: "Avenir Next Bold";
-  font-size: 1.25rem;
   color: #ffffff;
   background-color: #323232;
   border: 0.0625rem solid #323232;
   border-radius: 0.25rem;
+  width: 80%;
+  height: 2.8125rem;
+  font-size: 1.25rem;
 }
 
 .hero__title {

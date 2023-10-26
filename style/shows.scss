@@ -1,5 +1,38 @@
 @use "partials/global" as *;
 
+@mixin background-image-style {
+  background-size: cover;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+@mixin button-basic-style {
+  background-color: $bandsite-black;
+  color: $white;
+  border-radius: 0.25rem;
+  border: 0.0625rem solid $bandsite-black;
+  font-family: $primary-normal;
+}
+
+@mixin body-text-mobile {
+  line-height: $body-line-height-mobile;
+  font-size: $body-text-size-mobile;
+}
+
+@mixin body-text-tablet {
+  font-size: 1rem;
+  line-height: $body-line-height-desktop;
+}
+
+@mixin shows-container-flexbox-style {
+  padding: 36px;
+  border-bottom: 0.0625rem solid $alabaster;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .album {
   background-image: linear-gradient(
       0deg,
@@ -7,11 +40,7 @@
       rgba(0, 0, 0, 0.5)
     ),
     url(../Assets/Images/hero-shows.jpg);
-  background-size: cover;
-  margin: 0 auto;
-  background-repeat: no-repeat;
-  background-position: center;
-  position: relative;
+  @include background-image-style;
 
   &__title {
     padding: 24px 16px;
@@ -76,11 +105,12 @@
         color: $bandsite-darkblack;
       }
       button {
-        background-color: $bandsite-black;
-        color: $white;
-        border-radius: 0.25rem;
-        border: 0.0625rem solid $bandsite-black;
-        font-family: $primary-normal;
+        @include button-basic-style;
+        // background-color: $bandsite-black;
+        // color: $white;
+        // border-radius: 0.25rem;
+        // border: 0.0625rem solid $bandsite-black;
+        // font-family: $primary-normal;
       }
     }
   }
@@ -124,26 +154,21 @@
     border-bottom: 0.0625rem solid $mercury;
   }
   .shows__container__info__head {
-    font-size: $body-text-size-mobile;
-    line-height: $body-line-height-mobile;
+    @include body-text-mobile;
   }
   .shows__container__info__date {
-    line-height: $body-line-height-mobile;
-    font-size: $body-text-size-mobile;
+    @include body-text-mobile;
   }
   .shows__container__info__place {
-    line-height: $body-line-height-mobile;
-    font-size: $body-text-size-mobile;
+    @include body-text-mobile;
   }
   .shows__container__info__town {
-    line-height: $body-line-height-mobile;
+    @include body-text-mobile;
     padding-bottom: 1rem;
-    font-size: $body-text-size-mobile;
     width: 9.375rem;
   }
   button {
-    line-height: $body-line-height-mobile;
-    font-size: $subheader-text-size-mobile;
+    @include body-text-mobile;
     width: 100%;
     height: 2.5rem;
   }
@@ -187,28 +212,23 @@
   }
   .shows__container__column__head {
     font-family: $primary-normal;
-    font-size: 1rem;
-    line-height: $body-line-height-desktop;
+    @include body-text-tablet;
   }
   .shows__container__info {
     border-bottom: 1px solid $silver;
     padding: 0 0 1 rem $headline-padding-after-desktop;
   }
   .shows__container__info__head {
-    font-size: 1rem;
-    line-height: $body-line-height-desktop;
+    @include body-text-tablet;
   }
   .shows__container__info__date {
-    font-size: 1rem;
-    line-height: $body-line-height-desktop;
+    @include body-text-tablet;
   }
   .shows__container__info__place {
-    font-size: 1rem;
-    line-height: $body-line-height-desktop;
+    @include body-text-tablet;
   }
   .shows__container__info__town {
-    font-size: 1rem;
-    line-height: $body-line-height-desktop;
+    @include body-text-tablet;
   }
   button {
     line-height: $body-line-height-desktop;
@@ -241,11 +261,7 @@
     line-height: $body-line-height-desktop;
   }
   .shows__container__info {
-    padding: 36px;
-    border-bottom: 0.0625rem solid #afafaf;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    @include shows-container-flexbox-style;
   }
   .shows__container__info__head {
     display: none;
@@ -317,11 +333,7 @@
     line-height: $body-line-height-desktop;
   }
   .shows__container__info {
-    padding: 36px;
-    border-bottom: 0.0625rem solid #afafaf;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    @include shows-container-flexbox-style;
   }
   .shows__container__info__head {
     display: none;

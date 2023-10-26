@@ -95,4 +95,22 @@ function selectElement(divElement) {
   };
 }
 
-// TODO REMOVE HTML
+function retrieveShowDates() {
+  let dataAPI = {};
+  const retrieveShowDatesPromisse = axios
+    .get(
+      "https://project-1-api.herokuapp.com/showdates?api_key=7808a60f-f0a0-4469-8bfe-db68f24f6b64"
+    )
+    .then(
+      (result) => {
+        dataAPI = result.data;
+        dataAPI.forEach((concert) => {
+          generateConcertsElement(concert);
+          console.log(concert);
+        });
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+}

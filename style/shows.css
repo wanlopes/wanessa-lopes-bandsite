@@ -415,8 +415,8 @@ a {
     border-bottom: 0.0625rem solid #e1e1e1;
   }
   .shows__container__info__head {
-    font-size: 13px;
     line-height: 18px;
+    font-size: 13px;
   }
   .shows__container__info__date {
     line-height: 18px;
@@ -428,13 +428,13 @@ a {
   }
   .shows__container__info__town {
     line-height: 18px;
-    padding-bottom: 1rem;
     font-size: 13px;
+    padding-bottom: 1rem;
     width: 9.375rem;
   }
   button {
     line-height: 18px;
-    font-size: 14px;
+    font-size: 13px;
     width: 100%;
     height: 2.5rem;
   }
@@ -532,7 +532,7 @@ a {
   }
   .shows__container__info {
     padding: 36px;
-    border-bottom: 0.0625rem solid #afafaf;
+    border-bottom: 0.0625rem solid #fafafa;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -606,7 +606,7 @@ a {
   }
   .shows__container__info {
     padding: 36px;
-    border-bottom: 0.0625rem solid #afafaf;
+    border-bottom: 0.0625rem solid #fafafa;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

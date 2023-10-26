@@ -105,7 +105,6 @@ function retrieveAndDisplayComments() {
         dataAPI.forEach((comment) => {
           displayComment(comment);
         });
-        return result.data;
       },
       (error) => {
         console.log(error);

@@ -1,5 +1,21 @@
 @use "partials/global" as *;
 
+@mixin button-basic-style {
+  font-family: $primary-bold;
+  color: $white;
+  background-color: $bandsite-black;
+  border: 0.0625rem solid $bandsite-black;
+  border-radius: 0.25rem;
+}
+
+@mixin background-image-style {
+  background-size: cover;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
 .hero {
   background-image: linear-gradient(
       0deg,
@@ -7,11 +23,7 @@
       rgba(0, 0, 0, 0.5)
     ),
     url("../Assets/Images/hero-bio.jpg");
-  background-size: cover;
-  margin: 0 auto;
-  background-repeat: no-repeat;
-  background-position: center;
-  position: relative;
+  @include background-image-style;
   height: 100vh;
 
   &__title {
@@ -167,14 +179,15 @@
   display: flex;
 }
 .div__form__button {
+  @include button-basic-style;
   width: 80%;
   height: 2.8125rem;
-  font-family: $primary-bold;
   font-size: 1.25rem;
-  color: $white;
-  background-color: $bandsite-black;
-  border: 0.0625rem solid $bandsite-black;
-  border-radius: 0.25rem;
+  // font-family: $primary-bold;
+  // color: $white;
+  // background-color: $bandsite-black;
+  // border: 0.0625rem solid $bandsite-black;
+  // border-radius: 0.25rem;
 }
 
 .hero__title {
@@ -299,7 +312,6 @@
   }
   .testimony__division__article {
     font-family: $primary-normal;
-
   }
   .div__form__button {
     margin: 0 10px 0 58px;
