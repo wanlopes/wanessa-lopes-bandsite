@@ -1,35 +1,35 @@
-const concerts = [
-  {
-    date: "Mon, Sept, 6 2021",
-    venue: "Ronald Lane",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Tue, Sept, 21 2021",
-    venue: "Pier 3 East",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Fri, Oct 15 2021",
-    venue: "View Lounge",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Saturday, Nov 6 2021",
-    venue: "Hyatt Agency",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Fri Nov 26 2021",
-    venue: "Moscow Center",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Wed Dec 15 2021",
-    venue: "Press Club",
-    location: "San Francisco, CA",
-  },
-];
+// const concerts = [
+//   {
+//     date: "Mon, Sept, 6 2021",
+//     venue: "Ronald Lane",
+//     location: "San Francisco, CA",
+//   },
+//   {
+//     date: "Tue, Sept, 21 2021",
+//     venue: "Pier 3 East",
+//     location: "San Francisco, CA",
+//   },
+//   {
+//     date: "Fri, Oct 15 2021",
+//     venue: "View Lounge",
+//     location: "San Francisco, CA",
+//   },
+//   {
+//     date: "Saturday, Nov 6 2021",
+//     venue: "Hyatt Agency",
+//     location: "San Francisco, CA",
+//   },
+//   {
+//     date: "Fri Nov 26 2021",
+//     venue: "Moscow Center",
+//     location: "San Francisco, CA",
+//   },
+//   {
+//     date: "Wed Dec 15 2021",
+//     venue: "Press Club",
+//     location: "San Francisco, CA",
+//   },
+// ];
 
 function generateConcertsElement(concert) {
   const concertsContainer = document.getElementById("concerts-container");
@@ -45,7 +45,7 @@ function generateConcertsElement(concert) {
 
   const dateElement = document.createElement("p");
   dateElement.classList.add("shows__container__info__date");
-  dateElement.textContent = concert.date;
+  dateElement.textContent = convertTimestampToDate(concert.date);
   divElement.appendChild(dateElement);
 
   const headVenueElement = document.createElement("p");
@@ -55,7 +55,7 @@ function generateConcertsElement(concert) {
 
   const placeElement = document.createElement("p");
   placeElement.classList.add("shows__container__info__place");
-  placeElement.textContent = concert.venue;
+  placeElement.textContent = concert.place;
   divElement.appendChild(placeElement);
 
   const headLocationElement = document.createElement("p");
@@ -79,11 +79,15 @@ function generateConcertsElement(concert) {
   concertsContainer.appendChild(divElement);
 }
 
+function convertTimestampToDate(timestamp) {
+  let date = new Date(timestamp);
+  return date.toLocaleDateString();
+}
+
 document.addEventListener("DOMContentLoaded", (event) => {
-  for (let index = 0; index < concerts.length; index++) {
-    generateConcertsElement(concerts[index]);
-  }
+  retrieveShowDates();
 });
+
 function selectElement(divElement) {
   return function () {
     const selectedClassName = "shows__container__info--selected";
