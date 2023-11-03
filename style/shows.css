@@ -349,6 +349,9 @@ a {
   font-family: "Avenir Next Bold";
   color: #323232;
 }
+.shows__container {
+  cursor: pointer;
+}
 .shows__container__info:hover {
   background-color: #fafafa;
 }
@@ -531,8 +534,9 @@ a {
     line-height: 22px;
   }
   .shows__container__info {
+    cursor: pointer;
     padding: 36px;
-    border-bottom: 0.0625rem solid #fafafa;
+    border-bottom: 0.125rem solid #fafafa;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -606,7 +610,7 @@ a {
   }
   .shows__container__info {
     padding: 36px;
-    border-bottom: 0.0625rem solid #fafafa;
+    border-bottom: 0.125rem solid #fafafa;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

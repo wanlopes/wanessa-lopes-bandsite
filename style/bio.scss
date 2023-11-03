@@ -141,6 +141,7 @@
   // width: 40%;
   margin: 0 auto;
   &__input__name {
+    font-family: $primary-normal;
     border: 0.0625rem solid $mercury;
     border-radius: 0.25rem;
     height: 2.25rem;
@@ -153,7 +154,8 @@
       border-color: $bandsite-darkblack;
     }
   }
-  &__input__comment {
+  &__input__comment { 
+    font-family: $primary-normal;
     border: 0.0625rem solid $mercury;
     border-radius: 0.25rem;
     height: 2.25rem;

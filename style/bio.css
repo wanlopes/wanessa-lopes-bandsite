@@ -421,6 +421,7 @@ a {
   margin: 0 auto;
 }
 .cont__input__name {
+  font-family: "Avenir Next";
   border: 0.0625rem solid #e1e1e1;
   border-radius: 0.25rem;
   height: 2.25rem;
@@ -437,6 +438,7 @@ a {
   border-color: #000000;
 }
 .cont__input__comment {
+  font-family: "Avenir Next";
   border: 0.0625rem solid #e1e1e1;
   border-radius: 0.25rem;
   height: 2.25rem;

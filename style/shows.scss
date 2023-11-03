@@ -27,7 +27,7 @@
 
 @mixin shows-container-flexbox-style {
   padding: 36px;
-  border-bottom: 0.0625rem solid $alabaster;
+  border-bottom: 0.125rem solid $alabaster;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -81,6 +81,7 @@
     }
   }
   &__container {
+    cursor: pointer;
     &__info {
       &:hover {
         background-color: $alabaster;
@@ -261,6 +262,7 @@
     line-height: $body-line-height-desktop;
   }
   .shows__container__info {
+    cursor: pointer;
     @include shows-container-flexbox-style;
   }
   .shows__container__info__head {
@@ -348,4 +350,3 @@
     width: 12.5rem;
   }
 }
- 
