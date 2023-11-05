@@ -35,6 +35,7 @@
         margin-right: 0rem;
       }
       &:hover {
+        cursor: pointer;
         border-bottom: 0.1875rem solid $white;
         color: $white;
         font-family: $primary-extra-bold;

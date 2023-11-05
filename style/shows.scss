@@ -26,7 +26,7 @@
 }
 
 @mixin shows-container-flexbox-style {
-  padding: 36px;
+  padding: 2.25rem;
   border-bottom: 0.125rem solid $alabaster;
   display: flex;
   flex-direction: row;
@@ -60,17 +60,6 @@
     display: flex;
     width: 30%;
   }
-  // iframe {
-  //   // font-size: 0.625rem;
-  //   // color: #cccccc;
-  //   // font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
-  //   //   Garuda, Verdana, Tahoma, sans-serif;
-  //   // font-weight: $small;
-  //   // text-overflow: ellipsis;
-  //   // white-space: nowrap;
-  //   // overflow: hidden;
-  //   // width: 18.75rem;
-  // }
 }
 .shows {
   background-color: $white;
@@ -107,11 +96,6 @@
       }
       button {
         @include button-basic-style;
-        // background-color: $bandsite-black;
-        // color: $white;
-        // border-radius: 0.25rem;
-        // border: 0.0625rem solid $bandsite-black;
-        // font-family: $primary-normal;
       }
     }
   }
@@ -122,22 +106,27 @@
     padding: $headline-padding-before-mobile $headline-padding-after-mobile;
   }
   .album__title__paragraph {
-    padding: $headline-padding-before-mobile $headline-padding-after-mobile;
+    // padding: $headline-padding-before-mobile $headline-padding-after-mobile;
     font-size: $subheader-text-size-mobile;
     font-family: $primary-normal;
   }
   .album__pack {
+    flex-direction: column;
     display: flex;
   }
   .album__pack__subtitle {
-    padding: $headline-padding-before-mobile $headline-padding-after-mobile;
+    font-family: $primary-normal;
+    padding: 0rem $headline-padding-after-mobile;
     width: 70%;
   }
   .album__pack__subtitle__paragraph {
+    color: $white;
     font-size: $section-header-text-size-mobile;
   }
   iframe {
-    width: 90%;
+    padding: 0.625rem 0.625rem 2.25rem 0.625rem;
+    height: 7.375rem;
+    width: 309%;
   }
   .shows__heading {
     padding: $headline-padding-before-mobile $headline-padding-after-mobile 0px
@@ -176,21 +165,22 @@
 }
 @media (min-width: $tablet-screen-min-size) and (max-width: $tablet-screen-max-size) {
   .album {
-    height: 100vh;
+    height: 85vh;
   }
   .album__title {
     padding: $headline-padding-before-desktop $headline-padding-after-desktop;
   }
   .album__title__paragraph {
+    padding-top: 1.5rem;
     font-size: $subheader-text-size-desktop;
     font-family: $primary-bold;
   }
   .album__subtitle {
-    padding: 0px $headline-padding-after-desktop;
+    padding: 0rem $headline-padding-after-desktop;
     font-size: $section-header-text-size-desktop;
   }
   .album__pack__subtitle {
-    padding: $headline-padding-before-desktop $headline-padding-before-mobile;
+    padding: 0rem $headline-padding-after-desktop;
   }
   .album__pack__subtitle__paragraph {
     font-size: $page-header-text-size-desktop;
@@ -199,6 +189,7 @@
     width: 76%;
   }
   iframe {
+    width: 130%;
     margin: $headline-padding-before-desktop $headline-padding-after-desktop;
   }
   .shows__heading {
@@ -216,7 +207,7 @@
     @include body-text-tablet;
   }
   .shows__container__info {
-    border-bottom: 1px solid $silver;
+    border-bottom: 0.0625rem solid $silver;
     padding: 0 0 1 rem $headline-padding-after-desktop;
   }
   .shows__container__info__head {
@@ -238,17 +229,17 @@
     height: 3.125rem;
   }
   .shows__heading__title {
-    font-size: 48px;
+    font-size: 3rem;
   }
   .shows__container {
-    padding-bottom: 60px;
-    margin: 36px;
+    padding-bottom: 3.75rem;
+    margin: 2.25rem;
     flex-direction: column;
     display: flex;
     width: 90%;
   }
   .shows__container__column {
-    margin-left: -144px;
+    margin-left: -9rem;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -257,7 +248,7 @@
   .shows__container__column__head {
     color: $mercury;
     font-family: $primary-bold;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-size: 1rem;
     line-height: $body-line-height-desktop;
   }
@@ -281,13 +272,14 @@
 
 @media (min-width: $desktop-screen-min-size) and (max-width: $desktop-screen-max-size) {
   .album {
-    height: 100vh;
+    height: 90vh;
   }
   .album__title {
-    padding: $headline-padding-before-desktop 145px;
+    padding: $headline-padding-before-desktop 9.0625rem;
   }
   .album__title__paragraph {
-    font-size: 28px;
+    padding-top: 6.875rem;
+    font-size: 1.75rem;
     font-family: $primary-bold;
   }
   .album__pack {
@@ -299,21 +291,18 @@
     font-size: $section-header-text-size-desktop;
     font-family: $primary-bold;
     color: $white;
-    padding: 0px $headline-padding-after-desktop;
+    padding: 0rem $headline-padding-after-desktop;
     width: 39%;
   }
   .album__pack__subtitle__paragraph {
-    font-size: 64px;
+    font-size: 4rem;
   }
-  // iframe {
-  //   width: 350px;
-  // }
   .shows__heading__title {
-    font-size: 48px;
-    padding: 48px 60px;
+    font-size: 3rem;
+    padding: 3rem 3.75rem;
   }
   .shows__container {
-    padding-bottom: 60px;
+    padding-bottom: 3.75rem;
     margin: -79px 348px;
     flex-direction: column;
     display: flex;
@@ -330,7 +319,7 @@
   .shows__container__column__head {
     color: $mercury;
     font-family: $primary-bold;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-size: 1rem;
     line-height: $body-line-height-desktop;
   }

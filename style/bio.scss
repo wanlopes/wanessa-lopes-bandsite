@@ -138,7 +138,6 @@
 .cont {
   display: flex;
   flex-direction: column;
-  // width: 40%;
   margin: 0 auto;
   &__input__name {
     font-family: $primary-normal;
@@ -154,7 +153,7 @@
       border-color: $bandsite-darkblack;
     }
   }
-  &__input__comment { 
+  &__input__comment {
     font-family: $primary-normal;
     border: 0.0625rem solid $mercury;
     border-radius: 0.25rem;
@@ -185,11 +184,6 @@
   width: 80%;
   height: 2.8125rem;
   font-size: 1.25rem;
-  // font-family: $primary-bold;
-  // color: $white;
-  // background-color: $bandsite-black;
-  // border: 0.0625rem solid $bandsite-black;
-  // border-radius: 0.25rem;
 }
 
 .hero__title {
@@ -210,9 +204,9 @@
     padding: 0;
   }
   .hero__title {
-    padding: 0px 0px;
+    padding: 0rem 0rem;
     top: 4.25rem;
-    left: 18px;
+    left: 1.125rem;
   }
 
   .title__heading {
@@ -262,21 +256,22 @@
     grid-row-gap: $headline-padding-before-mobile;
   }
   .testimony__title {
-    padding: 24px 16px 0px 16px;
+    padding: $headline-padding-before-mobile $headline-padding-after-mobile 0rem
+      $headline-padding-after-mobile;
   }
   .form__name__container__img {
     right: -12px;
-    top: 60px;
+    top: 3.75rem;
     position: relative;
-    width: 38px;
-    height: 38px;
+    width: 2.375rem;
+    height: 2.375rem;
   }
   label {
     padding-bottom: 0.3125rem;
   }
   .cont {
     width: 80%;
-    padding: 0 10px 0 58px;
+    padding: 0 0.625rem 0 3.625rem;
   }
   .cont__input__name {
     padding-top: 0.25rem;
@@ -290,20 +285,20 @@
     font-family: $primary-normal;
   }
   .testimony__comments {
-    border-bottom: 1px solid $mercury;
-    padding: 0px 11px 12px 9px;
+    border-bottom: 0.0625rem solid $mercury;
+    padding: 0rem 0.6875rem 0.75 0.5625rem;
   }
   .testimony__comments__avatar {
     left: -1px;
-    top: 45px;
+    top: 2.8125rem;
     position: relative;
     background-color: #e1e1e1;
     border-radius: 50%;
-    width: 38px;
-    height: 38px;
+    width: 2.375rem;
+    height: 2.375rem;
   }
   .testimony__division {
-    padding: 0 0 0 45px;
+    padding: 0 0 0 2.8125rem;
     width: 87%;
   }
   .testimony__division__details {
@@ -316,7 +311,7 @@
     font-family: $primary-normal;
   }
   .div__form__button {
-    margin: 0 10px 0 58px;
+    margin: 0 0.625rem 0 3.625rem;
   }
 }
 
@@ -325,7 +320,7 @@
     height: 63vh;
   }
   .hero__title {
-    padding: 0px $headline-padding-after-desktop;
+    padding: 0rem $headline-padding-after-desktop;
     font-size: $section-header-text-size-desktop;
     left: 0rem;
   }
@@ -367,7 +362,7 @@
   }
   .main__paragraph {
     column-count: 2;
-    line-height: 24px;
+    line-height: 1.5rem;
     font-weight: $body-text-weight-desktop;
     font-family: $primary-normal;
     font-size: 18px;
@@ -380,10 +375,10 @@
   }
   .form__name {
     width: 70%;
-    margin: -50px 0 0 162px;
+    margin: -50px 0 0 10.125rem;
   }
   .form__name__container__img {
-    top: 96px;
+    top: 6rem;
     left: -77px;
     position: relative;
     width: 3.75rem;
@@ -394,29 +389,30 @@
   }
   .cont__input__name {
     width: 100%;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    padding-left: 15px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.9375rem;
   }
   .cont__input__comment {
     width: 100%;
-    padding-top: 4px;
-    padding-bottom: 60px;
-    padding-left: 15px;
+    padding-top: 0.25rem;
+    padding-bottom: 3.75rem;
+    padding-left: 0.9375rem;
   }
   .div {
     justify-content: flex-end;
-    padding: 36px 0px;
+    padding: $headline-padding-after-desktop 0rem;
   }
   .div__form__button {
     width: 36%;
     height: 49px;
   }
   .testimony__title {
-    padding: 48px 36px 24px 48px;
+    padding: $headline-padding-before-desktop $headline-padding-after-desktop
+      $headline-padding-before-mobile $headline-padding-before-desktop;
   }
   .testimony__title__heading {
-    font-size: 44px;
+    font-size: 2.75rem;
   }
   #comments {
     overflow-wrap: anywhere;
@@ -427,33 +423,33 @@
     flex-direction: column;
   }
   .testimony__comments__avatar {
-    left: 55px;
-    top: 57px;
+    left: 3.4375rem;
+    top: 3.5625rem;
     position: relative;
-    background-color: #e1e1e1;
+    background-color: $mercury;
     border-radius: 50%;
-    width: 48px;
-    height: 48px;
+    width: 3rem;
+    height: 3rem;
   }
   .testimony__division {
-    padding-bottom: 30px;
-    padding-left: 120px;
+    padding-bottom: 1.875rem;
+    padding-left: 7.5rem;
     width: 80%;
-    border-bottom: 1px solid $mercury;
+    border-bottom: 0rem625 solid $mercury;
   }
   .testimony__division__details {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-bottom: 10px;
+    padding-bottom: 0.625rem;
   }
   .testimony__division__details__fans {
     display: flex;
-    font-size: 18px;
+    font-size: 1.125rem;
   }
   .testimony__division__details__date {
     display: flex;
-    font-size: 18px;
+    font-size: 1.125rem;
   }
   .testimony__division__article {
     font-family: $primary-normal;
@@ -469,7 +465,7 @@
 
 @media (min-width: $desktop-screen-min-size) and (max-width: $desktop-screen-max-size) {
   .hero__title {
-    padding: 20px 60px;
+    padding: 1.25rem 3.75rem;
   }
   .title__heading {
     font-size: $page-header-text-size-desktop;
@@ -521,54 +517,56 @@
     padding-bottom: $headline-padding-after-desktop;
   }
   .testimony__title {
-    padding: 48px 36px 36px 60px;
+    padding: $headline-padding-before-desktop
+      $headline-padding-between-components-desktop
+      $headline-padding-between-components-desktop 3.75rem;
   }
   .testimony__title__heading {
-    padding: 0px 36px;
+    padding: 0px $headline-padding-between-components-desktop;
     font-size: $section-header-text-size-desktop;
   }
   .testimony__comments__avatar {
-    left: 55px;
-    top: 57px;
+    left: 3.4375rem;
+    top: 3.5625rem;
     position: relative;
-    background-color: #e1e1e1;
+    background-color: $mercury;
     border-radius: 50%;
-    width: 48px;
-    height: 48px;
+    width: $headline-padding-before-desktop;
+    height: $headline-padding-before-desktop;
   }
 
   .form__name {
-    border-bottom: 1px solid $mercury;
+    border-bottom: 0.0625rem solid $mercury;
     width: 50%;
     margin: 0 auto;
   }
   .form__name__container__img {
-    left: 15px;
-    top: 91px;
+    left: 0.9375rem;
+    top: 5.6875rem;
     position: relative;
-    width: 55px;
-    height: 55px;
+    width: 3.4375rem;
+    height: 3.4375rem;
   }
   .cont {
     width: 80%;
     display: flex;
     flex-direction: column;
-    margin: 0px 0px 0px 90px;
+    margin: 0rem 0rem 0rem 5.625rem;
   }
   label {
-    padding: 20px 0px 5px 0px;
+    padding: 1.25rem 0rem 0.3125rem 0rem;
   }
   .cont__input__name {
     width: 100%;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    padding-left: 15px;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-left: 0.9375rem;
   }
   .cont__input__comment {
     width: 100%;
-    padding-top: 4px;
-    padding-bottom: 55px;
-    padding-left: 15px;
+    padding-top: 0.25rem;
+    padding-bottom: 3.4375rem;
+    padding-left: 0.9375rem;
   }
   .div {
     justify-content: flex-end;
@@ -605,8 +603,8 @@
     color: $mercury;
   }
   .testimony__division {
-    padding-bottom: 30px;
-    padding-left: 120px;
+    padding-bottom: 1.875rem;
+    padding-left: 7.5rem;
     width: 80%;
   }
   .testimony__division__article {
@@ -615,8 +613,8 @@
     font-family: $primary-normal;
   }
   .testimony__comments {
-    padding-top: 0px;
-    border-bottom: 1px solid $mercury;
+    padding-top: 0rem;
+    border-bottom: 0.0625rem solid $mercury;
     width: 95%;
     display: flex;
     flex-direction: column;
