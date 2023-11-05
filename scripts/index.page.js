@@ -31,7 +31,7 @@ function displayComment(comment) {
   paragraph.textContent = comment.comment;
   divisionElement.appendChild(paragraph);
 
-  commentsDiv.appendChild(divElement);
+  commentsDiv.prepend(divElement);
 }
 
 function convertTimestampToDate(timestamp) {

@@ -331,16 +331,6 @@ a {
   display: flex;
   width: 30%;
 }
-.album iframe {
-  font-size: 0.625rem;
-  color: #cccccc;
-  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
-  font-weight: 100;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  width: 18.75rem;
-}
 
 .shows {
   background-color: #ffffff;
@@ -579,9 +569,6 @@ a {
   }
   .album__pack__subtitle__paragraph {
     font-size: 64px;
-  }
-  iframe {
-    width: 350px;
   }
   .shows__heading__title {
     font-size: 48px;
